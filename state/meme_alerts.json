@@ -18,5 +18,15 @@
   "mcap": 59130,
   "liq": 19786.01,
   "score": 65.5
+ },
+ {
+  "addr": "0x82237adBE542846864e8899E5645B96F26cEf6eB",
+  "chain": "base",
+  "symbol": "CASINO",
+  "t": 1792750844,
+  "price": 0.0002188,
+  "mcap": 218824,
+  "liq": 8997.9,
+  "score": 66.6
  }
 ]
