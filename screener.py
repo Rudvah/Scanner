@@ -1,20 +1,12 @@
 """
 Early-stage token screener + Web3 digest -> Telegram.
-
-Sources (all free, no key needed):
-  DefiLlama  : /protocols (TVL, mcap, category), /raises (VC rounds), /overview/fees (revenue)
-  CoinGecko  : /coins/markets (mcap, FDV, circulating/total supply, price)
-  RSS        : crypto news feeds, filtered for airdrop / points / testnet / funding items
-
+Sources: DefiLlama (protocols, raises, fees), CoinGecko (markets), RSS news.
 Commands:
-  python screener.py run [--sample DIR] [--dry]   build digest, send to Telegram (or print with --dry)
-  python screener.py track                        compare past picks vs. the screened universe
-
+  python screener.py run [--sample DIR] [--dry]
+  python screener.py track
 Env: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
-
 NOT financial advice. A high score means "worth researching", never "buy".
-Upcoming token unlocks are NOT available from free APIs, so low float (mcap/FDV) is used as the
-proxy; always check the unlock schedule manually (tokenomist.ai) before acting.
+Unlock schedules are not in free APIs: check tokenomist.ai manually.
 """
 import argparse, json, os, re, sys, time, statistics, urllib.request, urllib.parse
 import xml.etree.ElementTree as ET
@@ -24,12 +16,11 @@ from pathlib import Path
 HERE = Path(__file__).parent
 STATE = HERE / "state" / "picks.json"
 
-# --- tunables -------------------------------------------------------------------------------
-MCAP_MIN, MCAP_MAX = 3_000_000, 250_000_000     # "low market cap" window
+MCAP_MIN, MCAP_MAX = 3_000_000, 250_000_000
 MIN_TVL = 1_000_000
-MAX_AGE_DAYS = 900                                # ignore very old protocols
+MAX_AGE_DAYS = 900
 TOP_N = 8
-TIER1 = {  # investors whose backing is a real (if imperfect) quality signal
+TIER1 = {
     "a16z", "andreessen horowitz", "paradigm", "coinbase ventures", "binance labs", "polychain",
     "multicoin", "pantera", "sequoia", "dragonfly", "framework", "hashkey", "okx ventures",
     "jump crypto", "galaxy", "delphi", "variant", "electric capital", "placeholder", "lightspeed",
@@ -45,7 +36,8 @@ NEWS_FEEDS = [
 NEWS_KEYS = re.compile(r"airdrop|points program|testnet|incentivi[sz]ed|raises \$|funding round|seed round|"
                        r"series [ab]\b|token launch|tge\b|listing", re.I)
 
-# --- http -----------------------------------------------------------------------------------
+STATS = {}
+
 def get(url, timeout=30, retries=3):
     for k in range(retries):
         try:
@@ -53,8 +45,11 @@ def get(url, timeout=30, retries=3):
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read()
         except Exception as e:
+            if getattr(e, "code", None) == 429:
+                time.sleep(25)
             if k == retries - 1:
                 print(f"[warn] {url}: {e}", file=sys.stderr)
+                STATS.setdefault("errors", []).append(f"{url.split('?')[0].split('//')[-1][:45]}: {str(e)[:40]}")
                 return None
             time.sleep(2 * (k + 1))
 
@@ -65,7 +60,6 @@ def get_json(url, sample=None, name=None):
     raw = get(url)
     return json.loads(raw) if raw else None
 
-# --- data -----------------------------------------------------------------------------------
 def load_all(sample=None):
     protos = get_json("https://api.llama.fi/protocols", sample, "protocols") or []
     raises = (get_json("https://api.llama.fi/raises", sample, "raises") or {}).get("raises", [])
@@ -84,7 +78,7 @@ def gecko_markets(ids, sample=None):
                "&price_change_percentage=7d,30d&ids=" + urllib.parse.quote(chunk))
         for m in get_json(url) or []:
             out[m["id"]] = m
-        time.sleep(2.5)  # free-tier rate limit
+        time.sleep(2.5)
     return out
 
 def norm(s):
@@ -95,8 +89,7 @@ def investors_of(r):
     return [i for i in inv if i]
 
 def vc_profile(raise_rows):
-    """Aggregate all rounds for one project."""
-    total = sum((r.get("amount") or 0) for r in raise_rows)  # in $M
+    total = sum((r.get("amount") or 0) for r in raise_rows)
     names = {i for r in raise_rows for i in investors_of(r)}
     t1 = sorted(i for i in names if any(t in i.lower() for t in TIER1))
     leads = {i for r in raise_rows for i in (r.get("leadInvestors") or [])}
@@ -104,15 +97,12 @@ def vc_profile(raise_rows):
     return dict(total_m=total, n_inv=len(names), tier1=t1, n_leads=len(leads), last_ts=last,
                 rounds=len(raise_rows))
 
-# --- scoring --------------------------------------------------------------------------------
 def score(p, gk, vc, fee30):
-    """Return (score 0-100, reasons[], red_flags[]). Transparent, additive."""
     s, why, red = 0, [], []
     mcap = gk.get("market_cap") or p.get("mcap") or 0
     fdv = gk.get("fully_diluted_valuation") or 0
     tvl = p.get("tvl") or 0
 
-    # 1) VC backing (max 30)
     if vc:
         pts = min(15, len(vc["tier1"]) * 5) + min(8, vc["total_m"] / 5) + (4 if vc["n_leads"] >= 2 else 0)
         pts = min(30, pts + (3 if vc["rounds"] >= 2 else 0))
@@ -127,7 +117,6 @@ def score(p, gk, vc, fee30):
     else:
         red.append("NO VC/raise data found")
 
-    # 2) Valuation vs float (max 20)
     if fdv and mcap:
         ratio = mcap / fdv
         s += 20 * min(1, ratio / 0.6)
@@ -139,7 +128,6 @@ def score(p, gk, vc, fee30):
     else:
         red.append("no FDV data")
 
-    # 3) Real usage: TVL vs mcap (max 15)
     if mcap and tvl:
         r = tvl / mcap
         s += min(15, 15 * r / 1.0)
@@ -147,14 +135,12 @@ def score(p, gk, vc, fee30):
         if r < 0.1:
             red.append("TVL tiny vs market cap")
 
-    # 4) Revenue / fees (max 15)
     if fee30:
         s += min(15, 15 * (fee30 * 12 / max(mcap, 1)) / 0.2)
         why.append(f"30d fees ${fee30/1e3:.0f}k")
     else:
         red.append("no fee/revenue data")
 
-    # 5) Growth (max 15)
     g7, g30 = p.get("change_7d"), p.get("change_1m")
     if g30 is not None:
         s += max(0, min(10, g30 / 3))
@@ -166,7 +152,6 @@ def score(p, gk, vc, fee30):
         if g7 < -25:
             red.append(f"TVL down {g7:.0f}% in 7d")
 
-    # 6) Momentum sanity (max 5; penalise parabolic)
     pc30 = gk.get("price_change_percentage_30d_in_currency")
     if pc30 is not None:
         if pc30 > 150:
@@ -179,7 +164,6 @@ def score(p, gk, vc, fee30):
     if gk.get("total_volume") and mcap and gk["total_volume"] / mcap < 0.01:
         red.append("volume <1% of mcap -> hard to exit")
     return round(min(100, s), 1), why, red
-
 def screen(protos, raises, fees, gk, now=None):
     now = now or time.time()
     by_raise = {}
@@ -193,14 +177,17 @@ def screen(protos, raises, fees, gk, now=None):
         for k in (norm(f.get("name")), norm(f.get("slug")), "id:" + str(f.get("defillamaId"))):
             fee_by[k] = f.get("total30d") or 0
     out = []
+    STATS["gecko_matched"] = STATS["in_window"] = 0
     for p in protos:
         gid = p.get("gecko_id")
         if not gid or gid not in gk:
             continue
+        STATS["gecko_matched"] += 1
         m = gk[gid]
         mcap = m.get("market_cap") or 0
         if not (MCAP_MIN <= mcap <= MCAP_MAX) or (p.get("tvl") or 0) < MIN_TVL:
             continue
+        STATS["in_window"] += 1
         listed = p.get("listedAt")
         if listed and (now - listed) / 86400 > MAX_AGE_DAYS:
             continue
@@ -218,7 +205,6 @@ def screen(protos, raises, fees, gk, now=None):
     return out
 
 def early_projects(raises, tokens_known, days=14, now=None):
-    """Recently funded projects that don't (yet) have a listed token on DefiLlama."""
     now = now or time.time()
     res = []
     for r in raises:
@@ -252,7 +238,6 @@ def news(sample=None, limit=8):
                 items.append((t, l))
     return items[:limit]
 
-# --- formatting / telegram ----------------------------------------------------------------
 def esc(s):
     return (str(s) or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
@@ -288,6 +273,12 @@ def build_digest(top, early, headlines):
         parts.append(f"- <a href=\"{esc(l)}\">{esc(t)}</a>")
     if not headlines:
         parts.append("Nothing matched today.")
+    st = STATS
+    parts.append(f"\n<i>Diagnostics: protocols {st.get('protocols')} | raises {st.get('raises')} | fees {st.get('fees')} | "
+                 f"CoinGecko markets {st.get('markets')} | matched {st.get('gecko_matched')} | in mcap window {st.get('in_window')} | "
+                 f"with VC data {st.get('with_vc')}</i>")
+    for e in st.get("errors", [])[:4]:
+        parts.append(f"<i>! source error: {esc(e)}</i>")
     return "\n".join(parts)
 
 def chunks(text, n=3900):
@@ -310,7 +301,6 @@ def send(text):
         urllib.request.urlopen(urllib.request.Request(f"https://api.telegram.org/bot{tok}/sendMessage", data=data), timeout=30)
         time.sleep(1)
 
-# --- outcome tracker -----------------------------------------------------------------------
 def load_state():
     return json.loads(STATE.read_text()) if STATE.exists() else []
 
@@ -351,7 +341,6 @@ def track(min_days=14, sample=None):
     lines.append(f"Beat the universe in {beat}/{len(rows)} runs. Small sample = not proof.")
     return "\n".join(lines)
 
-# --- main ----------------------------------------------------------------------------------
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["run", "track"])
@@ -369,8 +358,10 @@ def main():
         sys.exit("DefiLlama returned nothing; aborting (no digest sent).")
     ids = {p["gecko_id"] for p in protos if p.get("gecko_id") and 1e6 <= (p.get("tvl") or 0)}
     gk = gecko_markets(ids, a.sample)
+    STATS.update(protocols=len(protos), raises=len(raises), fees=len(fees), markets=len(gk))
     ranked = screen(protos, raises, fees, gk)
-    top = [t for t in ranked if t["vc"]][:TOP_N]          # require verifiable VC backing
+    STATS["with_vc"] = sum(1 for t in ranked if t["vc"])
+    top = [t for t in ranked if t["vc"]][:TOP_N]
     tokens_known = {norm(p.get("name")) for p in protos if p.get("gecko_id")}
     msg = build_digest(top, early_projects(raises, tokens_known), news(a.sample))
     log_run(top, ranked)
@@ -378,7 +369,7 @@ def main():
         print(re.sub(r"<[^>]+>", "", msg.replace("</a>", "")))
     else:
         send(msg)
-        if datetime.now(timezone.utc).weekday() == 0:  # Mondays: tracker too
+        if datetime.now(timezone.utc).weekday() == 0:
             send(track())
 
 if __name__ == "__main__":
