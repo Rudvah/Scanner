@@ -1,0 +1,22 @@
+[
+ {
+  "addr": "0xc6cFbd7b8e280c899801e33176CAD0cED8F23b98",
+  "chain": "base",
+  "symbol": "IWRU",
+  "t": 1792750410,
+  "price": 0.0002228,
+  "mcap": 222870,
+  "liq": 9080.7,
+  "score": 67.4
+ },
+ {
+  "addr": "EHsTvXsE9LKgmzEhY51hadrQRMNQTwmuKoLPpPYWpump",
+  "chain": "solana",
+  "symbol": "Bear",
+  "t": 1792750410,
+  "price": 5.913e-05,
+  "mcap": 59130,
+  "liq": 19786.01,
+  "score": 65.5
+ }
+]
