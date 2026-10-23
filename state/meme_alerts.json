@@ -28,5 +28,25 @@
   "mcap": 218824,
   "liq": 8997.9,
   "score": 66.6
+ },
+ {
+  "addr": "E8YeG61gTkBADYtnPcobeyMe6iBwbx5MkUGyNyhxpump",
+  "chain": "solana",
+  "symbol": "CI",
+  "t": 1792783620,
+  "price": 0.0008852,
+  "mcap": 880861,
+  "liq": 82036.7,
+  "score": 75.0
+ },
+ {
+  "addr": "CokrQHPjaWjyXyU15LiN9rb62tgBuFiU78KD7fKiZtu1",
+  "chain": "solana",
+  "symbol": "SQUADS",
+  "t": 1792783620,
+  "price": 0.0002112,
+  "mcap": 202675,
+  "liq": 40788.8,
+  "score": 70.7
  }
 ]
