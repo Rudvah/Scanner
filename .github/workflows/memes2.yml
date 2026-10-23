@@ -1,0 +1,30 @@
+name: meme-scanner-v2
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+concurrency:
+  group: meme-scanner
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python meme_run.py run
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
+      - name: Save state
+        run: |
+          git config user.name "meme-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state/meme_*.json || true
+          git diff --cached --quiet || (git commit -m "meme state" && git pull --rebase -q && git push)
