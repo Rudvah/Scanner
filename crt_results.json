@@ -1,0 +1,118 @@
+{
+ "combos": {
+  "EURUSD|crt": {
+   "avg_R": -0.239,
+   "oos_avg_R": -0.104,
+   "oos_pf": 0.86,
+   "oos_trades": 169,
+   "trades": 417,
+   "verdict": "FAIL"
+  },
+  "EURUSD|crt_mss": {
+   "avg_R": -1.064,
+   "pf": 0.0,
+   "trades": 3,
+   "verdict": "INSUFFICIENT"
+  },
+  "EURUSD|crt_mss_trend": {
+   "avg_R": -1.08,
+   "pf": 0.0,
+   "trades": 2,
+   "verdict": "INSUFFICIENT"
+  },
+  "EURUSD|crt_trend": {
+   "avg_R": -0.335,
+   "oos_avg_R": -0.299,
+   "oos_pf": 0.62,
+   "oos_trades": 84,
+   "trades": 202,
+   "verdict": "FAIL"
+  },
+  "GBPUSD|crt": {
+   "avg_R": -0.222,
+   "oos_avg_R": -0.239,
+   "oos_pf": 0.69,
+   "oos_trades": 166,
+   "trades": 439,
+   "verdict": "FAIL"
+  },
+  "GBPUSD|crt_mss": {
+   "avg_R": 0.294,
+   "pf": 1.54,
+   "trades": 10,
+   "verdict": "INSUFFICIENT"
+  },
+  "GBPUSD|crt_mss_trend": {
+   "avg_R": 0.783,
+   "pf": 3.42,
+   "trades": 7,
+   "verdict": "INSUFFICIENT"
+  },
+  "GBPUSD|crt_trend": {
+   "avg_R": -0.224,
+   "oos_avg_R": -0.238,
+   "oos_pf": 0.68,
+   "oos_trades": 84,
+   "trades": 212,
+   "verdict": "FAIL"
+  },
+  "USDJPY|crt": {
+   "avg_R": -0.118,
+   "oos_avg_R": -0.264,
+   "oos_pf": 0.66,
+   "oos_trades": 203,
+   "trades": 504,
+   "verdict": "FAIL"
+  },
+  "USDJPY|crt_mss": {
+   "avg_R": -0.474,
+   "pf": 0.43,
+   "trades": 10,
+   "verdict": "INSUFFICIENT"
+  },
+  "USDJPY|crt_mss_trend": {
+   "avg_R": -1.049,
+   "pf": 0.0,
+   "trades": 2,
+   "verdict": "INSUFFICIENT"
+  },
+  "USDJPY|crt_trend": {
+   "avg_R": -0.147,
+   "oos_avg_R": -0.319,
+   "oos_pf": 0.58,
+   "oos_trades": 93,
+   "trades": 232,
+   "verdict": "FAIL"
+  },
+  "XAUUSD|crt": {
+   "avg_R": 0.016,
+   "oos_avg_R": -0.05,
+   "oos_pf": 0.92,
+   "oos_trades": 162,
+   "trades": 409,
+   "verdict": "FAIL"
+  },
+  "XAUUSD|crt_mss": {
+   "avg_R": -0.235,
+   "pf": 0.65,
+   "trades": 12,
+   "verdict": "INSUFFICIENT"
+  },
+  "XAUUSD|crt_mss_trend": {
+   "avg_R": -0.166,
+   "pf": 0.73,
+   "trades": 5,
+   "verdict": "INSUFFICIENT"
+  },
+  "XAUUSD|crt_trend": {
+   "avg_R": -0.015,
+   "oos_avg_R": -0.093,
+   "oos_pf": 0.86,
+   "oos_trades": 85,
+   "trades": 184,
+   "verdict": "FAIL"
+  }
+ },
+ "generated": "2026-10-23 08:08",
+ "tf": "4h"
+}
