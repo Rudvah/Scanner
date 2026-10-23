@@ -18,5 +18,29 @@
  "CokrQHPjaWjyXyU15LiN9rb62tgBuFiU78KD7fKiZtu1": {
   "t": 1792783620,
   "r": "alerted"
+ },
+ "3fwux1eyKEYzSnbYWVGoZtgg4ajUx4MBSAsvmTEgpump": {
+  "t": 1792794705,
+  "r": "unsafe",
+  "why": [
+   "Creator history of rugged tokens",
+   "Large Amount of LP Unlocked"
+  ]
+ },
+ "2Nyb2GXVoXM42hVQxJg5RppTbiN5SCZFL4LtZVVDpump": {
+  "t": 1792794705,
+  "r": "alerted"
+ },
+ "Ad6VdigRAwP7ioqiqWd1jbeAcNVvkzjLmKco8PHDpump": {
+  "t": 1792794705,
+  "r": "alerted"
+ },
+ "J8NLpWf52NrMMXLEhf26NUVrpst8Xm3CS91KZ5RPpump": {
+  "t": 1792794705,
+  "r": "alerted"
+ },
+ "0x648a6a60c00011b2f8FeA7B1F30D2c2E9b0845a2": {
+  "t": 1792794705,
+  "r": "alerted"
  }
 }

@@ -48,5 +48,45 @@
   "mcap": 202675,
   "liq": 40788.8,
   "score": 70.7
+ },
+ {
+  "addr": "2Nyb2GXVoXM42hVQxJg5RppTbiN5SCZFL4LtZVVDpump",
+  "chain": "solana",
+  "symbol": "Peekhole",
+  "t": 1792794705,
+  "price": 0.0001056,
+  "mcap": 101042,
+  "liq": 27002.22,
+  "score": 72.1
+ },
+ {
+  "addr": "Ad6VdigRAwP7ioqiqWd1jbeAcNVvkzjLmKco8PHDpump",
+  "chain": "solana",
+  "symbol": "Kit",
+  "t": 1792794705,
+  "price": 4.495e-05,
+  "mcap": 41427,
+  "liq": 16691.83,
+  "score": 67.5
+ },
+ {
+  "addr": "J8NLpWf52NrMMXLEhf26NUVrpst8Xm3CS91KZ5RPpump",
+  "chain": "solana",
+  "symbol": "YMBCOIN",
+  "t": 1792794705,
+  "price": 0.000758,
+  "mcap": 754531,
+  "liq": 76031.14,
+  "score": 65.9
+ },
+ {
+  "addr": "0x648a6a60c00011b2f8FeA7B1F30D2c2E9b0845a2",
+  "chain": "base",
+  "symbol": "UTDF",
+  "t": 1792794705,
+  "price": 5.267e-07,
+  "mcap": 52677,
+  "liq": 51083.45,
+  "score": 60.0
  }
 ]
