@@ -16,10 +16,13 @@ from pathlib import Path
 HERE = Path(__file__).parent
 STATE = HERE / "state" / "picks.json"
 
-MCAP_MIN, MCAP_MAX = 3_000_000, 250_000_000
+# ---- tunables (edit these numbers to change what the screen picks) ----
+MCAP_MIN, MCAP_MAX = 3_000_000, 250_000_000   # low market-cap window
 MIN_TVL = 1_000_000
-MAX_AGE_DAYS = 900
 TOP_N = 8
+EARLY_MONTHS = 24        # early-stage = listed OR raised within this many months
+MAX_TVL_DROP_7D = 40     # exclude if TVL fell more than this % in 7 days
+MIN_FLOAT = 0.30         # below this circulating/FDV ratio the score is penalised
 TIER1 = {
     "a16z", "andreessen horowitz", "paradigm", "coinbase ventures", "binance labs", "polychain",
     "multicoin", "pantera", "sequoia", "dragonfly", "framework", "hashkey", "okx ventures",
@@ -128,8 +131,11 @@ def score(p, gk, vc, fee30):
         why.append(f"raised ${vc['total_m']:.1f}M over {vc['rounds']} round(s)")
         if not vc["tier1"]:
             red.append("no tier-1 investor")
-        if vc["last_ts"] and datetime.fromtimestamp(vc["last_ts"], timezone.utc) < datetime.now(timezone.utc) - timedelta(days=900):
-            red.append("last raise >2.5y ago")
+        if vc["last_ts"]:
+            mo = (time.time() - vc["last_ts"]) / 2_592_000
+            why.append(f"last raise {mo:.0f}mo ago")
+            if mo > 30:
+                red.append("last raise >2.5y ago")
     else:
         red.append("NO VC/raise data found")
 
@@ -137,6 +143,8 @@ def score(p, gk, vc, fee30):
         ratio = mcap / fdv
         s += 20 * min(1, ratio / 0.6)
         why.append(f"float {ratio:.0%} of FDV")
+        if ratio < MIN_FLOAT:
+            s -= 10
         if ratio < 0.25:
             red.append(f"only {ratio:.0%} circulating -> heavy unlock overhang")
         if fdv / max(mcap, 1) > 5:
@@ -166,6 +174,7 @@ def score(p, gk, vc, fee30):
     if g7 is not None:
         s += max(0, min(5, g7 / 4))
         if g7 < -25:
+            s -= 15
             red.append(f"TVL down {g7:.0f}% in 7d")
 
     pc30 = gk.get("price_change_percentage_30d_in_currency")
@@ -179,7 +188,7 @@ def score(p, gk, vc, fee30):
         red.append("very low mcap -> illiquid/manipulable")
     if gk.get("total_volume") and mcap and gk["total_volume"] / mcap < 0.01:
         red.append("volume <1% of mcap -> hard to exit")
-    return round(min(100, s), 1), why, red
+    return round(max(0, min(100, s)), 1), why, red
 def screen(protos, raises, fees, gk, now=None, detail=None):
     now = now or time.time()
     by_raise = {}
@@ -204,15 +213,21 @@ def screen(protos, raises, fees, gk, now=None, detail=None):
         if not (MCAP_MIN <= mcap <= MCAP_MAX) or (p.get("tvl") or 0) < MIN_TVL:
             continue
         STATS["in_window"] += 1
-        listed = p.get("listedAt")
-        if listed and (now - listed) / 86400 > MAX_AGE_DAYS:
-            continue
         if (p.get("category") or "").lower() in {"cex", "chain"}:
             continue
+        if (p.get("change_7d") or 0) < -MAX_TVL_DROP_7D:
+            STATS["tvl_crash"] = STATS.get("tvl_crash", 0) + 1
+            continue
+        listed = p.get("listedAt")
+        recent_listing = bool(listed) and (now - listed) / 2_592_000 <= EARLY_MONTHS
         rr = by_raise.get("id:" + str(p.get("id"))) or by_raise.get(norm(p.get("name"))) or []
         if not rr and detail:
             rr = detail(p)
         vc = vc_profile(rr) if rr else None
+        recent_raise = bool(vc and vc["last_ts"] and (now - vc["last_ts"]) / 2_592_000 <= EARLY_MONTHS)
+        if not (recent_listing or recent_raise):
+            STATS["too_mature"] = STATS.get("too_mature", 0) + 1
+            continue
         fee30 = fee_by.get(norm(p.get("name"))) or fee_by.get(norm(p.get("slug"))) or fee_by.get("id:" + str(p.get("id"))) or 0
         sc, why, red = score(p, m, vc, fee30)
         out.append(dict(id=gid, name=p["name"], symbol=(p.get("symbol") or "").upper(), cat=p.get("category"),
@@ -272,7 +287,7 @@ def build_digest(top, early, headlines, unverified=False, raises_ok=True):
                      "<i>No free source returned funding data. Scores below use fundamentals only. "
                      "Open each DefiLlama link and check the Raises section before trusting a pick.</i>")
     else:
-        parts.append("\n<b>1) Top screened tokens (VC-backed, low mcap)</b>")
+        parts.append("\n<b>1) Top screened tokens (VC-backed, early-stage, low mcap)</b>")
     if not top:
         parts.append("Nothing passed the filters today.")
     for i, t in enumerate(top, 1):
@@ -281,7 +296,7 @@ def build_digest(top, early, headlines, unverified=False, raises_ok=True):
             f"\n<b>{i}. {esc(t['name'])} (${esc(t['symbol'])})</b> - score <b>{t['score']}</b>/100\n"
             f"{esc(t['cat'] or '?')} | {esc(', '.join(t['chains']))}\n"
             f"mcap {money(t['mcap'])} | FDV {money(t['fdv'])}\n"
-            f"+ {esc('; '.join(t['why'][:4]))}\n"
+            f"+ {esc('; '.join(t['why'][:5]))}\n"
             + (f"! {esc('; '.join(t['red'][:4]))}\n" if t["red"] else "! none flagged\n")
             + f"<a href=\"{link}\">DefiLlama</a>")
     parts.append("\n<b>2) Newly funded, no token yet (airdrop/points watch)</b>")
@@ -301,6 +316,7 @@ def build_digest(top, early, headlines, unverified=False, raises_ok=True):
     st = STATS
     parts.append(f"\n<i>Diagnostics: protocols {st.get('protocols')} | raises {st.get('raises')} | fees {st.get('fees')} | "
                  f"CoinGecko markets {st.get('markets')} | matched {st.get('gecko_matched')} | in mcap window {st.get('in_window')} | "
+                 f"too mature {st.get('too_mature', 0)} | TVL crash {st.get('tvl_crash', 0)} | candidates {st.get('candidates')} | "
                  f"with VC data {st.get('with_vc')} | detail lookups {st.get('detail_calls', 0)} (ok {st.get('detail_vc', 0)}, failed {st.get('detail_fail', 0)})</i>")
     for e in st.get("errors", [])[:4]:
         parts.append(f"<i>! source error: {esc(e)}</i>")
@@ -385,6 +401,7 @@ def main():
     gk = gecko_markets(ids, a.sample)
     STATS.update(protocols=len(protos), raises=len(raises), fees=len(fees), markets=len(gk))
     ranked = screen(protos, raises, fees, gk, detail=None if (a.sample or raises) else detail_raises)
+    STATS["candidates"] = len(ranked)
     STATS["with_vc"] = sum(1 for t in ranked if t["vc"])
     vc_ranked = [t for t in ranked if t["vc"]]
     unverified = not vc_ranked
