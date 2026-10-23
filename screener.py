@@ -1,6 +1,6 @@
 """
 Early-stage token screener + Web3 digest -> Telegram.
-Sources: DefiLlama (protocols, raises, fees), CoinGecko (markets), RSS news.
+Sources: DefiLlama (protocols, fees, per-protocol raises), CoinGecko (markets), RSS news.
 Commands:
   python screener.py run [--sample DIR] [--dry]
   python screener.py track
@@ -38,7 +38,7 @@ NEWS_KEYS = re.compile(r"airdrop|points program|testnet|incentivi[sz]ed|raises \
 
 STATS = {}
 
-def get(url, timeout=30, retries=3):
+def get(url, timeout=30, retries=3, quiet=False):
     for k in range(retries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "web3-screener/1.0"})
@@ -47,9 +47,10 @@ def get(url, timeout=30, retries=3):
         except Exception as e:
             if getattr(e, "code", None) == 429:
                 time.sleep(25)
-            if k == retries - 1:
-                print(f"[warn] {url}: {e}", file=sys.stderr)
-                STATS.setdefault("errors", []).append(f"{url.split('?')[0].split('//')[-1][:45]}: {str(e)[:40]}")
+            if k == retries - 1 or getattr(e, "code", None) in (402, 403, 404):
+                if not quiet:
+                    print(f"[warn] {url}: {e}", file=sys.stderr)
+                    STATS.setdefault("errors", []).append(f"{url.split('?')[0].split('//')[-1][:45]}: {str(e)[:40]}")
                 return None
             time.sleep(2 * (k + 1))
 
@@ -80,6 +81,21 @@ def gecko_markets(ids, sample=None):
             out[m["id"]] = m
         time.sleep(2.5)
     return out
+
+def detail_raises(p):
+    STATS["detail_calls"] = STATS.get("detail_calls", 0) + 1
+    raw = get(f"https://api.llama.fi/protocol/{p['slug']}", 40, 1, quiet=True)
+    time.sleep(0.2)
+    if not raw:
+        STATS["detail_fail"] = STATS.get("detail_fail", 0) + 1
+        return []
+    try:
+        rr = json.loads(raw).get("raises") or []
+    except Exception:
+        return []
+    if rr:
+        STATS["detail_vc"] = STATS.get("detail_vc", 0) + 1
+    return rr
 
 def norm(s):
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
@@ -164,7 +180,7 @@ def score(p, gk, vc, fee30):
     if gk.get("total_volume") and mcap and gk["total_volume"] / mcap < 0.01:
         red.append("volume <1% of mcap -> hard to exit")
     return round(min(100, s), 1), why, red
-def screen(protos, raises, fees, gk, now=None):
+def screen(protos, raises, fees, gk, now=None, detail=None):
     now = now or time.time()
     by_raise = {}
     for r in raises:
@@ -194,6 +210,8 @@ def screen(protos, raises, fees, gk, now=None):
         if (p.get("category") or "").lower() in {"cex", "chain"}:
             continue
         rr = by_raise.get("id:" + str(p.get("id"))) or by_raise.get(norm(p.get("name"))) or []
+        if not rr and detail:
+            rr = detail(p)
         vc = vc_profile(rr) if rr else None
         fee30 = fee_by.get(norm(p.get("name"))) or fee_by.get(norm(p.get("slug"))) or fee_by.get("id:" + str(p.get("id"))) or 0
         sc, why, red = score(p, m, vc, fee30)
@@ -246,10 +264,15 @@ def money(x):
         return "n/a"
     return f"${x/1e9:.2f}B" if x >= 1e9 else f"${x/1e6:.1f}M" if x >= 1e6 else f"${x/1e3:.0f}k"
 
-def build_digest(top, early, headlines):
+def build_digest(top, early, headlines, unverified=False, raises_ok=True):
     d = datetime.now(timezone.utc).strftime("%d %b %Y")
     parts = [f"<b>Web3 early-stage digest - {d}</b>\n<i>Research leads, not advice. Check unlock schedules + liquidity before acting.</i>"]
-    parts.append("\n<b>1) Top screened tokens (VC-backed, low mcap)</b>")
+    if unverified:
+        parts.append("\n<b>1) Top screened tokens (low mcap) - VC backing UNVERIFIED</b>\n"
+                     "<i>No free source returned funding data. Scores below use fundamentals only. "
+                     "Open each DefiLlama link and check the Raises section before trusting a pick.</i>")
+    else:
+        parts.append("\n<b>1) Top screened tokens (VC-backed, low mcap)</b>")
     if not top:
         parts.append("Nothing passed the filters today.")
     for i, t in enumerate(top, 1):
@@ -262,7 +285,9 @@ def build_digest(top, early, headlines):
             + (f"! {esc('; '.join(t['red'][:4]))}\n" if t["red"] else "! none flagged\n")
             + f"<a href=\"{link}\">DefiLlama</a>")
     parts.append("\n<b>2) Newly funded, no token yet (airdrop/points watch)</b>")
-    if not early:
+    if not raises_ok:
+        parts.append("Funding feed unavailable today (DefiLlama raises is paid). See headlines below.")
+    elif not early:
         parts.append("None in the last 14 days.")
     for r in early:
         inv = ", ".join((r.get("leadInvestors") or [])[:3]) or "undisclosed"
@@ -276,7 +301,7 @@ def build_digest(top, early, headlines):
     st = STATS
     parts.append(f"\n<i>Diagnostics: protocols {st.get('protocols')} | raises {st.get('raises')} | fees {st.get('fees')} | "
                  f"CoinGecko markets {st.get('markets')} | matched {st.get('gecko_matched')} | in mcap window {st.get('in_window')} | "
-                 f"with VC data {st.get('with_vc')}</i>")
+                 f"with VC data {st.get('with_vc')} | detail lookups {st.get('detail_calls', 0)} (ok {st.get('detail_vc', 0)}, failed {st.get('detail_fail', 0)})</i>")
     for e in st.get("errors", [])[:4]:
         parts.append(f"<i>! source error: {esc(e)}</i>")
     return "\n".join(parts)
@@ -359,11 +384,13 @@ def main():
     ids = {p["gecko_id"] for p in protos if p.get("gecko_id") and 1e6 <= (p.get("tvl") or 0)}
     gk = gecko_markets(ids, a.sample)
     STATS.update(protocols=len(protos), raises=len(raises), fees=len(fees), markets=len(gk))
-    ranked = screen(protos, raises, fees, gk)
+    ranked = screen(protos, raises, fees, gk, detail=None if (a.sample or raises) else detail_raises)
     STATS["with_vc"] = sum(1 for t in ranked if t["vc"])
-    top = [t for t in ranked if t["vc"]][:TOP_N]
+    vc_ranked = [t for t in ranked if t["vc"]]
+    unverified = not vc_ranked
+    top = (vc_ranked or ranked)[:TOP_N]
     tokens_known = {norm(p.get("name")) for p in protos if p.get("gecko_id")}
-    msg = build_digest(top, early_projects(raises, tokens_known), news(a.sample))
+    msg = build_digest(top, early_projects(raises, tokens_known), news(a.sample), unverified, bool(raises))
     log_run(top, ranked)
     if a.dry:
         print(re.sub(r"<[^>]+>", "", msg.replace("</a>", "")))
