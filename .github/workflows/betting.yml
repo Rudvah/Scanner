@@ -1,0 +1,46 @@
+name: betting
+
+on:
+  schedule:
+    - cron: "0 9 * * *"    # once a day, 09:00 UTC (10:00 in Lagos). Keep runs few: the free plan has few credits.
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options:
+          - scan
+          - fair
+        default: scan
+
+permissions:
+  contents: write
+
+concurrency:
+  group: betting
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Run
+        run: python betting_bot.py --${{ github.event.inputs.mode || 'scan' }}
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BET_SPORTS: ${{ vars.BET_SPORTS || 'soccer_epl,soccer_uefa_champs_league,soccer_spain_la_liga,basketball_nba' }}
+          BET_REGIONS: ${{ vars.BET_REGIONS || 'eu,uk' }}
+          BANKROLL: ${{ vars.BANKROLL || '100' }}
+      - name: Save state
+        run: |
+          git config user.name "scanner-bot"
+          git config user.email "scanner-bot@users.noreply.github.com"
+          git add bet_state.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "update bet state" && git pull --rebase && git push)
