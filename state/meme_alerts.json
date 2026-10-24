@@ -178,5 +178,25 @@
   "mcap": 5567,
   "liq": 9201.38,
   "score": 63.8
+ },
+ {
+  "addr": "BzA6JBKgH8qK3XzBpXUiF283jd1k7yCKzwJEiEFAhc68",
+  "chain": "solana",
+  "symbol": "SLOPCOIN",
+  "t": 1792841070,
+  "price": 0.0001189,
+  "mcap": 115056,
+  "liq": 27789.02,
+  "score": 82.9
+ },
+ {
+  "addr": "DEL3KmMovmE57YmwzFYFkMuNDs3PZyi3qMvP9Jyfpump",
+  "chain": "solana",
+  "symbol": "HUG",
+  "t": 1792841070,
+  "price": 0.0001178,
+  "mcap": 111908,
+  "liq": 28231.57,
+  "score": 74.0
  }
 ]
