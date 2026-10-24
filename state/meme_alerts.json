@@ -228,5 +228,15 @@
   "mcap": 52723,
   "liq": 18831.53,
   "score": 79.1
+ },
+ {
+  "addr": "DQSL3cVotoRw3fTG9bXwDnS7YuZz2bz9rjjtR8X9pump",
+  "chain": "solana",
+  "symbol": "AVON",
+  "t": 1792872834,
+  "price": 6.635e-05,
+  "mcap": 66358,
+  "liq": 20946.42,
+  "score": 86.5
  }
 ]

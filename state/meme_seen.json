@@ -98,5 +98,16 @@
  "DEU2iFMPePKqpze4EqZn9i5yBzeQT3riwx7vwgVVpump": {
   "t": 1792864186,
   "r": "alerted"
+ },
+ "6mQvSQvbYDBvWbQdXTx7jhqDfwzz5GVcX6tNacs1pump": {
+  "t": 1792872834,
+  "r": "unsafe",
+  "why": [
+   "Creator history of rugged tokens"
+  ]
+ },
+ "DQSL3cVotoRw3fTG9bXwDnS7YuZz2bz9rjjtR8X9pump": {
+  "t": 1792872834,
+  "r": "alerted"
  }
 }
