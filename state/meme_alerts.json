@@ -88,5 +88,45 @@
   "mcap": 52677,
   "liq": 51083.45,
   "score": 60.0
+ },
+ {
+  "addr": "HJcPYoVCbJM3mqMNRMNUDu4h7DiC7tb7WfJZfumvpump",
+  "chain": "solana",
+  "symbol": "STANLEY",
+  "t": 1792804876,
+  "price": 0.0001236,
+  "mcap": 123683,
+  "liq": 28937.52,
+  "score": 90.8
+ },
+ {
+  "addr": "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump",
+  "chain": "solana",
+  "symbol": "DONNA",
+  "t": 1792804876,
+  "price": 6.439e-05,
+  "mcap": 61739,
+  "liq": 19948.76,
+  "score": 83.7
+ },
+ {
+  "addr": "0x8b4086C85bF0538aDC4FD026E2aF18eC15DAFa1f",
+  "chain": "base",
+  "symbol": "LIQUIDBGT",
+  "t": 1792804876,
+  "price": 1.139e-06,
+  "mcap": 6381,
+  "liq": 9861.25,
+  "score": 79.0
+ },
+ {
+  "addr": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
+  "chain": "solana",
+  "symbol": "REMUS",
+  "t": 1792804876,
+  "price": 0.0001945,
+  "mcap": 191835,
+  "liq": 37340.56,
+  "score": 70.2
  }
 ]
