@@ -248,5 +248,25 @@
   "mcap": 32845,
   "liq": 14077.66,
   "score": 72.0
+ },
+ {
+  "addr": "8THZ69JP2ErZuHVj4G5rcwkFfsQafp5mQsaoQReApump",
+  "chain": "solana",
+  "symbol": "NETWORK",
+  "t": 1792881480,
+  "price": 0.0001224,
+  "mcap": 116384,
+  "liq": 28216.31,
+  "score": 81.4
+ },
+ {
+  "addr": "hFF4rkdzsaoYhkz4dGEQepGmHCBTVFFCoaLXbJqpump",
+  "chain": "solana",
+  "symbol": "WRHND",
+  "t": 1792881480,
+  "price": 0.001373,
+  "mcap": 1368842,
+  "liq": 103552.45,
+  "score": 69.3
  }
 ]
