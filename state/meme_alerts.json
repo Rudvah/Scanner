@@ -198,5 +198,25 @@
   "mcap": 111908,
   "liq": 28231.57,
   "score": 74.0
+ },
+ {
+  "addr": "Ap9VJCDz3QMHM2Ef93cmJ5fkz3UDjSh6YDAGhgPdpump",
+  "chain": "solana",
+  "symbol": "$MRLY",
+  "t": 1792853072,
+  "price": 7.708e-05,
+  "mcap": 76970,
+  "liq": 22734.54,
+  "score": 89.5
+ },
+ {
+  "addr": "BzoYWZL3fXC5KkzkA6dEh9pBKcv9NAqwkTxJReNxpump",
+  "chain": "solana",
+  "symbol": "VELK",
+  "t": 1792853072,
+  "price": 7.288e-05,
+  "mcap": 69300,
+  "liq": 21868.64,
+  "score": 77.7
  }
 ]
