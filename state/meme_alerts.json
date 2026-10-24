@@ -218,5 +218,15 @@
   "mcap": 69300,
   "liq": 21868.64,
   "score": 77.7
+ },
+ {
+  "addr": "DEU2iFMPePKqpze4EqZn9i5yBzeQT3riwx7vwgVVpump",
+  "chain": "solana",
+  "symbol": "JEET",
+  "t": 1792864186,
+  "price": 5.272e-05,
+  "mcap": 52723,
+  "liq": 18831.53,
+  "score": 79.1
  }
 ]
