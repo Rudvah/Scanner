@@ -238,5 +238,15 @@
   "mcap": 66358,
   "liq": 20946.42,
   "score": 86.5
+ },
+ {
+  "addr": "22rWiyDiY9GgxSrFiWC2vX1GxNxjkvrRPmZJDzv9pq6X",
+  "chain": "solana",
+  "symbol": "PARANOID",
+  "t": 1792872864,
+  "price": 3.284e-05,
+  "mcap": 32845,
+  "liq": 14077.66,
+  "score": 72.0
  }
 ]
