@@ -128,5 +128,55 @@
   "mcap": 191835,
   "liq": 37340.56,
   "score": 70.2
+ },
+ {
+  "addr": "59NZWxgJWRoHdXxsBFrXLBq4NEa9RBsmmFUqseLzpump",
+  "chain": "solana",
+  "symbol": "DPM",
+  "t": 1792822313,
+  "price": 0.0001499,
+  "mcap": 147968,
+  "liq": 32149.22,
+  "score": 82.5
+ },
+ {
+  "addr": "BLAZEgnrPc5rw1NGPAdUYT3S5AtyoDaPM2WneBk7uYz8",
+  "chain": "solana",
+  "symbol": "BLAZE",
+  "t": 1792822313,
+  "price": 5.402e-05,
+  "mcap": 53167,
+  "liq": 18089.69,
+  "score": 80.1
+ },
+ {
+  "addr": "B7cX5wW3wxHhRzSYTpM56YgMo8pesJjJk6ehz8aXpump",
+  "chain": "solana",
+  "symbol": "John",
+  "t": 1792822313,
+  "price": 8.563e-05,
+  "mcap": 81939,
+  "liq": 23901.46,
+  "score": 77.4
+ },
+ {
+  "addr": "FFPSPaZ6pZEeVET743ZBxAhbwQqKZhRp997dMWDNpump",
+  "chain": "solana",
+  "symbol": "baldcat",
+  "t": 1792822313,
+  "price": 7.447e-05,
+  "mcap": 71092,
+  "liq": 22585.69,
+  "score": 69.0
+ },
+ {
+  "addr": "0xdD6d33ed2076a4BCAf535841B108d9Bc116bAb91",
+  "chain": "base",
+  "symbol": "SPACEX",
+  "t": 1792822313,
+  "price": 9.94e-07,
+  "mcap": 5567,
+  "liq": 9201.38,
+  "score": 63.8
  }
 ]
