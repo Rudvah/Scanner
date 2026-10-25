@@ -96,7 +96,8 @@ def magiceden_drops(cfg):
             continue
         out.append({"id": f"solana:me:{sym}", "name": c.get("name") or sym, "chain": "solana", "price": to_float(c.get("price")),
                     "currency": "SOL", "supply": c.get("size"), "start": parse_time(c.get("launchDatetime")), "end": None,
-                    "link": f"https://magiceden.io/launchpad/{sym}", "contract": None, "source": "Magic Eden launchpad"})
+                    "link": f"https://magiceden.io/launchpad/{sym}", "alt": [f"https://magiceden.io/marketplace/{sym}"],
+                    "contract": None, "source": "Magic Eden launchpad"})
     return out
 
 
@@ -217,6 +218,8 @@ def wanted(d, cfg, now):
         return False
     if d.get("end") and d["end"] < now:
         return False
+    if d["start"] and not d.get("end") and d["start"] < now - timedelta(hours=24):
+        return False
     return is_free(d)
 
 
@@ -243,6 +246,10 @@ def fmt_alert(d, status, notes, now):
     if d.get("snippet"):
         lines.append("Post: " + html.escape(d["snippet"]))
     lines.append(html.escape(d["link"]))
+    for extra in (d.get("alt") or []):
+        lines.append("Backup link: " + html.escape(extra))
+    if d["source"].startswith("Magic Eden"):
+        lines.append("If a link says 404, open magiceden.io and search the collection name above.")
     lines += ["", "Before you mint: use a separate wallet with little money in it, open only the project's official link, "
               "and read the transaction preview. A mint should never ask permission to move all your tokens or NFTs. "
               "Free does not mean valuable: most free mints are worth nothing."]
