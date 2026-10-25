@@ -27,6 +27,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          WALLETS: ${{ secrets.WALLETS }}
+          SOLANA_RPC: ${{ secrets.SOLANA_RPC }}
           CALL_CHANNELS: ${{ vars.CALL_CHANNELS }}
           MIN_SOURCES: ${{ vars.MIN_SOURCES }}
           WINDOW_HOURS: ${{ vars.WINDOW_HOURS || '6' }}
