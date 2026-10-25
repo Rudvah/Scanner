@@ -378,5 +378,45 @@
   "mcap": 28445,
   "liq": 12929.6,
   "score": 72.7
+ },
+ {
+  "addr": "Pairn5qtjZqVDMGbFuxMvLF6Mf7f2ZRSE46bNjyme67",
+  "chain": "solana",
+  "symbol": "PMD",
+  "t": 1792962252,
+  "price": 0.0001064,
+  "mcap": 106439,
+  "liq": 26879.73,
+  "score": 76.5
+ },
+ {
+  "addr": "GCN58WHB85WJ2kt3vwsmNUs8yhLTQNGcFguP77AKpump",
+  "chain": "solana",
+  "symbol": "SWENEE",
+  "t": 1792962252,
+  "price": 0.0009554,
+  "mcap": 945813,
+  "liq": 83811.19,
+  "score": 74.0
+ },
+ {
+  "addr": "D3oWE6gjnAaDV1iEPAwnhtLCPLN3LxRqRK8JRhMjpump",
+  "chain": "solana",
+  "symbol": "Tenmusu",
+  "t": 1792962252,
+  "price": 3.554e-05,
+  "mcap": 35544,
+  "liq": 14308.78,
+  "score": 72.5
+ },
+ {
+  "addr": "9PPQ5jEY3UpXjAa22a1aMb12VjoYYfL21aC9RhSspump",
+  "chain": "solana",
+  "symbol": "GENNY",
+  "t": 1792962252,
+  "price": 7.855e-05,
+  "mcap": 75921,
+  "liq": 22774.04,
+  "score": 70.8
  }
 ]
