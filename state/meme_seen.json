@@ -188,5 +188,24 @@
  "9PPQ5jEY3UpXjAa22a1aMb12VjoYYfL21aC9RhSspump": {
   "t": 1792962252,
   "r": "alerted"
+ },
+ "4WgxC56hGyNXLd14mCgxBuR2DUyDReF8koFDynhepump": {
+  "t": 1792970800,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Top 10 holders high ownership"
+  ]
+ },
+ "3b9HqmcnUb8HTmicHd6TJUF2Rm9sSLZWkbWdhfuepump": {
+  "t": 1792970800,
+  "r": "unsafe",
+  "why": [
+   "Single holder ownership"
+  ]
+ },
+ "4U6QvbLXyTpJTiU9HbgaN9yGa6CQ7gXFnWL1HFaWpump": {
+  "t": 1792970800,
+  "r": "alerted"
  }
 }

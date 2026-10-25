@@ -418,5 +418,15 @@
   "mcap": 75921,
   "liq": 22774.04,
   "score": 70.8
+ },
+ {
+  "addr": "4U6QvbLXyTpJTiU9HbgaN9yGa6CQ7gXFnWL1HFaWpump",
+  "chain": "solana",
+  "symbol": "SCS",
+  "t": 1792970800,
+  "price": 7.52e-05,
+  "mcap": 75210,
+  "liq": 21563.54,
+  "score": 65.6
  }
 ]
