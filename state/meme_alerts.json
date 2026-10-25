@@ -268,5 +268,25 @@
   "mcap": 1368842,
   "liq": 103552.45,
   "score": 69.3
+ },
+ {
+  "addr": "DgmECo2oh1h7WC7sb7Y25fuH6YLBDCnjCBzKbVQ1pump",
+  "chain": "solana",
+  "symbol": "REACHY",
+  "t": 1792889364,
+  "price": 0.0002176,
+  "mcap": 214286,
+  "liq": 38361.72,
+  "score": 81.5
+ },
+ {
+  "addr": "7PHPSS4btbBoRkheZ2guBKw9y3GPLJTNopTV48wupump",
+  "chain": "solana",
+  "symbol": "FATS",
+  "t": 1792889364,
+  "price": 3.588e-05,
+  "mcap": 35885,
+  "liq": 14429.44,
+  "score": 73.9
  }
 ]
