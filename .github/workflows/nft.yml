@@ -1,0 +1,40 @@
+name: nft
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nft
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Find free mints
+        run: python nft_free_mint.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          OPENSEA_API_KEY: ${{ secrets.OPENSEA_API_KEY }}
+          MAGICEDEN_API_KEY: ${{ secrets.MAGICEDEN_API_KEY }}
+          NFT_CHAINS: ${{ vars.NFT_CHAINS || 'all' }}
+          NFT_CHANNELS: ${{ vars.NFT_CHANNELS }}
+          HOURS_AHEAD: ${{ vars.HOURS_AHEAD || '24' }}
+      - name: Save state
+        run: |
+          git config user.name "scanner-bot"
+          git config user.email "scanner-bot@users.noreply.github.com"
+          git add nft_state.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "update nft state" && git pull --rebase && git push)
