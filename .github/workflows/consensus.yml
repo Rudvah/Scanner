@@ -1,0 +1,40 @@
+name: consensus
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: consensus
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Scan
+        run: python consensus_scanner.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CALL_CHANNELS: ${{ vars.CALL_CHANNELS }}
+          MIN_SOURCES: ${{ vars.MIN_SOURCES }}
+          WINDOW_HOURS: ${{ vars.WINDOW_HOURS || '6' }}
+          GUARD: ${{ vars.GUARD || 'normal' }}
+          SEND_SKIPPED: ${{ vars.SEND_SKIPPED }}
+      - name: Save state
+        run: |
+          git config user.name "scanner-bot"
+          git config user.email "scanner-bot@users.noreply.github.com"
+          git add consensus_state.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "update consensus state" && git pull --rebase && git push)
