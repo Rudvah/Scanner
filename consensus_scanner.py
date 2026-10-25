@@ -1,4 +1,6 @@
-"""Consensus meme scanner (Solana + BNB). Alert-only. Needs memecoin_scanner.py in the same folder."""
+"""Consensus meme scanner (Solana + BNB). Alert-only. Needs memecoin_scanner.py in the same folder.
+Sources: public Telegram channels, GeckoTerminal (trending + new/active), DexScreener boosts,
+Jupiter (Solana), and your tracked wallets (WALLETS secret)."""
 import html
 import json
 import os
@@ -48,6 +50,7 @@ def load_config():
         "min_liq": 15_000, "min_age_h": 0.2, "max_age_h": 72, "max_mcap": 5_000_000,
         "max_lookups": 40, "realert_h": 12,
         "send_skipped": os.getenv("SEND_SKIPPED", "") == "1",
+        "wallets": ms.load_wallets(),
     }
 
 
@@ -103,6 +106,50 @@ def dex_boosts(path):
             if i.get("chainId") and i.get("tokenAddress")]
 
 
+def jupiter_list(kind):
+    r = ms.http_get(f"https://lite-api.jup.ag/tokens/v2/{kind}/1h", params={"limit": 50})
+    items = r if isinstance(r, list) else (r or {}).get("tokens") or (r or {}).get("data") or []
+    return [i.get("id") or i.get("address") or i.get("mint") for i in items if isinstance(i, dict)
+            and (i.get("id") or i.get("address") or i.get("mint"))]
+
+
+def gecko_active(net):
+    r = ms.http_get(f"https://api.geckoterminal.com/api/v2/networks/{GECKO_NET[net]}/new_pools")
+    out = []
+    for item in (r or {}).get("data", []):
+        tx = ((item.get("attributes") or {}).get("transactions") or {}).get("h1") or {}
+        buys, sells = tx.get("buys") or 0, tx.get("sells") or 0
+        tid = (((item.get("relationships") or {}).get("base_token") or {}).get("data") or {}).get("id", "")
+        if "_" in tid and buys >= 80 and buys > sells:
+            out.append(tid.split("_", 1)[1])
+    return out
+
+
+def update_wallets(cfg, state, now):
+    ws = state.setdefault("wallet_state", {})
+    for k in ("seen", "wallet_seen", "sol_sigs", "blocks"):
+        ws.setdefault(k, {})
+    buys = state.setdefault("wallet_buys", {})
+    by_chain = {}
+    for w in cfg["wallets"]:
+        by_chain.setdefault(w[0], []).append(w)
+    for chain, group in by_chain.items():
+        try:
+            if chain == "solana":
+                url = os.getenv("SOLANA_RPC") or ms.SOL_RPC_DEFAULT
+                for w in group:
+                    for mint in ms.watch_solana(w, ws, url):
+                        buys.setdefault(f"solana:{mint}", {})[w[2]] = now.timestamp()
+            elif chain == "bsc":
+                for tok, label in ms.watch_evm("bsc", group, ws):
+                    buys.setdefault(f"bsc:{tok.lower()}", {})[label] = now.timestamp()
+        except Exception as e:  # noqa: BLE001
+            print(f"[warn] wallet watch {chain}: {e}")
+    cut = (now - timedelta(days=3)).timestamp()
+    state["wallet_buys"] = {k: {l: t for l, t in v.items() if t > cut} for k, v in buys.items()}
+    state["wallet_buys"] = {k: v for k, v in state["wallet_buys"].items() if v}
+
+
 def pair_to_token(chain, pair):
     try:
         r = ms.http_get(f"{ms.DEX}/latest/dex/pairs/{chain}/{pair}")
@@ -112,7 +159,7 @@ def pair_to_token(chain, pair):
         return None
 
 
-def collect_mentions(cfg, now):
+def collect_mentions(cfg, now, state=None):
     found = {}
     cutoff = now - timedelta(hours=cfg["window_h"])
 
@@ -148,6 +195,29 @@ def collect_mentions(cfg, now):
                         add((net, a.lower() if net == "bsc" else a), f"GeckoTerminal trending ({net})", now)
             except Exception as e:  # noqa: BLE001
                 print(f"[warn] geckoterminal {net}: {e}")
+    for net in cfg["chains"]:
+        if net in GECKO_NET:
+            try:
+                for a in gecko_active(net):
+                    if a not in SKIP_TOKENS and a.lower() not in SKIP_TOKENS:
+                        add((net, a.lower() if net == "bsc" else a), f"GeckoTerminal new + active ({net})", now)
+            except Exception as e:  # noqa: BLE001
+                print(f"[warn] geckoterminal active {net}: {e}")
+    if "solana" in cfg["chains"]:
+        for label, kind in (("Jupiter trending", "toptrending"), ("Jupiter organic score", "toporganicscore")):
+            try:
+                for a in jupiter_list(kind):
+                    if a not in SKIP_TOKENS:
+                        add(("solana", a), label, now)
+            except Exception as e:  # noqa: BLE001
+                print(f"[warn] {label}: {e}")
+    for key, who in ((state or {}).get("wallet_buys") or {}).items():
+        chain, addr = key.split(":", 1)
+        if chain in cfg["chains"]:
+            for label, t in who.items():
+                when = datetime.fromtimestamp(t, timezone.utc)
+                if when >= cutoff:
+                    add((chain, addr), f"Wallet: {label}", when)
     for label, path in (("DexScreener boosts", "/token-boosts/top/v1"),
                         ("DexScreener boosts", "/token-boosts/latest/v1")):
         try:
@@ -275,12 +345,13 @@ def load_state():
 
 
 def run(cfg, state, now, dry=False):
-    found = collect_mentions(cfg, now)
+    update_wallets(cfg, state, now)
+    found = collect_mentions(cfg, now, state)
     state["alerted"] = {k: t for k, t in state["alerted"].items() if t > (now - timedelta(days=3)).timestamp()}
     ranked = sorted(((k, s) for k, s in found.items() if len(s) >= cfg["min_sources"]),
                     key=lambda kv: -len(kv[1]))
     print(f"{len(found)} tokens seen, {len(ranked)} with {cfg['min_sources']}+ sources "
-          f"(guard {cfg['guard']}, channels {len(cfg['channels'])})")
+          f"(guard {cfg['guard']}, channels {len(cfg['channels'])}, wallets {len(cfg['wallets'])})")
     alerts, skipped = [], []
     for (chain, addr), sources in ranked[:cfg["max_lookups"]]:
         key = f"{chain}:{addr}"
