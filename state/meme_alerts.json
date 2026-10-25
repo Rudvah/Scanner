@@ -348,5 +348,25 @@
   "mcap": 220099,
   "liq": 41985.85,
   "score": 64.8
+ },
+ {
+  "addr": "5QREAgtfP1NkuymRaFdHxr5QNF2Yry9M1YCyaompump",
+  "chain": "solana",
+  "symbol": "PumpkinBot",
+  "t": 1792939694,
+  "price": 0.0003514,
+  "mcap": 343047,
+  "liq": 49528.34,
+  "score": 79.2
+ },
+ {
+  "addr": "BY9TNoqwmeZUQwAWDjFcNziBZR567889xzWnbXQipump",
+  "chain": "solana",
+  "symbol": "KEKW",
+  "t": 1792939694,
+  "price": 7.427e-05,
+  "mcap": 71007,
+  "liq": 22538.1,
+  "score": 70.1
  }
 ]
