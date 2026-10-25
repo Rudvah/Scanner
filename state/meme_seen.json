@@ -161,5 +161,16 @@
  "BY9TNoqwmeZUQwAWDjFcNziBZR567889xzWnbXQipump": {
   "t": 1792939694,
   "r": "alerted"
+ },
+ "GaW5SiXrKqxZPimyzou32nMMse72sGe7cN56rw5kpump": {
+  "t": 1792951660,
+  "r": "unsafe",
+  "why": [
+   "Top 10 holders high ownership"
+  ]
+ },
+ "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump": {
+  "t": 1792951660,
+  "r": "alerted"
  }
 }

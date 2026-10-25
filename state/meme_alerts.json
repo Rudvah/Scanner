@@ -368,5 +368,15 @@
   "mcap": 71007,
   "liq": 22538.1,
   "score": 70.1
+ },
+ {
+  "addr": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
+  "chain": "solana",
+  "symbol": "mihao",
+  "t": 1792951660,
+  "price": 3.022e-05,
+  "mcap": 28445,
+  "liq": 12929.6,
+  "score": 72.7
  }
 ]
