@@ -338,5 +338,15 @@
   "mcap": 92166,
   "liq": 24175.46,
   "score": 69.1
+ },
+ {
+  "addr": "BTCk1ZAAGrbSq7e4L7mg8oiRKRqafkUbeLQpXeGq9BTC",
+  "chain": "solana",
+  "symbol": "BTC",
+  "t": 1792925090,
+  "price": 0.0002291,
+  "mcap": 220099,
+  "liq": 41985.85,
+  "score": 64.8
  }
 ]
