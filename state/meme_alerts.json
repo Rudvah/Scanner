@@ -298,5 +298,15 @@
   "mcap": 26984,
   "liq": 12718.77,
   "score": 70.7
+ },
+ {
+  "addr": "3R1Kry3rj4xpFwud5quHtpQQxh6e8gwp25qiaEqBXkid",
+  "chain": "solana",
+  "symbol": "KID",
+  "t": 1792906886,
+  "price": 6.821e-05,
+  "mcap": 66803,
+  "liq": 21664.12,
+  "score": 71.2
  }
 ]
