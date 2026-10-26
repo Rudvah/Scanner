@@ -428,5 +428,35 @@
   "mcap": 75210,
   "liq": 21563.54,
   "score": 65.6
+ },
+ {
+  "addr": "Asgq1QLYv4WxfEXfkcnu4jEZkcq5WA3GXW1ciEXbpump",
+  "chain": "solana",
+  "symbol": "DANIELLA",
+  "t": 1792978231,
+  "price": 0.000215,
+  "mcap": 212011,
+  "liq": 38683.2,
+  "score": 87.1
+ },
+ {
+  "addr": "82FEcWhKWAhm4QdqV5oCr7NDgXRQuXbACAstBqrJhook",
+  "chain": "solana",
+  "symbol": "HOOKER",
+  "t": 1792978231,
+  "price": 9.094e-05,
+  "mcap": 86491,
+  "liq": 24703.3,
+  "score": 71.4
+ },
+ {
+  "addr": "7JEfFdwmXfQf89ty1sF3aspN9oku9fHikA7XZTTXpump",
+  "chain": "solana",
+  "symbol": "GTA",
+  "t": 1792978231,
+  "price": 0.0005958,
+  "mcap": 588552,
+  "liq": 65190.87,
+  "score": 62.5
  }
 ]
