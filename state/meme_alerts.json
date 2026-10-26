@@ -478,5 +478,15 @@
   "mcap": 38256,
   "liq": 14695.62,
   "score": 77.6
+ },
+ {
+  "addr": "CNZb6yDRfEWphA1EAiNAThGTJSBpJvP2UnpCnuzwrift",
+  "chain": "solana",
+  "symbol": "RIFT",
+  "t": 1793059118,
+  "price": 2.476e-05,
+  "mcap": 23855,
+  "liq": 11848.88,
+  "score": 68.3
  }
 ]

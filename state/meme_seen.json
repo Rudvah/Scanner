@@ -227,5 +227,16 @@
  "7tBFpmJe48sb6Ho61QTwACeoPgh1wx4D39v3FKZTpump": {
   "t": 1793045073,
   "r": "alerted"
+ },
+ "5UJkWhgLxiZZoCbcN4NfqacmrtAPKNxwa17Puv4zpump": {
+  "t": 1793059118,
+  "r": "unsafe",
+  "why": [
+   "Creator history of rugged tokens"
+  ]
+ },
+ "CNZb6yDRfEWphA1EAiNAThGTJSBpJvP2UnpCnuzwrift": {
+  "t": 1793059118,
+  "r": "alerted"
  }
 }
