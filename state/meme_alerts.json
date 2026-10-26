@@ -458,5 +458,25 @@
   "mcap": 588552,
   "liq": 65190.87,
   "score": 62.5
+ },
+ {
+  "addr": "3kFWwzjQ6cuLw5KUCmLX3t2h5F1NawncF5dL8wxUpump",
+  "chain": "solana",
+  "symbol": "LP",
+  "t": 1793045073,
+  "price": 5.823e-05,
+  "mcap": 58231,
+  "liq": 19305.16,
+  "score": 79.3
+ },
+ {
+  "addr": "7tBFpmJe48sb6Ho61QTwACeoPgh1wx4D39v3FKZTpump",
+  "chain": "solana",
+  "symbol": "Nevada",
+  "t": 1793045073,
+  "price": 3.825e-05,
+  "mcap": 38256,
+  "liq": 14695.62,
+  "score": 77.6
  }
 ]
