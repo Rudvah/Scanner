@@ -528,5 +528,25 @@
   "mcap": 68112,
   "liq": 21155.46,
   "score": 70.3
+ },
+ {
+  "addr": "Fek7BGWxw9MabKejxFdhEftygFkJXcQjezk99fkTmKaX",
+  "chain": "solana",
+  "symbol": "TS",
+  "t": 1793095941,
+  "price": 1.898e-05,
+  "mcap": 18985,
+  "liq": 11785.53,
+  "score": 72.1
+ },
+ {
+  "addr": "HMTwjQPHbf82woGKMwDyPHAxgpwVj4boFQPMwk5Bpump",
+  "chain": "solana",
+  "symbol": "Blackout",
+  "t": 1793095941,
+  "price": 5.984e-05,
+  "mcap": 57152,
+  "liq": 18782.81,
+  "score": 68.2
  }
 ]

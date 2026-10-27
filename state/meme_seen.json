@@ -254,5 +254,27 @@
  "5zTLJ9JxQRDeTxfm8onF8Gbf7J9tfXFwRbubaLs3pump": {
   "t": 1793076464,
   "r": "alerted"
+ },
+ "CyXDdjGUeV1nGzzr4g9octqkJNcqC19DD1gmfVq5hjrH": {
+  "t": 1793095941,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked"
+  ]
+ },
+ "GrtE7xGn3iBk93hhf1zz6i3Wbfv1uDd9unStGVhGpump": {
+  "t": 1793095941,
+  "r": "unsafe",
+  "why": [
+   "Single holder ownership"
+  ]
+ },
+ "Fek7BGWxw9MabKejxFdhEftygFkJXcQjezk99fkTmKaX": {
+  "t": 1793095941,
+  "r": "alerted"
+ },
+ "HMTwjQPHbf82woGKMwDyPHAxgpwVj4boFQPMwk5Bpump": {
+  "t": 1793095941,
+  "r": "alerted"
  }
 }
