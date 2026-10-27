@@ -488,5 +488,45 @@
   "mcap": 23855,
   "liq": 11848.88,
   "score": 68.3
+ },
+ {
+  "addr": "CufvRbdcYz3zRHYhAp4efhYu7TA3KkoqAFWqnzsVuh9V",
+  "chain": "solana",
+  "symbol": "Leverage",
+  "t": 1793076464,
+  "price": 5.495e-05,
+  "mcap": 53841,
+  "liq": 20223.99,
+  "score": 77.1
+ },
+ {
+  "addr": "E6exteuDy1u6u3FfQV7SvPyU4XPdcBGi4cBnqrusocat",
+  "chain": "solana",
+  "symbol": "CAT",
+  "t": 1793076464,
+  "price": 6.721e-05,
+  "mcap": 67216,
+  "liq": 20828.19,
+  "score": 76.9
+ },
+ {
+  "addr": "GZd9LCziRNVXQWfsQ5jakdGLnkVBK7jtX3PjQjors7kT",
+  "chain": "solana",
+  "symbol": "IF",
+  "t": 1793076464,
+  "price": 2.576e-05,
+  "mcap": 25761,
+  "liq": 13564.44,
+  "score": 71.6
+ },
+ {
+  "addr": "5zTLJ9JxQRDeTxfm8onF8Gbf7J9tfXFwRbubaLs3pump",
+  "chain": "solana",
+  "symbol": "Particle",
+  "t": 1793076464,
+  "price": 7.071e-05,
+  "mcap": 68112,
+  "liq": 21155.46,
+  "score": 70.3
  }
 ]
