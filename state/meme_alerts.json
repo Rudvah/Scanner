@@ -558,5 +558,35 @@
   "mcap": 300692,
   "liq": 46089.43,
   "score": 67.0
+ },
+ {
+  "addr": "EewKK6jLaWNo4KmKgruGEp3b3jv2jbY8EtW9eziLpump",
+  "chain": "solana",
+  "symbol": "RATIOED",
+  "t": 1793133030,
+  "price": 4.234e-05,
+  "mcap": 40905,
+  "liq": 15674.98,
+  "score": 74.8
+ },
+ {
+  "addr": "67swHekykm7copiKAufdV9yuPC68mUFs4epsaKympump",
+  "chain": "solana",
+  "symbol": "ROFL!",
+  "t": 1793133030,
+  "price": 5.043e-05,
+  "mcap": 48727,
+  "liq": 16945.54,
+  "score": 67.2
+ },
+ {
+  "addr": "E8hghmFbrwhLHy4xzSS6Y5ubkPsk2uUnH9Cpn4S9Z9ve",
+  "chain": "solana",
+  "symbol": "SOUL",
+  "t": 1793133030,
+  "price": 5.76e-05,
+  "mcap": 57607,
+  "liq": 23900.44,
+  "score": 65.5
  }
 ]
