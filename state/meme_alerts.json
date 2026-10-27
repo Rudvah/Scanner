@@ -548,5 +548,15 @@
   "mcap": 57152,
   "liq": 18782.81,
   "score": 68.2
+ },
+ {
+  "addr": "J7ZfGzTcDwHhxhRCDFgSy4avH2xoBQczz9d4wJXrpump",
+  "chain": "solana",
+  "symbol": "TON",
+  "t": 1793116647,
+  "price": 0.0003048,
+  "mcap": 300692,
+  "liq": 46089.43,
+  "score": 67.0
  }
 ]
