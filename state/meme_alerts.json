@@ -588,5 +588,35 @@
   "mcap": 57607,
   "liq": 23900.44,
   "score": 65.5
+ },
+ {
+  "addr": "BtM6yvMeqZ9ZHdeEJRcep9EnaZm6qGWCEwz9t8hapump",
+  "chain": "solana",
+  "symbol": "MOTHADO",
+  "t": 1793146496,
+  "price": 0.0005013,
+  "mcap": 498359,
+  "liq": 60923.56,
+  "score": 81.6
+ },
+ {
+  "addr": "6By4iwLRAj2QfufgxgFBo6JPU448Jrd1E9JFuP6Spump",
+  "chain": "solana",
+  "symbol": "zPepe",
+  "t": 1793146496,
+  "price": 4.377e-05,
+  "mcap": 42037,
+  "liq": 16734.5,
+  "score": 68.1
+ },
+ {
+  "addr": "FfR4XdDPVrRmq7SFhkaH4srv54uFnNW2wfi83eNPpump",
+  "chain": "solana",
+  "symbol": "THINKGUY",
+  "t": 1793146496,
+  "price": 4.551e-05,
+  "mcap": 43206,
+  "liq": 16418.61,
+  "score": 67.7
  }
 ]
