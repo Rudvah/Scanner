@@ -332,5 +332,12 @@
  "DUKEjskPBoszW4xEowcSWptekuUZpwLFv6nTt5Cmpump": {
   "t": 1793213918,
   "r": "alerted"
+ },
+ "DPe74dTCW7aFSCwCK4ZFWJJ4BL7uVJ9i4P58VUWJpump": {
+  "t": 1793228713,
+  "r": "unsafe",
+  "why": [
+   "Creator history of rugged tokens"
+  ]
  }
 }
