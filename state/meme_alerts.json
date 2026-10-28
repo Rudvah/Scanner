@@ -618,5 +618,25 @@
   "mcap": 43206,
   "liq": 16418.61,
   "score": 67.7
+ },
+ {
+  "addr": "69Y6D9xQKkDYPvESDiKaQpU9Z5FXzY8LB7PthQkmpump",
+  "chain": "solana",
+  "symbol": "Rapport",
+  "t": 1793167304,
+  "price": 0.0006207,
+  "mcap": 598750,
+  "liq": 67418.55,
+  "score": 80.6
+ },
+ {
+  "addr": "DDgEb1AyoqR81NNTJX44AgpfYkbnWAegf4BrxP1Bpump",
+  "chain": "solana",
+  "symbol": "DORA",
+  "t": 1793167304,
+  "price": 6.033e-05,
+  "mcap": 57276,
+  "liq": 19228.88,
+  "score": 65.0
  }
 ]
