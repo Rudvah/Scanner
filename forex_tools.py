@@ -4,29 +4,44 @@ Every trade: 1.5 x ATR stop, 2R target, one trade at a time, spread included.
 --backtest  tests every pair x rule on ~2 years; first 60% in-sample, last 40% out-of-sample.
 --scan      alerts on fresh signals on the latest closed candle, skipping rules that FAILED.
 --demo      backtest on fake data (no internet).
-FOREX_TF: 4h, 1h, or all (both). FOREX_PAIRS: default EURUSD,GBPUSD,USDJPY,XAUUSD.
+FOREX_TF: 4h, 1h, or all (both). FOREX_PAIRS: default all (28 forex pairs + gold) or a comma list.
+FOREX_REPORT: set to "full" for the long backtest report.
 Needs: pip install requests pandas numpy yfinance"""
 import argparse
 import json
 import os
 import sys
+import time
 from datetime import datetime, timezone
 
 import numpy as np
 import pandas as pd
 import requests
 
-TICKER = {"EURUSD": "EURUSD=X", "GBPUSD": "GBPUSD=X", "USDJPY": "USDJPY=X",
-          "XAUUSD": "GC=F",
-          "AUDUSD": "AUDUSD=X", "USDCAD": "USDCAD=X"}
-SPREAD = {"EURUSD": 0.00010, "GBPUSD": 0.00012, "USDJPY": 0.010, "XAUUSD": 0.30,
-          "AUDUSD": 0.00012, "USDCAD": 0.00015}
+TICKER = {"XAUUSD": "GC=F"}
+_MAJORS = ["EURUSD", "GBPUSD", "USDJPY", "USDCHF", "AUDUSD", "USDCAD", "NZDUSD"]
+_CROSSES = ["EURGBP", "EURJPY", "EURCHF", "EURAUD", "EURCAD", "EURNZD", "GBPJPY", "GBPCHF", "GBPAUD", "GBPCAD",
+            "GBPNZD", "AUDJPY", "AUDCHF", "AUDCAD", "AUDNZD", "NZDJPY", "NZDCHF", "NZDCAD", "CADJPY", "CADCHF", "CHFJPY"]
+for _p in _MAJORS + _CROSSES:
+    TICKER[_p] = _p + "=X"
+SPREAD = {"XAUUSD": 0.30}
+for _p in _MAJORS + _CROSSES:
+    if _p.endswith("JPY"):
+        SPREAD[_p] = 0.010 if _p == "USDJPY" else 0.030 if _p.startswith("GBP") else 0.020
+    elif _p in ("EURUSD", "USDCHF"):
+        SPREAD[_p] = 0.00010
+    elif _p in _MAJORS:
+        SPREAD[_p] = 0.00013
+    else:
+        SPREAD[_p] = 0.00030 if _p.startswith("GBP") else 0.00020
+OLD_DEFAULT_PAIRS = "EURUSD,GBPUSD,USDJPY,XAUUSD"
+ALL_PAIRS = ["XAUUSD"] + _MAJORS + _CROSSES
 TF_HOURS = {"1h": 1, "4h": 4}
 
 STOP_ATR = 1.5
 R_MULT = 2.0
 MAX_BARS = 30
-MIN_TRADES = 40
+MIN_TRADES = 60
 RESULTS_FILE = "forex_results.json"
 STATE_FILE = "forex_state.json"
 
@@ -88,11 +103,24 @@ def make_demo(symbol, tf, n=3000):
                          "low": np.minimum(open_, close) * (1 - wick), "close": close}, index=idx)
 
 
+_RAW = {}
+
+
 def load(symbol, tf, period):
     import yfinance as yf
-    raw = yf.download(symbol, interval="1h", period=period, auto_adjust=True, progress=False)
+    if (symbol, period) not in _RAW:
+        raw = None
+        for attempt in range(2):
+            raw = yf.download(symbol, interval="1h", period=period, auto_adjust=True, progress=False)
+            if raw is not None and not raw.empty:
+                break
+            time.sleep(2)
+        _RAW[(symbol, period)] = raw
+        time.sleep(0.2)
+    raw = _RAW[(symbol, period)]
     if raw is None or raw.empty:
         raise RuntimeError(f"no data for {symbol}")
+    raw = raw.copy()
     if isinstance(raw.columns, pd.MultiIndex):
         raw.columns = raw.columns.get_level_values(0)
     df = raw.rename(columns=str.lower)[["open", "high", "low", "close"]].dropna()
@@ -147,10 +175,11 @@ def stats(tr):
 def judge(s_in, s_out, total):
     if total < MIN_TRADES:
         return "INSUFFICIENT"
-    if s_in["avg_R"] > 0 and s_out["trades"] >= 15 and s_out["avg_R"] > 0.05 and s_out["profit_factor"] > 1.1:
+    if (s_in["avg_R"] > 0.05 and s_in["profit_factor"] > 1.1 and s_out["trades"] >= 30
+            and s_out["avg_R"] > 0.10 and s_out["profit_factor"] > 1.2):
         return "PASS"
     return "FAIL"
-  
+
 
 def read_json(path):
     try:
@@ -170,19 +199,32 @@ def send_telegram(text):
     if not tok or not chat:
         print("[info] Telegram not set up (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID missing)")
         return False
-    try:
-        r = requests.post(f"https://api.telegram.org/bot{tok}/sendMessage",
-                          json={"chat_id": chat, "text": text, "disable_web_page_preview": True}, timeout=15)
-        if r.status_code != 200:
-            print(f"[warn] telegram HTTP {r.status_code}: {r.text[:200]}")
-        return r.status_code == 200
-    except Exception as e:  # noqa: BLE001
-        print(f"[warn] telegram failed ({e.__class__.__name__})")
-        return False
+    parts, chunk = [], ""
+    for line in text.split("\n"):
+        if len(chunk) + len(line) + 1 > 3800:
+            parts.append(chunk)
+            chunk = ""
+        chunk += line + "\n"
+    parts.append(chunk)
+    ok = True
+    for part in parts:
+        try:
+            r = requests.post(f"https://api.telegram.org/bot{tok}/sendMessage",
+                              json={"chat_id": chat, "text": part, "disable_web_page_preview": True}, timeout=15)
+            if r.status_code != 200:
+                print(f"[warn] telegram HTTP {r.status_code}: {r.text[:200]}")
+            ok = ok and r.status_code == 200
+        except Exception as e:  # noqa: BLE001
+            print(f"[warn] telegram failed ({e.__class__.__name__})")
+            ok = False
+    return ok
 
 
-def get_pairs():
-    names = [p.strip().upper() for p in os.getenv("FOREX_PAIRS", "EURUSD,GBPUSD,USDJPY,XAUUSD").split(",") if p.strip()]
+def get_pairs(default=OLD_DEFAULT_PAIRS):
+    raw = os.getenv("FOREX_PAIRS", "").strip() or default
+    if raw.lower() == "all":
+        return list(ALL_PAIRS)
+    names = [p.strip().upper() for p in raw.split(",") if p.strip()]
     bad = [p for p in names if p not in TICKER]
     if bad:
         print(f"[warn] unknown pairs ignored: {', '.join(bad)} (supported: {', '.join(TICKER)})")
@@ -230,13 +272,20 @@ def run_backtest(tf, pairs, notify=True, write=True):
         order = {"PASS": 0, "INSUFFICIENT": 1, "FAIL": 2}
         ranked = sorted(combos.items(), key=lambda kv: (order.get(kv[1]["verdict"], 3), -kv[1]["oos_avg_R"]))
         icon = {"PASS": "✅", "FAIL": "❌", "INSUFFICIENT": "❔"}
+        full = os.getenv("FOREX_REPORT", "").lower() == "full" or len(ranked) <= 14
+        shown = ranked if full else [kv for kv in ranked if kv[1]["verdict"] == "PASS"]
         lines = [f"{icon.get(c['verdict'], '')} {k.split('|')[0]} {k.split('|')[1]}: {c['verdict']} | {c['trades']} trades, "
                  f"win {c.get('win_rate', 0)}%, avg {c['avg_R']:+.2f}R, recent {c['oos_avg_R']:+.2f}R ({c['oos_trades']})"
-                 for k, c in ranked]
-        msg = (f"📊 Forex reliability ({tf}, ~2y of past data)\n" + "\n".join(lines) +
+                 for k, c in shown]
+        n_fail = sum(1 for c in combos.values() if c["verdict"] == "FAIL")
+        n_few = sum(1 for c in combos.values() if c["verdict"] == "INSUFFICIENT")
+        if not full:
+            lines = lines or ["No combination passed."]
+            lines.append(f"\n❌ {n_fail} failed and ❔ {n_few} had too few trades (not listed: the bot ignores the failed ones).")
+        msg = (f"📊 Forex reliability ({tf}, ~2y of past data, {len(set(k.split('|')[0] for k in combos))} pairs)\n" + "\n".join(lines) +
                f"\n\n{len(passed)} of {len(combos)} passed. PASS = profitable in both the older and the recent part of the data. "
-               "FAIL = not reliable, so the bot will not send signals for it. ❔ = too few trades to judge. "
-               "Avg R = average result per trade in units of risk. Past results only: some passes are luck, so risk little.")
+               "With this many combinations tested, some passes are luck: treat a PASS as a shortlist, not a promise. "
+               "Avg R = average result per trade in units of risk. Past results only, so risk little.")
         send_telegram(msg)
     return combos
 
@@ -266,14 +315,14 @@ def run_scan(tf, pairs, notify=True, write=True):
                 continue
             c = combos.get(f"{pair}|{sname}", {})
             verdict = c.get("verdict", "UNTESTED")
-            if verdict == "FAIL":
+            if verdict == "FAIL" or (verdict == "UNTESTED" and combos):
                 continue
             note = {"PASS": "RELIABLE so far", "INSUFFICIENT": "too few past trades to judge",
                     "UNTESTED": "not backtested yet"}.get(verdict, verdict)
             past = (f"\nPast {tf}: {c['trades']} trades, win {c.get('win_rate', 0)}%, avg {c['avg_R']:+.2f}R, "
                     f"recent {c['oos_avg_R']:+.2f}R") if "trades" in c and "avg_R" in c else ""
             entry, risk = float(df["close"].iloc[-1]), float(STOP_ATR * a.iloc[-1])
-            dp = 3 if pair == "USDJPY" else 2 if pair == "XAUUSD" else 5
+            dp = 3 if pair.endswith("JPY") else 2 if pair == "XAUUSD" else 5
             msg = (f"{'🟢 LONG' if s == 1 else '🔴 SHORT'} {pair} ({tf}) via {sname}\n"
                    f"Ref price {entry:.{dp}f} | stop {entry - s * risk:.{dp}f} | target {entry + s * risk * R_MULT:.{dp}f}\n"
                    f"Reliability: {verdict} ({note}){past}\nNot a guarantee. Risk 1% or less and always use the stop.")
@@ -303,7 +352,7 @@ def main():
     if bad or not tfs:
         print(f"Unsupported timeframe '{args.tf}', use 1h, 4h or all")
         return 1
-    pairs = get_pairs()
+    pairs = get_pairs("all")
     if args.demo:
         load = lambda symbol, tf, period: make_demo(symbol, tf)  # noqa: E731
         for tf in tfs:
@@ -319,4 +368,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-  
