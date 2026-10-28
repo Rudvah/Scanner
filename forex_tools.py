@@ -1,30 +1,11 @@
-#!/usr/bin/env python3
-"""
-Forex backtester + signal scanner (alert-only, does NOT trade).
-
-Three classic rules are tested on ~2 years of past data (spread cost included):
-  ema_cross          trend: EMA20 crosses EMA50
-  rsi_reversion      reversal: RSI(14) leaves oversold/overbought
-  donchian_breakout  breakout: close beats the previous 20-bar high/low
-Every trade uses a 1.5 x ATR stop and a 2R target, one trade at a time.
-
---backtest  tests every pair x rule. The first 60% of history is "in-sample", the last 40%
-            is "out-of-sample" (rules never tuned on it). A rule gets PASS only if it is
-            profitable in BOTH parts, with enough trades. Results go to forex_results.json
-            and a Telegram summary.
---scan      looks at the latest CLOSED candle and alerts on fresh signals, skipping rules
-            whose backtest verdict is FAIL. State goes to forex_state.json.
---demo      runs the backtest on fake random data (no internet) to test the code.
-
-Settings (environment variables or flags):
-  FOREX_TF      4h (default) or 1h      (--tf also works)
-  FOREX_PAIRS   default "EURUSD,GBPUSD,USDJPY,XAUUSD"; also AUDUSD, USDCAD
-  TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
-
-Needs: pip install requests pandas numpy yfinance
-IMPORTANT: a PASS means "held up in past data", not "will make money". With a dozen
-combinations tested, a few will pass by luck. Forward-test with tiny risk before trusting it.
-"""
+"""Forex backtester + signal scanner (alert-only, does NOT trade).
+Rules: ema_cross (EMA20/EMA50), rsi_reversion (RSI14 leaves 30/70), donchian_breakout (20-bar high/low).
+Every trade: 1.5 x ATR stop, 2R target, one trade at a time, spread included.
+--backtest  tests every pair x rule on ~2 years; first 60% in-sample, last 40% out-of-sample.
+--scan      alerts on fresh signals on the latest closed candle, skipping rules that FAILED.
+--demo      backtest on fake data (no internet).
+FOREX_TF: 4h, 1h, or all (both). FOREX_PAIRS: default EURUSD,GBPUSD,USDJPY,XAUUSD.
+Needs: pip install requests pandas numpy yfinance"""
 import argparse
 import json
 import os
@@ -36,9 +17,8 @@ import pandas as pd
 import requests
 
 TICKER = {"EURUSD": "EURUSD=X", "GBPUSD": "GBPUSD=X", "USDJPY": "USDJPY=X",
-          "XAUUSD": "GC=F",  # gold futures as a proxy for spot gold
+          "XAUUSD": "GC=F",
           "AUDUSD": "AUDUSD=X", "USDCAD": "USDCAD=X"}
-# Assumed round-trip spread in price units (roughly 1 pip; 0.30 for gold). Real spreads vary.
 SPREAD = {"EURUSD": 0.00010, "GBPUSD": 0.00012, "USDJPY": 0.010, "XAUUSD": 0.30,
           "AUDUSD": 0.00012, "USDCAD": 0.00015}
 TF_HOURS = {"1h": 1, "4h": 4}
@@ -51,7 +31,6 @@ RESULTS_FILE = "forex_results.json"
 STATE_FILE = "forex_state.json"
 
 
-# ---------------------------------------------------------------- indicators
 def ema(s, n):
     return s.ewm(span=n, adjust=False).mean()
 
@@ -70,7 +49,6 @@ def atr(df, n=14):
     return tr.ewm(alpha=1 / n, adjust=False).mean()
 
 
-# ---------------------------------------------------------------- strategies (+1 long, -1 short)
 def _signal(long_cond, short_cond, index):
     s = pd.Series(0, index=index)
     s[long_cond.fillna(False)] = 1
@@ -99,9 +77,7 @@ STRATEGIES = {"ema_cross": sig_ema_cross, "rsi_reversion": sig_rsi_reversion,
               "donchian_breakout": sig_donchian_breakout}
 
 
-# ---------------------------------------------------------------- data
 def make_demo(symbol, tf, n=3000):
-    """Fake random-walk candles for offline testing."""
     h = TF_HOURS[tf]
     rng = np.random.default_rng(sum(ord(ch) for ch in symbol))
     close = 100 * np.exp(np.cumsum(rng.normal(0, 0.002, n)))
@@ -113,7 +89,6 @@ def make_demo(symbol, tf, n=3000):
 
 
 def load(symbol, tf, period):
-    """Download hourly candles from Yahoo Finance, resample to tf, drop the unfinished candle."""
     import yfinance as yf
     raw = yf.download(symbol, interval="1h", period=period, auto_adjust=True, progress=False)
     if raw is None or raw.empty:
@@ -129,10 +104,7 @@ def load(symbol, tf, period):
     return df[df.index + pd.Timedelta(hours=h) <= pd.Timestamp.now(tz="UTC")]
 
 
-# ---------------------------------------------------------------- backtest engine
 def backtest(df, signals, atr_vals, spread, stop_mult=STOP_ATR, r_mult=R_MULT, max_bars=MAX_BARS):
-    """Signal on candle i's close -> enter at candle i+1's open. If stop and target are hit in
-    the same candle, the stop is assumed to hit first (pessimistic). Returns trades with R results."""
     o, h, l, c = (df[k].values for k in ("open", "high", "low", "close"))
     n, trades, i = len(df), [], 0
     while i < n - 1:
@@ -157,7 +129,7 @@ def backtest(df, signals, atr_vals, spread, stop_mult=STOP_ATR, r_mult=R_MULT, m
         if exit_price is None:
             j, exit_price = end, c[end]
         trades.append({"entry_time": df.index[ei], "dir": s, "R": ((exit_price - entry) * s - spread) / risk})
-        i = j + 1  # one trade at a time
+        i = j + 1
     return pd.DataFrame(trades, columns=["entry_time", "dir", "R"])
 
 
@@ -178,9 +150,8 @@ def judge(s_in, s_out, total):
     if s_in["avg_R"] > 0 and s_out["trades"] >= 15 and s_out["avg_R"] > 0.05 and s_out["profit_factor"] > 1.1:
         return "PASS"
     return "FAIL"
+  
 
-
-# ---------------------------------------------------------------- io helpers
 def read_json(path):
     try:
         with open(path) as f:
@@ -218,7 +189,6 @@ def get_pairs():
     return [p for p in names if p in TICKER]
 
 
-# ---------------------------------------------------------------- backtest runner
 def run_backtest(tf, pairs, notify=True, write=True):
     combos, rows = {}, []
     for pair in pairs:
@@ -235,7 +205,7 @@ def run_backtest(tf, pairs, notify=True, write=True):
             s_in, s_out = stats(tr[tr["entry_time"] < cut]), stats(tr[tr["entry_time"] >= cut])
             verdict = judge(s_in, s_out, s_all["trades"])
             combos[f"{pair}|{sname}"] = {"verdict": verdict, "trades": s_all["trades"],
-                                         "avg_R": round(s_all["avg_R"], 3),
+                                         "avg_R": round(s_all["avg_R"], 3), "win_rate": round(s_all["win_rate"]),
                                          "oos_trades": s_out["trades"], "oos_avg_R": round(s_out["avg_R"], 3),
                                          "oos_pf": round(s_out["profit_factor"], 2)}
             rows.append((pair, sname, s_all, s_out, verdict))
@@ -250,25 +220,30 @@ def run_backtest(tf, pairs, notify=True, write=True):
     print(f"\n{len(passed)} of {len(combos)} combinations passed. Some pass by luck; forward-test with tiny risk.")
 
     if write:
-        write_json(RESULTS_FILE, {"tf": tf, "generated": now, "combos": combos})
+        res = read_json(RESULTS_FILE)
+        res.pop("tf", None), res.pop("combos", None), res.pop("generated", None)
+        res.setdefault("by_tf", {})[tf] = {"generated": now, "combos": combos}
+        write_json(RESULTS_FILE, res)
         if not os.path.exists(STATE_FILE):
             write_json(STATE_FILE, {})
     if notify and combos:
-        if passed:
-            lines = [f"{p} {n}: out-of-sample {c['oos_avg_R']:+.2f}R avg, {c['oos_trades']} trades" for p, n, c in passed]
-            msg = (f"📊 Forex backtest ({tf}, ~2y) - rules that held up:\n" + "\n".join(lines) +
-                   "\n\nPast results only. Forward-test with tiny risk first.")
-        else:
-            msg = (f"📊 Forex backtest ({tf}, ~2y): no rule passed. "
-                   "That is useful to know: don't trade these rules as they are.")
+        order = {"PASS": 0, "INSUFFICIENT": 1, "FAIL": 2}
+        ranked = sorted(combos.items(), key=lambda kv: (order.get(kv[1]["verdict"], 3), -kv[1]["oos_avg_R"]))
+        icon = {"PASS": "✅", "FAIL": "❌", "INSUFFICIENT": "❔"}
+        lines = [f"{icon.get(c['verdict'], '')} {k.split('|')[0]} {k.split('|')[1]}: {c['verdict']} | {c['trades']} trades, "
+                 f"win {c.get('win_rate', 0)}%, avg {c['avg_R']:+.2f}R, recent {c['oos_avg_R']:+.2f}R ({c['oos_trades']})"
+                 for k, c in ranked]
+        msg = (f"📊 Forex reliability ({tf}, ~2y of past data)\n" + "\n".join(lines) +
+               f"\n\n{len(passed)} of {len(combos)} passed. PASS = profitable in both the older and the recent part of the data. "
+               "FAIL = not reliable, so the bot will not send signals for it. ❔ = too few trades to judge. "
+               "Avg R = average result per trade in units of risk. Past results only: some passes are luck, so risk little.")
         send_telegram(msg)
     return combos
 
 
-# ---------------------------------------------------------------- scanner
 def run_scan(tf, pairs, notify=True, write=True):
     results, state = read_json(RESULTS_FILE), read_json(STATE_FILE)
-    combos = results.get("combos", {}) if results.get("tf") == tf else {}
+    combos = (results.get("by_tf", {}).get(tf) or {}).get("combos") or (results.get("combos", {}) if results.get("tf") == tf else {})
     h = TF_HOURS[tf]
     now = pd.Timestamp.now(tz="UTC")
     alerts = 0
@@ -283,20 +258,25 @@ def run_scan(tf, pairs, notify=True, write=True):
         a = atr(df)
         bar_time = df.index[-1]
         if now - (bar_time + pd.Timedelta(hours=h)) > pd.Timedelta(hours=2 * h):
-            continue  # market closed / stale data
+            continue
         for sname, fn in STRATEGIES.items():
             s = int(fn(df).fillna(0).iloc[-1])
             key = f"{pair}|{sname}|{tf}"
             if s == 0 or state.get(key) == str(bar_time):
                 continue
-            verdict = combos.get(f"{pair}|{sname}", {}).get("verdict", "UNTESTED")
+            c = combos.get(f"{pair}|{sname}", {})
+            verdict = c.get("verdict", "UNTESTED")
             if verdict == "FAIL":
                 continue
+            note = {"PASS": "RELIABLE so far", "INSUFFICIENT": "too few past trades to judge",
+                    "UNTESTED": "not backtested yet"}.get(verdict, verdict)
+            past = (f"\nPast {tf}: {c['trades']} trades, win {c.get('win_rate', 0)}%, avg {c['avg_R']:+.2f}R, "
+                    f"recent {c['oos_avg_R']:+.2f}R") if "trades" in c and "avg_R" in c else ""
             entry, risk = float(df["close"].iloc[-1]), float(STOP_ATR * a.iloc[-1])
             dp = 3 if pair == "USDJPY" else 2 if pair == "XAUUSD" else 5
             msg = (f"{'🟢 LONG' if s == 1 else '🔴 SHORT'} {pair} ({tf}) via {sname}\n"
                    f"Ref price {entry:.{dp}f} | stop {entry - s * risk:.{dp}f} | target {entry + s * risk * R_MULT:.{dp}f}\n"
-                   f"Backtest verdict: {verdict}\nNot a guarantee. Risk 1% or less and always use the stop.")
+                   f"Reliability: {verdict} ({note}){past}\nNot a guarantee. Risk 1% or less and always use the stop.")
             print(msg.replace("\n", " | "))
             if notify:
                 send_telegram(msg)
@@ -310,7 +290,6 @@ def run_scan(tf, pairs, notify=True, write=True):
     return alerts
 
 
-# ---------------------------------------------------------------- main
 def main():
     global load  # noqa: PLW0603
     ap = argparse.ArgumentParser()
@@ -319,22 +298,25 @@ def main():
     ap.add_argument("--demo", action="store_true", help="fake data, no internet, nothing saved")
     ap.add_argument("--tf", default=os.getenv("FOREX_TF", "4h"))
     args = ap.parse_args()
-    if args.tf not in TF_HOURS:
-        print(f"Unsupported timeframe '{args.tf}', use 1h or 4h")
+    tfs = list(TF_HOURS) if args.tf.lower() == "all" else [t.strip() for t in args.tf.split(",") if t.strip()]
+    bad = [t for t in tfs if t not in TF_HOURS]
+    if bad or not tfs:
+        print(f"Unsupported timeframe '{args.tf}', use 1h, 4h or all")
         return 1
     pairs = get_pairs()
     if args.demo:
         load = lambda symbol, tf, period: make_demo(symbol, tf)  # noqa: E731
-        run_backtest(args.tf, pairs, notify=False, write=False)
+        for tf in tfs:
+            run_backtest(tf, pairs, notify=False, write=False)
         return 0
-    if args.scan:
-        run_scan(args.tf, pairs)
-    elif args.backtest:
-        run_backtest(args.tf, pairs)
-    else:
+    if not (args.scan or args.backtest):
         ap.print_help()
+        return 0
+    for tf in tfs:
+        run_scan(tf, pairs) if args.scan else run_backtest(tf, pairs)
     return 0
 
 
 if __name__ == "__main__":
     sys.exit(main())
+  
