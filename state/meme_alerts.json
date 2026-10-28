@@ -678,5 +678,15 @@
   "mcap": 28222,
   "liq": 12946.99,
   "score": 62.0
+ },
+ {
+  "addr": "DUKEjskPBoszW4xEowcSWptekuUZpwLFv6nTt5Cmpump",
+  "chain": "solana",
+  "symbol": "HOUSECOIN",
+  "t": 1793213918,
+  "price": 4.239e-05,
+  "mcap": 42390,
+  "liq": 15826.61,
+  "score": 71.3
  }
 ]
