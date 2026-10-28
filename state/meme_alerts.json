@@ -668,5 +668,15 @@
   "mcap": 244938,
   "liq": 160987.83,
   "score": 60.0
+ },
+ {
+  "addr": "9rdw2ukP4gW5rQFS1RZrFdmpmB9tBFdngsYXP5NLpump",
+  "chain": "solana",
+  "symbol": "garry",
+  "t": 1793193685,
+  "price": 2.954e-05,
+  "mcap": 28222,
+  "liq": 12946.99,
+  "score": 62.0
  }
 ]
