@@ -2,6 +2,384 @@
  "by_tf": {
   "1h": {
    "combos": {
+    "AUDCAD|donchian_breakout": {
+     "avg_R": -0.274,
+     "oos_avg_R": -0.29,
+     "oos_pf": 0.57,
+     "oos_trades": 191,
+     "trades": 446,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "AUDCAD|ema_cross": {
+     "avg_R": -0.166,
+     "oos_avg_R": -0.136,
+     "oos_pf": 0.77,
+     "oos_trades": 119,
+     "trades": 294,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "AUDCAD|rsi_reversion": {
+     "avg_R": -0.052,
+     "oos_avg_R": -0.018,
+     "oos_pf": 0.97,
+     "oos_trades": 133,
+     "trades": 336,
+     "verdict": "FAIL",
+     "win_rate": 42
+    },
+    "AUDCHF|donchian_breakout": {
+     "avg_R": -0.263,
+     "oos_avg_R": -0.285,
+     "oos_pf": 0.57,
+     "oos_trades": 166,
+     "trades": 430,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "AUDCHF|ema_cross": {
+     "avg_R": -0.165,
+     "oos_avg_R": -0.081,
+     "oos_pf": 0.85,
+     "oos_trades": 95,
+     "trades": 253,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "AUDCHF|rsi_reversion": {
+     "avg_R": -0.111,
+     "oos_avg_R": -0.182,
+     "oos_pf": 0.71,
+     "oos_trades": 113,
+     "trades": 323,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "AUDJPY|donchian_breakout": {
+     "avg_R": -0.004,
+     "oos_avg_R": 0.117,
+     "oos_pf": 1.19,
+     "oos_trades": 262,
+     "trades": 663,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "AUDJPY|ema_cross": {
+     "avg_R": 0.079,
+     "oos_avg_R": 0.151,
+     "oos_pf": 1.25,
+     "oos_trades": 95,
+     "trades": 265,
+     "verdict": "FAIL",
+     "win_rate": 41
+    },
+    "AUDJPY|rsi_reversion": {
+     "avg_R": -0.127,
+     "oos_avg_R": -0.212,
+     "oos_pf": 0.71,
+     "oos_trades": 169,
+     "trades": 437,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "AUDNZD|donchian_breakout": {
+     "avg_R": -0.421,
+     "oos_avg_R": -0.313,
+     "oos_pf": 0.58,
+     "oos_trades": 228,
+     "trades": 500,
+     "verdict": "FAIL",
+     "win_rate": 26
+    },
+    "AUDNZD|ema_cross": {
+     "avg_R": -0.346,
+     "oos_avg_R": -0.331,
+     "oos_pf": 0.56,
+     "oos_trades": 118,
+     "trades": 292,
+     "verdict": "FAIL",
+     "win_rate": 28
+    },
+    "AUDNZD|rsi_reversion": {
+     "avg_R": -0.25,
+     "oos_avg_R": -0.225,
+     "oos_pf": 0.67,
+     "oos_trades": 158,
+     "trades": 320,
+     "verdict": "FAIL",
+     "win_rate": 31
+    },
+    "AUDUSD|donchian_breakout": {
+     "avg_R": -0.126,
+     "oos_avg_R": -0.084,
+     "oos_pf": 0.88,
+     "oos_trades": 311,
+     "trades": 745,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "AUDUSD|ema_cross": {
+     "avg_R": -0.131,
+     "oos_avg_R": -0.128,
+     "oos_pf": 0.82,
+     "oos_trades": 123,
+     "trades": 304,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "AUDUSD|rsi_reversion": {
+     "avg_R": 0.055,
+     "oos_avg_R": -0.013,
+     "oos_pf": 0.98,
+     "oos_trades": 171,
+     "trades": 430,
+     "verdict": "FAIL",
+     "win_rate": 40
+    },
+    "CADCHF|donchian_breakout": {
+     "avg_R": -0.287,
+     "oos_avg_R": -0.271,
+     "oos_pf": 0.57,
+     "oos_trades": 156,
+     "trades": 401,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "CADCHF|ema_cross": {
+     "avg_R": -0.246,
+     "oos_avg_R": -0.263,
+     "oos_pf": 0.57,
+     "oos_trades": 115,
+     "trades": 265,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "CADCHF|rsi_reversion": {
+     "avg_R": -0.108,
+     "oos_avg_R": -0.149,
+     "oos_pf": 0.72,
+     "oos_trades": 98,
+     "trades": 297,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "CADJPY|donchian_breakout": {
+     "avg_R": -0.01,
+     "oos_avg_R": 0.12,
+     "oos_pf": 1.2,
+     "oos_trades": 236,
+     "trades": 642,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "CADJPY|ema_cross": {
+     "avg_R": -0.115,
+     "oos_avg_R": -0.025,
+     "oos_pf": 0.96,
+     "oos_trades": 108,
+     "trades": 283,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "CADJPY|rsi_reversion": {
+     "avg_R": -0.004,
+     "oos_avg_R": -0.05,
+     "oos_pf": 0.92,
+     "oos_trades": 167,
+     "trades": 422,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "CHFJPY|donchian_breakout": {
+     "avg_R": -0.091,
+     "oos_avg_R": 0.039,
+     "oos_pf": 1.06,
+     "oos_trades": 247,
+     "trades": 650,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "CHFJPY|ema_cross": {
+     "avg_R": -0.062,
+     "oos_avg_R": 0.038,
+     "oos_pf": 1.06,
+     "oos_trades": 108,
+     "trades": 294,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "CHFJPY|rsi_reversion": {
+     "avg_R": -0.163,
+     "oos_avg_R": -0.217,
+     "oos_pf": 0.69,
+     "oos_trades": 172,
+     "trades": 403,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "EURAUD|donchian_breakout": {
+     "avg_R": -0.057,
+     "oos_avg_R": -0.057,
+     "oos_pf": 0.91,
+     "oos_trades": 237,
+     "trades": 599,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "EURAUD|ema_cross": {
+     "avg_R": -0.059,
+     "oos_avg_R": -0.026,
+     "oos_pf": 0.96,
+     "oos_trades": 113,
+     "trades": 290,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "EURAUD|rsi_reversion": {
+     "avg_R": -0.055,
+     "oos_avg_R": -0.004,
+     "oos_pf": 0.99,
+     "oos_trades": 156,
+     "trades": 395,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "EURCAD|donchian_breakout": {
+     "avg_R": -0.155,
+     "oos_avg_R": -0.147,
+     "oos_pf": 0.79,
+     "oos_trades": 226,
+     "trades": 575,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "EURCAD|ema_cross": {
+     "avg_R": -0.144,
+     "oos_avg_R": -0.136,
+     "oos_pf": 0.81,
+     "oos_trades": 123,
+     "trades": 291,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "EURCAD|rsi_reversion": {
+     "avg_R": -0.175,
+     "oos_avg_R": -0.129,
+     "oos_pf": 0.8,
+     "oos_trades": 163,
+     "trades": 390,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "EURCHF|donchian_breakout": {
+     "avg_R": -0.194,
+     "oos_avg_R": -0.213,
+     "oos_pf": 0.67,
+     "oos_trades": 179,
+     "trades": 489,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "EURCHF|ema_cross": {
+     "avg_R": -0.159,
+     "oos_avg_R": -0.11,
+     "oos_pf": 0.83,
+     "oos_trades": 107,
+     "trades": 286,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "EURCHF|rsi_reversion": {
+     "avg_R": -0.108,
+     "oos_avg_R": -0.1,
+     "oos_pf": 0.83,
+     "oos_trades": 118,
+     "trades": 320,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "EURGBP|donchian_breakout": {
+     "avg_R": -0.308,
+     "oos_avg_R": -0.365,
+     "oos_pf": 0.56,
+     "oos_trades": 245,
+     "trades": 620,
+     "verdict": "FAIL",
+     "win_rate": 31
+    },
+    "EURGBP|ema_cross": {
+     "avg_R": -0.381,
+     "oos_avg_R": -0.318,
+     "oos_pf": 0.6,
+     "oos_trades": 118,
+     "trades": 314,
+     "verdict": "FAIL",
+     "win_rate": 30
+    },
+    "EURGBP|rsi_reversion": {
+     "avg_R": -0.228,
+     "oos_avg_R": -0.223,
+     "oos_pf": 0.69,
+     "oos_trades": 141,
+     "trades": 382,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "EURJPY|donchian_breakout": {
+     "avg_R": -0.09,
+     "oos_avg_R": -0.045,
+     "oos_pf": 0.93,
+     "oos_trades": 253,
+     "trades": 655,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "EURJPY|ema_cross": {
+     "avg_R": -0.124,
+     "oos_avg_R": -0.114,
+     "oos_pf": 0.84,
+     "oos_trades": 121,
+     "trades": 284,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "EURJPY|rsi_reversion": {
+     "avg_R": -0.073,
+     "oos_avg_R": -0.062,
+     "oos_pf": 0.9,
+     "oos_trades": 146,
+     "trades": 399,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "EURNZD|donchian_breakout": {
+     "avg_R": -0.15,
+     "oos_avg_R": -0.193,
+     "oos_pf": 0.73,
+     "oos_trades": 244,
+     "trades": 617,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "EURNZD|ema_cross": {
+     "avg_R": -0.06,
+     "oos_avg_R": -0.005,
+     "oos_pf": 0.99,
+     "oos_trades": 104,
+     "trades": 274,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "EURNZD|rsi_reversion": {
+     "avg_R": -0.133,
+     "oos_avg_R": -0.061,
+     "oos_pf": 0.91,
+     "oos_trades": 151,
+     "trades": 406,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
     "EURUSD|donchian_breakout": {
      "avg_R": -0.131,
      "oos_avg_R": -0.233,
@@ -29,18 +407,153 @@
      "verdict": "FAIL",
      "win_rate": 39
     },
-    "GBPUSD|donchian_breakout": {
-     "avg_R": -0.021,
+    "GBPAUD|donchian_breakout": {
+     "avg_R": -0.108,
+     "oos_avg_R": -0.11,
+     "oos_pf": 0.84,
+     "oos_trades": 255,
+     "trades": 648,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "GBPAUD|ema_cross": {
+     "avg_R": -0.101,
+     "oos_avg_R": -0.151,
+     "oos_pf": 0.79,
+     "oos_trades": 125,
+     "trades": 303,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "GBPAUD|rsi_reversion": {
+     "avg_R": -0.084,
+     "oos_avg_R": -0.093,
+     "oos_pf": 0.86,
+     "oos_trades": 143,
+     "trades": 411,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "GBPCAD|donchian_breakout": {
+     "avg_R": -0.163,
+     "oos_avg_R": -0.228,
+     "oos_pf": 0.69,
+     "oos_trades": 259,
+     "trades": 636,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "GBPCAD|ema_cross": {
+     "avg_R": -0.263,
+     "oos_avg_R": -0.166,
+     "oos_pf": 0.76,
+     "oos_trades": 118,
+     "trades": 276,
+     "verdict": "FAIL",
+     "win_rate": 30
+    },
+    "GBPCAD|rsi_reversion": {
+     "avg_R": -0.02,
+     "oos_avg_R": 0.024,
+     "oos_pf": 1.04,
+     "oos_trades": 166,
+     "trades": 416,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "GBPCHF|donchian_breakout": {
+     "avg_R": -0.232,
+     "oos_avg_R": -0.269,
+     "oos_pf": 0.63,
+     "oos_trades": 212,
+     "trades": 560,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "GBPCHF|ema_cross": {
+     "avg_R": -0.099,
+     "oos_avg_R": -0.252,
+     "oos_pf": 0.66,
+     "oos_trades": 125,
+     "trades": 309,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "GBPCHF|rsi_reversion": {
+     "avg_R": -0.049,
+     "oos_avg_R": -0.186,
+     "oos_pf": 0.72,
+     "oos_trades": 134,
+     "trades": 356,
+     "verdict": "FAIL",
+     "win_rate": 40
+    },
+    "GBPJPY|donchian_breakout": {
+     "avg_R": -0.087,
+     "oos_avg_R": -0.056,
+     "oos_pf": 0.92,
+     "oos_trades": 268,
+     "trades": 667,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "GBPJPY|ema_cross": {
+     "avg_R": -0.101,
+     "oos_avg_R": -0.05,
+     "oos_pf": 0.93,
+     "oos_trades": 125,
+     "trades": 313,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "GBPJPY|rsi_reversion": {
+     "avg_R": -0.117,
+     "oos_avg_R": -0.139,
+     "oos_pf": 0.79,
+     "oos_trades": 147,
+     "trades": 398,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "GBPNZD|donchian_breakout": {
+     "avg_R": -0.166,
+     "oos_avg_R": -0.279,
+     "oos_pf": 0.62,
+     "oos_trades": 243,
+     "trades": 636,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "GBPNZD|ema_cross": {
+     "avg_R": -0.08,
+     "oos_avg_R": -0.363,
+     "oos_pf": 0.51,
+     "oos_trades": 121,
+     "trades": 319,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "GBPNZD|rsi_reversion": {
+     "avg_R": -0.125,
      "oos_avg_R": -0.027,
      "oos_pf": 0.96,
+     "oos_trades": 145,
+     "trades": 388,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "GBPUSD|donchian_breakout": {
+     "avg_R": -0.026,
+     "oos_avg_R": -0.032,
+     "oos_pf": 0.95,
      "oos_trades": 291,
      "trades": 758,
      "verdict": "FAIL",
      "win_rate": 36
     },
     "GBPUSD|ema_cross": {
-     "avg_R": -0.146,
-     "oos_avg_R": -0.213,
+     "avg_R": -0.151,
+     "oos_avg_R": -0.218,
      "oos_pf": 0.71,
      "oos_trades": 128,
      "trades": 304,
@@ -48,13 +561,175 @@
      "win_rate": 32
     },
     "GBPUSD|rsi_reversion": {
-     "avg_R": -0.102,
-     "oos_avg_R": -0.03,
+     "avg_R": -0.107,
+     "oos_avg_R": -0.034,
      "oos_pf": 0.95,
      "oos_trades": 166,
      "trades": 442,
      "verdict": "FAIL",
      "win_rate": 33
+    },
+    "NZDCAD|donchian_breakout": {
+     "avg_R": -0.275,
+     "oos_avg_R": -0.348,
+     "oos_pf": 0.56,
+     "oos_trades": 241,
+     "trades": 623,
+     "verdict": "FAIL",
+     "win_rate": 30
+    },
+    "NZDCAD|ema_cross": {
+     "avg_R": -0.177,
+     "oos_avg_R": -0.262,
+     "oos_pf": 0.66,
+     "oos_trades": 126,
+     "trades": 300,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "NZDCAD|rsi_reversion": {
+     "avg_R": -0.129,
+     "oos_avg_R": -0.21,
+     "oos_pf": 0.71,
+     "oos_trades": 140,
+     "trades": 401,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "NZDCHF|donchian_breakout": {
+     "avg_R": -0.431,
+     "oos_avg_R": -0.555,
+     "oos_pf": 0.37,
+     "oos_trades": 186,
+     "trades": 527,
+     "verdict": "FAIL",
+     "win_rate": 24
+    },
+    "NZDCHF|ema_cross": {
+     "avg_R": -0.163,
+     "oos_avg_R": -0.196,
+     "oos_pf": 0.74,
+     "oos_trades": 119,
+     "trades": 285,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "NZDCHF|rsi_reversion": {
+     "avg_R": -0.178,
+     "oos_avg_R": -0.057,
+     "oos_pf": 0.92,
+     "oos_trades": 116,
+     "trades": 335,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "NZDJPY|donchian_breakout": {
+     "avg_R": -0.014,
+     "oos_avg_R": 0.042,
+     "oos_pf": 1.06,
+     "oos_trades": 256,
+     "trades": 670,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "NZDJPY|ema_cross": {
+     "avg_R": -0.088,
+     "oos_avg_R": 0.038,
+     "oos_pf": 1.06,
+     "oos_trades": 109,
+     "trades": 298,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "NZDJPY|rsi_reversion": {
+     "avg_R": -0.189,
+     "oos_avg_R": -0.316,
+     "oos_pf": 0.59,
+     "oos_trades": 155,
+     "trades": 416,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "NZDUSD|donchian_breakout": {
+     "avg_R": -0.101,
+     "oos_avg_R": -0.13,
+     "oos_pf": 0.82,
+     "oos_trades": 317,
+     "trades": 827,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "NZDUSD|ema_cross": {
+     "avg_R": -0.228,
+     "oos_avg_R": -0.281,
+     "oos_pf": 0.64,
+     "oos_trades": 115,
+     "trades": 286,
+     "verdict": "FAIL",
+     "win_rate": 30
+    },
+    "NZDUSD|rsi_reversion": {
+     "avg_R": -0.187,
+     "oos_avg_R": -0.245,
+     "oos_pf": 0.68,
+     "oos_trades": 177,
+     "trades": 460,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "USDCAD|donchian_breakout": {
+     "avg_R": -0.01,
+     "oos_avg_R": 0.065,
+     "oos_pf": 1.11,
+     "oos_trades": 219,
+     "trades": 559,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "USDCAD|ema_cross": {
+     "avg_R": -0.011,
+     "oos_avg_R": -0.098,
+     "oos_pf": 0.85,
+     "oos_trades": 88,
+     "trades": 256,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "USDCAD|rsi_reversion": {
+     "avg_R": -0.2,
+     "oos_avg_R": -0.268,
+     "oos_pf": 0.62,
+     "oos_trades": 180,
+     "trades": 413,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "USDCHF|donchian_breakout": {
+     "avg_R": -0.144,
+     "oos_avg_R": -0.147,
+     "oos_pf": 0.79,
+     "oos_trades": 268,
+     "trades": 659,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "USDCHF|ema_cross": {
+     "avg_R": -0.118,
+     "oos_avg_R": -0.103,
+     "oos_pf": 0.85,
+     "oos_trades": 123,
+     "trades": 297,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "USDCHF|rsi_reversion": {
+     "avg_R": -0.128,
+     "oos_avg_R": -0.118,
+     "oos_pf": 0.83,
+     "oos_trades": 155,
+     "trades": 415,
+     "verdict": "FAIL",
+     "win_rate": 34
     },
     "USDJPY|donchian_breakout": {
      "avg_R": -0.039,
@@ -111,10 +786,388 @@
      "win_rate": 33
     }
    },
-   "generated": "2026-10-28 07:25"
+   "generated": "2026-10-28 07:37"
   },
   "4h": {
    "combos": {
+    "AUDCAD|donchian_breakout": {
+     "avg_R": -0.369,
+     "oos_avg_R": -0.3,
+     "oos_pf": 0.57,
+     "oos_trades": 60,
+     "trades": 143,
+     "verdict": "FAIL",
+     "win_rate": 28
+    },
+    "AUDCAD|ema_cross": {
+     "avg_R": -0.266,
+     "oos_avg_R": -0.376,
+     "oos_pf": 0.46,
+     "oos_trades": 41,
+     "trades": 92,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "AUDCAD|rsi_reversion": {
+     "avg_R": 0.422,
+     "oos_avg_R": 0.356,
+     "oos_pf": 1.84,
+     "oos_trades": 31,
+     "trades": 81,
+     "verdict": "PASS",
+     "win_rate": 56
+    },
+    "AUDCHF|donchian_breakout": {
+     "avg_R": -0.123,
+     "oos_avg_R": -0.372,
+     "oos_pf": 0.48,
+     "oos_trades": 56,
+     "trades": 137,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "AUDCHF|ema_cross": {
+     "avg_R": 0.037,
+     "oos_avg_R": -0.139,
+     "oos_pf": 0.77,
+     "oos_trades": 31,
+     "trades": 73,
+     "verdict": "FAIL",
+     "win_rate": 45
+    },
+    "AUDCHF|rsi_reversion": {
+     "avg_R": -0.06,
+     "oos_avg_R": 0.059,
+     "oos_pf": 1.12,
+     "oos_trades": 34,
+     "trades": 87,
+     "verdict": "FAIL",
+     "win_rate": 40
+    },
+    "AUDJPY|donchian_breakout": {
+     "avg_R": -0.014,
+     "oos_avg_R": -0.075,
+     "oos_pf": 0.88,
+     "oos_trades": 73,
+     "trades": 185,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "AUDJPY|ema_cross": {
+     "avg_R": 0.197,
+     "oos_avg_R": 0.288,
+     "oos_pf": 1.52,
+     "oos_trades": 28,
+     "trades": 76,
+     "verdict": "FAIL",
+     "win_rate": 43
+    },
+    "AUDJPY|rsi_reversion": {
+     "avg_R": -0.032,
+     "oos_avg_R": -0.056,
+     "oos_pf": 0.92,
+     "oos_trades": 51,
+     "trades": 122,
+     "verdict": "FAIL",
+     "win_rate": 34
+    },
+    "AUDNZD|donchian_breakout": {
+     "avg_R": -0.083,
+     "oos_avg_R": 0.063,
+     "oos_pf": 1.1,
+     "oos_trades": 57,
+     "trades": 141,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "AUDNZD|ema_cross": {
+     "avg_R": -0.236,
+     "oos_avg_R": -0.158,
+     "oos_pf": 0.77,
+     "oos_trades": 33,
+     "trades": 70,
+     "verdict": "FAIL",
+     "win_rate": 29
+    },
+    "AUDNZD|rsi_reversion": {
+     "avg_R": -0.274,
+     "oos_avg_R": -0.049,
+     "oos_pf": 0.93,
+     "oos_trades": 55,
+     "trades": 110,
+     "verdict": "FAIL",
+     "win_rate": 29
+    },
+    "AUDUSD|donchian_breakout": {
+     "avg_R": -0.047,
+     "oos_avg_R": -0.058,
+     "oos_pf": 0.91,
+     "oos_trades": 79,
+     "trades": 188,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "AUDUSD|ema_cross": {
+     "avg_R": 0.069,
+     "oos_avg_R": -0.118,
+     "oos_pf": 0.84,
+     "oos_trades": 29,
+     "trades": 81,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "AUDUSD|rsi_reversion": {
+     "avg_R": -0.142,
+     "oos_avg_R": -0.328,
+     "oos_pf": 0.58,
+     "oos_trades": 40,
+     "trades": 116,
+     "verdict": "FAIL",
+     "win_rate": 30
+    },
+    "CADCHF|donchian_breakout": {
+     "avg_R": -0.172,
+     "oos_avg_R": -0.242,
+     "oos_pf": 0.65,
+     "oos_trades": 48,
+     "trades": 124,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "CADCHF|ema_cross": {
+     "avg_R": -0.171,
+     "oos_avg_R": -0.187,
+     "oos_pf": 0.72,
+     "oos_trades": 35,
+     "trades": 83,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "CADCHF|rsi_reversion": {
+     "avg_R": 0.087,
+     "oos_avg_R": 0.206,
+     "oos_pf": 1.44,
+     "oos_trades": 36,
+     "trades": 91,
+     "verdict": "FAIL",
+     "win_rate": 45
+    },
+    "CADJPY|donchian_breakout": {
+     "avg_R": -0.121,
+     "oos_avg_R": 0.088,
+     "oos_pf": 1.14,
+     "oos_trades": 69,
+     "trades": 183,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "CADJPY|ema_cross": {
+     "avg_R": 0.269,
+     "oos_avg_R": 0.36,
+     "oos_pf": 1.73,
+     "oos_trades": 32,
+     "trades": 71,
+     "verdict": "PASS",
+     "win_rate": 44
+    },
+    "CADJPY|rsi_reversion": {
+     "avg_R": 0.042,
+     "oos_avg_R": 0.183,
+     "oos_pf": 1.31,
+     "oos_trades": 55,
+     "trades": 121,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "CHFJPY|donchian_breakout": {
+     "avg_R": -0.006,
+     "oos_avg_R": -0.141,
+     "oos_pf": 0.79,
+     "oos_trades": 80,
+     "trades": 178,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "CHFJPY|ema_cross": {
+     "avg_R": -0.072,
+     "oos_avg_R": 0.124,
+     "oos_pf": 1.2,
+     "oos_trades": 35,
+     "trades": 77,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "CHFJPY|rsi_reversion": {
+     "avg_R": 0.132,
+     "oos_avg_R": 0.442,
+     "oos_pf": 1.9,
+     "oos_trades": 46,
+     "trades": 109,
+     "verdict": "FAIL",
+     "win_rate": 42
+    },
+    "EURAUD|donchian_breakout": {
+     "avg_R": 0.135,
+     "oos_avg_R": 0.044,
+     "oos_pf": 1.07,
+     "oos_trades": 63,
+     "trades": 158,
+     "verdict": "FAIL",
+     "win_rate": 41
+    },
+    "EURAUD|ema_cross": {
+     "avg_R": 0.091,
+     "oos_avg_R": -0.047,
+     "oos_pf": 0.93,
+     "oos_trades": 29,
+     "trades": 74,
+     "verdict": "FAIL",
+     "win_rate": 41
+    },
+    "EURAUD|rsi_reversion": {
+     "avg_R": 0.11,
+     "oos_avg_R": -0.024,
+     "oos_pf": 0.96,
+     "oos_trades": 49,
+     "trades": 118,
+     "verdict": "FAIL",
+     "win_rate": 42
+    },
+    "EURCAD|donchian_breakout": {
+     "avg_R": 0.011,
+     "oos_avg_R": -0.008,
+     "oos_pf": 0.99,
+     "oos_trades": 62,
+     "trades": 160,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "EURCAD|ema_cross": {
+     "avg_R": -0.23,
+     "oos_avg_R": -0.557,
+     "oos_pf": 0.32,
+     "oos_trades": 33,
+     "trades": 83,
+     "verdict": "FAIL",
+     "win_rate": 30
+    },
+    "EURCAD|rsi_reversion": {
+     "avg_R": -0.125,
+     "oos_avg_R": -0.139,
+     "oos_pf": 0.8,
+     "oos_trades": 42,
+     "trades": 111,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "EURCHF|donchian_breakout": {
+     "avg_R": -0.045,
+     "oos_avg_R": -0.231,
+     "oos_pf": 0.68,
+     "oos_trades": 54,
+     "trades": 143,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "EURCHF|ema_cross": {
+     "avg_R": -0.031,
+     "oos_avg_R": -0.332,
+     "oos_pf": 0.55,
+     "oos_trades": 25,
+     "trades": 69,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "EURCHF|rsi_reversion": {
+     "avg_R": -0.224,
+     "oos_avg_R": -0.151,
+     "oos_pf": 0.76,
+     "oos_trades": 42,
+     "trades": 103,
+     "verdict": "FAIL",
+     "win_rate": 30
+    },
+    "EURGBP|donchian_breakout": {
+     "avg_R": -0.24,
+     "oos_avg_R": -0.292,
+     "oos_pf": 0.61,
+     "oos_trades": 66,
+     "trades": 163,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "EURGBP|ema_cross": {
+     "avg_R": -0.27,
+     "oos_avg_R": -0.333,
+     "oos_pf": 0.59,
+     "oos_trades": 32,
+     "trades": 80,
+     "verdict": "FAIL",
+     "win_rate": 28
+    },
+    "EURGBP|rsi_reversion": {
+     "avg_R": -0.058,
+     "oos_avg_R": -0.096,
+     "oos_pf": 0.85,
+     "oos_trades": 42,
+     "trades": 106,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "EURJPY|donchian_breakout": {
+     "avg_R": -0.017,
+     "oos_avg_R": -0.0,
+     "oos_pf": 1.0,
+     "oos_trades": 72,
+     "trades": 175,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "EURJPY|ema_cross": {
+     "avg_R": -0.037,
+     "oos_avg_R": -0.188,
+     "oos_pf": 0.74,
+     "oos_trades": 41,
+     "trades": 85,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "EURJPY|rsi_reversion": {
+     "avg_R": -0.074,
+     "oos_avg_R": 0.006,
+     "oos_pf": 1.01,
+     "oos_trades": 47,
+     "trades": 114,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "EURNZD|donchian_breakout": {
+     "avg_R": 0.077,
+     "oos_avg_R": 0.123,
+     "oos_pf": 1.22,
+     "oos_trades": 59,
+     "trades": 164,
+     "verdict": "FAIL",
+     "win_rate": 40
+    },
+    "EURNZD|ema_cross": {
+     "avg_R": -0.037,
+     "oos_avg_R": -0.117,
+     "oos_pf": 0.82,
+     "oos_trades": 32,
+     "trades": 76,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "EURNZD|rsi_reversion": {
+     "avg_R": -0.032,
+     "oos_avg_R": -0.061,
+     "oos_pf": 0.91,
+     "oos_trades": 50,
+     "trades": 106,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
     "EURUSD|donchian_breakout": {
      "avg_R": -0.168,
      "oos_avg_R": -0.236,
@@ -142,9 +1195,144 @@
      "verdict": "FAIL",
      "win_rate": 29
     },
-    "GBPUSD|donchian_breakout": {
+    "GBPAUD|donchian_breakout": {
      "avg_R": 0.008,
-     "oos_avg_R": 0.158,
+     "oos_avg_R": 0.093,
+     "oos_pf": 1.16,
+     "oos_trades": 63,
+     "trades": 169,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "GBPAUD|ema_cross": {
+     "avg_R": -0.066,
+     "oos_avg_R": -0.164,
+     "oos_pf": 0.78,
+     "oos_trades": 34,
+     "trades": 79,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "GBPAUD|rsi_reversion": {
+     "avg_R": 0.053,
+     "oos_avg_R": -0.041,
+     "oos_pf": 0.93,
+     "oos_trades": 40,
+     "trades": 106,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "GBPCAD|donchian_breakout": {
+     "avg_R": -0.046,
+     "oos_avg_R": -0.502,
+     "oos_pf": 0.4,
+     "oos_trades": 75,
+     "trades": 170,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "GBPCAD|ema_cross": {
+     "avg_R": 0.066,
+     "oos_avg_R": -0.236,
+     "oos_pf": 0.68,
+     "oos_trades": 36,
+     "trades": 81,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "GBPCAD|rsi_reversion": {
+     "avg_R": 0.018,
+     "oos_avg_R": 0.03,
+     "oos_pf": 1.05,
+     "oos_trades": 36,
+     "trades": 112,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "GBPCHF|donchian_breakout": {
+     "avg_R": -0.211,
+     "oos_avg_R": -0.33,
+     "oos_pf": 0.55,
+     "oos_trades": 60,
+     "trades": 160,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "GBPCHF|ema_cross": {
+     "avg_R": -0.09,
+     "oos_avg_R": -0.202,
+     "oos_pf": 0.72,
+     "oos_trades": 35,
+     "trades": 87,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "GBPCHF|rsi_reversion": {
+     "avg_R": -0.03,
+     "oos_avg_R": 0.305,
+     "oos_pf": 1.64,
+     "oos_trades": 39,
+     "trades": 106,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "GBPJPY|donchian_breakout": {
+     "avg_R": -0.066,
+     "oos_avg_R": 0.054,
+     "oos_pf": 1.08,
+     "oos_trades": 68,
+     "trades": 181,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "GBPJPY|ema_cross": {
+     "avg_R": 0.004,
+     "oos_avg_R": 0.104,
+     "oos_pf": 1.18,
+     "oos_trades": 28,
+     "trades": 78,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "GBPJPY|rsi_reversion": {
+     "avg_R": -0.037,
+     "oos_avg_R": 0.148,
+     "oos_pf": 1.25,
+     "oos_trades": 44,
+     "trades": 113,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "GBPNZD|donchian_breakout": {
+     "avg_R": -0.023,
+     "oos_avg_R": -0.018,
+     "oos_pf": 0.97,
+     "oos_trades": 62,
+     "trades": 158,
+     "verdict": "FAIL",
+     "win_rate": 38
+    },
+    "GBPNZD|ema_cross": {
+     "avg_R": 0.07,
+     "oos_avg_R": 0.344,
+     "oos_pf": 1.72,
+     "oos_trades": 26,
+     "trades": 75,
+     "verdict": "FAIL",
+     "win_rate": 43
+    },
+    "GBPNZD|rsi_reversion": {
+     "avg_R": 0.149,
+     "oos_avg_R": -0.16,
+     "oos_pf": 0.75,
+     "oos_trades": 37,
+     "trades": 97,
+     "verdict": "FAIL",
+     "win_rate": 41
+    },
+    "GBPUSD|donchian_breakout": {
+     "avg_R": 0.006,
+     "oos_avg_R": 0.155,
      "oos_pf": 1.26,
      "oos_trades": 69,
      "trades": 187,
@@ -152,22 +1340,184 @@
      "win_rate": 35
     },
     "GBPUSD|ema_cross": {
-     "avg_R": 0.049,
-     "oos_avg_R": -0.057,
-     "oos_pf": 0.92,
+     "avg_R": 0.047,
+     "oos_avg_R": -0.059,
+     "oos_pf": 0.91,
      "oos_trades": 34,
      "trades": 85,
      "verdict": "FAIL",
      "win_rate": 36
     },
     "GBPUSD|rsi_reversion": {
-     "avg_R": 0.145,
-     "oos_avg_R": 0.166,
-     "oos_pf": 1.28,
+     "avg_R": 0.142,
+     "oos_avg_R": 0.164,
+     "oos_pf": 1.27,
      "oos_trades": 43,
      "trades": 117,
      "verdict": "PASS",
      "win_rate": 40
+    },
+    "NZDCAD|donchian_breakout": {
+     "avg_R": -0.241,
+     "oos_avg_R": -0.174,
+     "oos_pf": 0.76,
+     "oos_trades": 63,
+     "trades": 170,
+     "verdict": "FAIL",
+     "win_rate": 29
+    },
+    "NZDCAD|ema_cross": {
+     "avg_R": -0.121,
+     "oos_avg_R": -0.041,
+     "oos_pf": 0.94,
+     "oos_trades": 31,
+     "trades": 84,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "NZDCAD|rsi_reversion": {
+     "avg_R": -0.081,
+     "oos_avg_R": -0.047,
+     "oos_pf": 0.93,
+     "oos_trades": 44,
+     "trades": 111,
+     "verdict": "FAIL",
+     "win_rate": 32
+    },
+    "NZDCHF|donchian_breakout": {
+     "avg_R": -0.523,
+     "oos_avg_R": -0.688,
+     "oos_pf": 0.23,
+     "oos_trades": 52,
+     "trades": 149,
+     "verdict": "FAIL",
+     "win_rate": 20
+    },
+    "NZDCHF|ema_cross": {
+     "avg_R": -0.244,
+     "oos_avg_R": -0.346,
+     "oos_pf": 0.54,
+     "oos_trades": 30,
+     "trades": 74,
+     "verdict": "FAIL",
+     "win_rate": 28
+    },
+    "NZDCHF|rsi_reversion": {
+     "avg_R": -0.158,
+     "oos_avg_R": 0.015,
+     "oos_pf": 1.02,
+     "oos_trades": 35,
+     "trades": 90,
+     "verdict": "FAIL",
+     "win_rate": 33
+    },
+    "NZDJPY|donchian_breakout": {
+     "avg_R": 0.002,
+     "oos_avg_R": 0.298,
+     "oos_pf": 1.56,
+     "oos_trades": 60,
+     "trades": 168,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "NZDJPY|ema_cross": {
+     "avg_R": 0.047,
+     "oos_avg_R": 0.291,
+     "oos_pf": 1.52,
+     "oos_trades": 30,
+     "trades": 79,
+     "verdict": "FAIL",
+     "win_rate": 39
+    },
+    "NZDJPY|rsi_reversion": {
+     "avg_R": -0.189,
+     "oos_avg_R": -0.058,
+     "oos_pf": 0.91,
+     "oos_trades": 51,
+     "trades": 121,
+     "verdict": "FAIL",
+     "win_rate": 31
+    },
+    "NZDUSD|donchian_breakout": {
+     "avg_R": 0.169,
+     "oos_avg_R": 0.237,
+     "oos_pf": 1.42,
+     "oos_trades": 72,
+     "trades": 188,
+     "verdict": "PASS",
+     "win_rate": 42
+    },
+    "NZDUSD|ema_cross": {
+     "avg_R": 0.199,
+     "oos_avg_R": 0.571,
+     "oos_pf": 2.33,
+     "oos_trades": 26,
+     "trades": 82,
+     "verdict": "FAIL",
+     "win_rate": 43
+    },
+    "NZDUSD|rsi_reversion": {
+     "avg_R": 0.015,
+     "oos_avg_R": -0.159,
+     "oos_pf": 0.77,
+     "oos_trades": 52,
+     "trades": 129,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "USDCAD|donchian_breakout": {
+     "avg_R": 0.103,
+     "oos_avg_R": 0.45,
+     "oos_pf": 1.96,
+     "oos_trades": 62,
+     "trades": 160,
+     "verdict": "FAIL",
+     "win_rate": 42
+    },
+    "USDCAD|ema_cross": {
+     "avg_R": 0.002,
+     "oos_avg_R": 0.448,
+     "oos_pf": 1.87,
+     "oos_trades": 24,
+     "trades": 78,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "USDCAD|rsi_reversion": {
+     "avg_R": -0.094,
+     "oos_avg_R": -0.305,
+     "oos_pf": 0.59,
+     "oos_trades": 60,
+     "trades": 123,
+     "verdict": "FAIL",
+     "win_rate": 36
+    },
+    "USDCHF|donchian_breakout": {
+     "avg_R": 0.028,
+     "oos_avg_R": 0.049,
+     "oos_pf": 1.08,
+     "oos_trades": 73,
+     "trades": 177,
+     "verdict": "FAIL",
+     "win_rate": 37
+    },
+    "USDCHF|ema_cross": {
+     "avg_R": -0.034,
+     "oos_avg_R": -0.069,
+     "oos_pf": 0.9,
+     "oos_trades": 35,
+     "trades": 85,
+     "verdict": "FAIL",
+     "win_rate": 35
+    },
+    "USDCHF|rsi_reversion": {
+     "avg_R": 0.115,
+     "oos_avg_R": 0.01,
+     "oos_pf": 1.02,
+     "oos_trades": 50,
+     "trades": 128,
+     "verdict": "FAIL",
+     "win_rate": 41
     },
     "USDJPY|donchian_breakout": {
      "avg_R": 0.034,
@@ -211,7 +1561,7 @@
      "oos_pf": 1.02,
      "oos_trades": 22,
      "trades": 59,
-     "verdict": "FAIL",
+     "verdict": "INSUFFICIENT",
      "win_rate": 41
     },
     "XAUUSD|rsi_reversion": {
@@ -224,7 +1574,7 @@
      "win_rate": 35
     }
    },
-   "generated": "2026-10-28 07:25"
+   "generated": "2026-10-28 07:37"
   }
  }
 }
