@@ -638,5 +638,35 @@
   "mcap": 57276,
   "liq": 19228.88,
   "score": 65.0
+ },
+ {
+  "addr": "HDwZkNNh8Bt9oPP51xrPwGyKxDUR2YorHiAHGuiypump",
+  "chain": "solana",
+  "symbol": "QUBIT",
+  "t": 1793193656,
+  "price": 0.0001708,
+  "mcap": 165217,
+  "liq": 36485.95,
+  "score": 85.6
+ },
+ {
+  "addr": "96AUKiHdkZHAj4S4VjHdAY2KGDztaG8Tt8sLZpSPWRAY",
+  "chain": "solana",
+  "symbol": "MANTA",
+  "t": 1793193656,
+  "price": 2.8e-05,
+  "mcap": 28003,
+  "liq": 14549.64,
+  "score": 75.8
+ },
+ {
+  "addr": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
+  "chain": "solana",
+  "symbol": "STONKLANA",
+  "t": 1793193656,
+  "price": 0.0002449,
+  "mcap": 244938,
+  "liq": 160987.83,
+  "score": 60.0
  }
 ]
