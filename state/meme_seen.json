@@ -362,5 +362,12 @@
  "8HLSVns9QeHkWmWjADEkCsK7ut8zzukCMmMCfKbgpump": {
   "t": 1793290762,
   "r": "alerted"
+ },
+ "HBFxk72r4xVqhT8yK8ZFXEEGvpfkoeeSTQXiewZP7SZM": {
+  "t": 1793308695,
+  "r": "unsafe",
+  "why": [
+   "Creator history of rugged tokens"
+  ]
  }
 }
