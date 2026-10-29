@@ -718,5 +718,15 @@
   "mcap": 26937,
   "liq": 12095.37,
   "score": 78.0
+ },
+ {
+  "addr": "8HLSVns9QeHkWmWjADEkCsK7ut8zzukCMmMCfKbgpump",
+  "chain": "solana",
+  "symbol": "Perpium",
+  "t": 1793290762,
+  "price": 3.908e-05,
+  "mcap": 37398,
+  "liq": 16112.7,
+  "score": 75.6
  }
 ]
