@@ -708,5 +708,15 @@
   "mcap": 19702,
   "liq": 10534.63,
   "score": 66.8
+ },
+ {
+  "addr": "Bnxttv7gQHYP1n9JyXuiATWKtxxJPc6sJJzeRFVBuuu",
+  "chain": "solana",
+  "symbol": "Bu",
+  "t": 1793265640,
+  "price": 2.693e-05,
+  "mcap": 26937,
+  "liq": 12095.37,
+  "score": 78.0
  }
 ]

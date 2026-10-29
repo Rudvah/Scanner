@@ -347,5 +347,16 @@
  "B3gsiynnGCcAdGPwigWyCnjy6t1hf8vR62ZDBwngpump": {
   "t": 1793241505,
   "r": "alerted"
+ },
+ "Fa24xN13pzjmcx1dtKP9nBMMFCwLtXCJrtP5hSPKpump": {
+  "t": 1793265640,
+  "r": "unsafe",
+  "why": [
+   "Creator history of rugged tokens"
+  ]
+ },
+ "Bnxttv7gQHYP1n9JyXuiATWKtxxJPc6sJJzeRFVBuuu": {
+  "t": 1793265640,
+  "r": "alerted"
  }
 }
