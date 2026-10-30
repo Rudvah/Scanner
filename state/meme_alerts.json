@@ -768,5 +768,55 @@
   "mcap": 54441,
   "liq": 17568.85,
   "score": 71.4
+ },
+ {
+  "addr": "BK4sWbteR1EhULXACs7khW1dasdF9LEkjuS9BAV3pump",
+  "chain": "solana",
+  "symbol": "minecat",
+  "t": 1793389844,
+  "price": 6.685e-05,
+  "mcap": 66852,
+  "liq": 20926.13,
+  "score": 82.8
+ },
+ {
+  "addr": "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump",
+  "chain": "solana",
+  "symbol": "WASTED",
+  "t": 1793389844,
+  "price": 0.0006025,
+  "mcap": 591133,
+  "liq": 63907.91,
+  "score": 76.7
+ },
+ {
+  "addr": "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump",
+  "chain": "solana",
+  "symbol": "TYGR",
+  "t": 1793389844,
+  "price": 0.0003265,
+  "mcap": 320798,
+  "liq": 53993.7,
+  "score": 76.1
+ },
+ {
+  "addr": "E8c9gvuE7gW4R8AVcaTCbbTG1zJGdUR9KGtS94eXBAGS",
+  "chain": "solana",
+  "symbol": "TRK",
+  "t": 1793389844,
+  "price": 3.027e-05,
+  "mcap": 30279,
+  "liq": 13486.84,
+  "score": 72.3
+ },
+ {
+  "addr": "ACv7iJ7xVfohvfXp3dt7AfAPcekL2dHsYCbJw8Vp1osr",
+  "chain": "solana",
+  "symbol": "RETARD",
+  "t": 1793389844,
+  "price": 4.697e-05,
+  "mcap": 46977,
+  "liq": 18087.42,
+  "score": 70.5
  }
 ]
