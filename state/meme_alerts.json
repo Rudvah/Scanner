@@ -738,5 +738,35 @@
   "mcap": 32974,
   "liq": 13934.68,
   "score": 69.9
+ },
+ {
+  "addr": "0x1D6313cc032c54Bc1Bb7e650d26dE95Be0356031",
+  "chain": "base",
+  "symbol": "AODF",
+  "t": 1793371791,
+  "price": 0.0001292,
+  "mcap": 274933,
+  "liq": 66058.43,
+  "score": 76.8
+ },
+ {
+  "addr": "etRgw1DVduNwoSdrwaMcnb6Yy16CShyv34SYWuApump",
+  "chain": "solana",
+  "symbol": "SAFU",
+  "t": 1793371791,
+  "price": 0.0005754,
+  "mcap": 569405,
+  "liq": 61694.99,
+  "score": 75.5
+ },
+ {
+  "addr": "E5ybm4acARqNKEAHpUqYG1BRLpYai9anMz8enAHpump",
+  "chain": "solana",
+  "symbol": "SKIVE",
+  "t": 1793371791,
+  "price": 5.444e-05,
+  "mcap": 54441,
+  "liq": 17568.85,
+  "score": 71.4
  }
 ]

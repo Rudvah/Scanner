@@ -373,5 +373,24 @@
  "AHgqStQviBDBiPra3cLxb8gQs2auRAmXT4s9v7LKpump": {
   "t": 1793322908,
   "r": "alerted"
+ },
+ "0x06363Bb76Fc8A0B4BFE5c768cE5BB8013F417400": {
+  "t": 1793371791,
+  "r": "unsafe",
+  "why": [
+   "owner can pause/blacklist/change tax"
+  ]
+ },
+ "0x1D6313cc032c54Bc1Bb7e650d26dE95Be0356031": {
+  "t": 1793371791,
+  "r": "alerted"
+ },
+ "etRgw1DVduNwoSdrwaMcnb6Yy16CShyv34SYWuApump": {
+  "t": 1793371791,
+  "r": "alerted"
+ },
+ "E5ybm4acARqNKEAHpUqYG1BRLpYai9anMz8enAHpump": {
+  "t": 1793371791,
+  "r": "alerted"
  }
 }
