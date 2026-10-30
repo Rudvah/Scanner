@@ -818,5 +818,35 @@
   "mcap": 46977,
   "liq": 18087.42,
   "score": 70.5
+ },
+ {
+  "addr": "nG3jfPQHU2ZQhPERkTZD8YPSAsrrWiePPDcm9jxpump",
+  "chain": "solana",
+  "symbol": "ARNOLD",
+  "t": 1793402845,
+  "price": 9.066e-05,
+  "mcap": 88724,
+  "liq": 23394.57,
+  "score": 74.3
+ },
+ {
+  "addr": "HgxEGTZ1Epb64RrYqcuHkqb1gGWWnF5WcPTCDWzApump",
+  "chain": "solana",
+  "symbol": "iCoin",
+  "t": 1793402845,
+  "price": 0.0007198,
+  "mcap": 695849,
+  "liq": 79846.57,
+  "score": 70.8
+ },
+ {
+  "addr": "FGrGAFiBjSb3hZ5YHquFqnSsoBHnWqJttsQq6srDmeUA",
+  "chain": "solana",
+  "symbol": "REMARC",
+  "t": 1793402845,
+  "price": 3.366e-05,
+  "mcap": 33670,
+  "liq": 15484.69,
+  "score": 69.8
  }
 ]
