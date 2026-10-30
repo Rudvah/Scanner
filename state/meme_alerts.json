@@ -728,5 +728,15 @@
   "mcap": 37398,
   "liq": 16112.7,
   "score": 75.6
+ },
+ {
+  "addr": "AHgqStQviBDBiPra3cLxb8gQs2auRAmXT4s9v7LKpump",
+  "chain": "solana",
+  "symbol": "SAFU",
+  "t": 1793322908,
+  "price": 3.406e-05,
+  "mcap": 32974,
+  "liq": 13934.68,
+  "score": 69.9
  }
 ]
