@@ -440,5 +440,33 @@
  "5hvV6oAoUt8rxDJgusk3c32TfxtXYCbddbfkabupump": {
   "t": 1793474931,
   "r": "alerted"
+ },
+ "2pDkdMYChGZQQMfbRhfDgorZkKwmPF6sjN4bPfxoABTC": {
+  "t": 1793486695,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Low Liquidity"
+  ]
+ },
+ "9sNc5nW9XfBSK8Fwh8Ue4mTBmkDutCeZfjFd2x7Dpump": {
+  "t": 1793486695,
+  "r": "unsafe",
+  "why": [
+   "Top 10 holders high ownership",
+   "Single holder ownership"
+  ]
+ },
+ "8UVVYBKvHfhP9mN8bHfHGgYiZd1Jb1aVuye1RkdTpump": {
+  "t": 1793486695,
+  "r": "alerted"
+ },
+ "DZrVCDqSyUBFoFJWJCVELhzL4cTFYWpCMirnv91TTTSH": {
+  "t": 1793486695,
+  "r": "alerted"
+ },
+ "7Ypg1rKLu8q32E1AQEDjaPCg8dfGeCSsMkFnK98zcash": {
+  "t": 1793486695,
+  "r": "alerted"
  }
 }
