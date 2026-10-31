@@ -1,30 +1,11 @@
-#!/usr/bin/env python3
-"""
-Sports betting scanner (alert-only: it never places bets).  Data: The Odds API (free key).
-
-  --scan   finds (1) ARBITRAGE: back every outcome at the best price across bookmakers so the
-               total return beats the total stake, and (2) VALUE BETS: a bookmaker's price is
-               higher than the fair price implied by the sharp line (Pinnacle, margin removed;
-               falls back to a consensus of 4+ books). Sends Telegram alerts.
-  --fair   sends a "fair odds sheet" for upcoming matches: the fair price per outcome and the
-               minimum odds worth taking (+5%). Use it to check a bookmaker the API doesn't
-               cover (Bet9ja, SportyBet, ...): if your bookmaker offers at least that price, it
-               is a value bet by the same logic.
-  --dry    print only, nothing sent or saved (add after --scan / --fair).
-
-Setup: ODDS_API_KEY (free key at the-odds-api.com), TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID.
-Optional: BET_SPORTS (comma list of sport keys), BET_REGIONS (default "eu,uk"), BET_HOURS
-(default 48), BANKROLL (default 100, in your own currency units).
-
-CREDITS: each request costs about 1 credit per region per market. A run costs
-(number of sports x number of regions). The free plan has a small monthly budget, so keep
-sports few and runs rare. The script stops when the remaining credits get low.
-
-HONEST LIMITS: arbitrage gives roughly 1-5% and bookmakers limit or close accounts that do it;
-odds move fast, so a daily scan mostly finds stale prices; fair odds from a devigged line are
-an estimate, not a certainty. Many edges here are errors or old prices: check the live odds
-before betting and never stake money you cannot afford to lose.
-"""
+"""Sports betting scanner (alert-only: it never places bets).  Data: The Odds API (free key).
+  --scan   SURE BETS (arbitrage) and VALUE BETS (a price above the fair price from Pinnacle, or a consensus of 4+ books).
+  --fair   plain-language fair odds sheet: result, goals over/under, double chance, draw-no-bet, with the minimum odds worth taking.
+  --dry    print only, nothing sent or saved.
+Setup: ODDS_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID.
+Optional: BET_SPORTS, BET_REGIONS (scan, default eu,uk), BET_FAIR_REGIONS (fair sheet, default eu),
+BET_MARKETS (default h2h,totals), BET_HOURS (default 48), BANKROLL (default 100).
+CREDITS: a run costs about sports x regions x markets. Scan = 4x2x2 = 16, fair sheet = 4x1x2 = 8."""
 import argparse
 import json
 import os
@@ -41,25 +22,20 @@ CFG = {
     "sports": [s.strip() for s in os.getenv(
         "BET_SPORTS", "soccer_epl,soccer_uefa_champs_league,soccer_spain_la_liga,basketball_nba").split(",") if s.strip()],
     "regions": os.getenv("BET_REGIONS", "eu,uk"),
+    "fair_regions": os.getenv("BET_FAIR_REGIONS", "eu"),
+    "markets": os.getenv("BET_MARKETS", "h2h,totals"),
     "hours": float(os.getenv("BET_HOURS", "48")),
     "bankroll": float(os.getenv("BANKROLL", "100")),
-    "min_edge": 0.04,        # value bet: price beats fair price by 4% or more
-    "min_edge_consensus": 0.06,
-    "max_edge": 0.20,        # bigger "edges" are almost always errors or stale prices
+    "min_edge": 0.04, "min_edge_consensus": 0.06, "max_edge": 0.20,
     "min_arb": 0.005, "max_arb": 0.12,
     "kelly_frac": 0.25, "max_stake_pct": 0.05,
-    "reserve": 20,           # stop when fewer credits than this remain
+    "take_margin": 1.05,
+    "sheet_events": 12, "reserve": 20,
 }
 
 
-# ---------------------------------------------------------------- maths
-def implied(prices):
-    return {k: 1.0 / v for k, v in prices.items()}
-
-
 def devig(prices):
-    """Remove the bookmaker margin proportionally -> fair probabilities."""
-    imp = implied(prices)
+    imp = {k: 1.0 / v for k, v in prices.items()}
     tot = sum(imp.values())
     return {k: v / tot for k, v in imp.items()}
 
@@ -79,7 +55,6 @@ def find_arb(books, names):
 
 
 def fair_probs(books, names):
-    """Return (probs, source). Sharp line first, otherwise a consensus of 4+ books."""
     sharp = books.get(SHARP)
     if sharp and all(n in sharp["prices"] for n in names):
         return devig({n: sharp["prices"][n] for n in names}), "Pinnacle"
@@ -97,10 +72,10 @@ def kelly_stake(edge, price, bankroll):
     return max(frac, 0.0) * bankroll
 
 
-# ---------------------------------------------------------------- data
-def get_events(sport, key):
+def get_events(sport, key, regions):
     r = requests.get(f"{API}/sports/{sport}/odds", timeout=30, params={
-        "apiKey": key, "regions": CFG["regions"], "markets": "h2h", "oddsFormat": "decimal", "dateFormat": "iso"})
+        "apiKey": key, "regions": regions, "markets": CFG["markets"], "oddsFormat": "decimal",
+        "dateFormat": "iso"})
     remaining = r.headers.get("x-requests-remaining")
     if r.status_code == 401:
         raise SystemExit("The Odds API rejected the key (401). Check the ODDS_API_KEY secret.")
@@ -114,22 +89,30 @@ def get_events(sport, key):
     return r.json(), remaining
 
 
-def parse_books(ev):
-    books = {}
+def parse_instances(ev):
+    inst = {}
     for b in ev.get("bookmakers", []):
         for m in b.get("markets", []):
-            if m.get("key") != "h2h":
+            mk = m.get("key")
+            if mk not in ("h2h", "totals"):
                 continue
-            prices = {o["name"]: float(o["price"]) for o in m.get("outcomes", [])
-                      if o.get("price") and float(o["price"]) > 1.0}
-            if len(prices) >= 2:
-                books[b["key"]] = {"title": b.get("title", b["key"]), "prices": prices}
-    return books
+            by_point = {}
+            for o in m.get("outcomes", []):
+                try:
+                    price = float(o.get("price"))
+                except (TypeError, ValueError):
+                    continue
+                if price > 1.0:
+                    by_point.setdefault(o.get("point") if mk == "totals" else None, {})[o["name"]] = price
+            for pt, prices in by_point.items():
+                if len(prices) >= 2:
+                    inst.setdefault((mk, pt), {})[b["key"]] = {"title": b.get("title", b["key"]), "prices": prices}
+    return inst
 
 
 def kickoff(ev):
     t = datetime.fromisoformat(ev["commence_time"].replace("Z", "+00:00"))
-    return t, (t + timedelta(hours=1)).strftime("%a %d %b %H:%M WAT")
+    return t, (t + timedelta(hours=1)).strftime("%a %d %b, %H:%M WAT")
 
 
 def upcoming(ev, now):
@@ -137,65 +120,120 @@ def upcoming(ev, now):
     return now < t <= now + timedelta(hours=CFG["hours"])
 
 
-# ---------------------------------------------------------------- analysis
+def is_soccer(ev):
+    return ev["sport_key"].startswith("soccer")
+
+
+def icon(ev):
+    return "⚽" if is_soccer(ev) else "🏀" if ev["sport_key"].startswith("basketball") else "🎯"
+
+
+def label(ev, market, point, outcome):
+    if market == "h2h":
+        return "Draw" if outcome == "Draw" else f"{outcome} to win"
+    return f"{outcome} {point:g} {'goals' if is_soccer(ev) else 'points'}"
+
+
 def analyse(events, now):
-    arbs, values, fair = [], [], []
+    arbs, values, sheet = [], [], []
     for ev in events:
         if not upcoming(ev, now):
             continue
-        books = parse_books(ev)
-        if len(books) < 2:
-            continue
-        names = sorted(max((d["prices"] for d in books.values()), key=len))
         title = f"{ev['home_team']} vs {ev['away_team']}"
         when = kickoff(ev)[1]
-        arb = find_arb(books, names)
-        if arb and CFG["min_arb"] <= arb["profit"] <= CFG["max_arb"]:
-            arbs.append({"id": ev["id"], "event": title, "when": when, "sport": ev["sport_key"], **arb})
-        probs, src = fair_probs(books, names)
-        if not probs:
-            continue
-        fair.append({"event": title, "when": when, "sport": ev["sport_key"], "probs": probs, "src": src})
-        need = CFG["min_edge"] if src == "Pinnacle" else CFG["min_edge_consensus"]
-        for bk, d in books.items():
-            if bk == SHARP:
+        rec = {"ev": ev, "event": title, "when": when, "kick": kickoff(ev)[0], "h2h": None, "totals": []}
+        for (mk, pt), books in parse_instances(ev).items():
+            if len(books) < 2 and SHARP not in books:
                 continue
-            for n in names:
-                if n not in d["prices"]:
+            names = sorted(max((d["prices"] for d in books.values()), key=len))
+            arb = find_arb(books, names) if len(books) >= 2 else None
+            if arb and CFG["min_arb"] <= arb["profit"] <= CFG["max_arb"]:
+                legs = {label(ev, mk, pt, n): v for n, v in arb["legs"].items()}
+                arbs.append({"id": ev["id"], "key": f"{mk}|{pt}", "event": title, "when": when, "icon": icon(ev),
+                             "profit": arb["profit"], "legs": legs, "total": arb["total"]})
+            probs, src = fair_probs(books, names)
+            if not probs:
+                continue
+            if mk == "h2h":
+                rec["h2h"] = (probs, src)
+            else:
+                rec["totals"].append((pt, probs, src))
+            need = CFG["min_edge"] if src == "Pinnacle" else CFG["min_edge_consensus"]
+            for bk, d in books.items():
+                if bk == SHARP:
                     continue
-                edge = d["prices"][n] * probs[n] - 1.0
-                if need <= edge <= CFG["max_edge"]:
-                    values.append({"id": ev["id"], "event": title, "when": when, "pick": n, "book": d["title"],
-                                   "price": d["prices"][n], "fair": 1.0 / probs[n], "edge": edge, "src": src,
-                                   "stake": kelly_stake(edge, d["prices"][n], CFG["bankroll"])})
+                for n in names:
+                    if n not in d["prices"]:
+                        continue
+                    edge = d["prices"][n] * probs[n] - 1.0
+                    if need <= edge <= CFG["max_edge"]:
+                        values.append({"id": ev["id"], "event": title, "when": when, "icon": icon(ev),
+                                       "pick": label(ev, mk, pt, n), "book": d["title"], "price": d["prices"][n],
+                                       "fair": 1.0 / probs[n], "edge": edge, "src": src,
+                                       "stake": kelly_stake(edge, d["prices"][n], CFG["bankroll"])})
+        if rec["h2h"] or rec["totals"]:
+            sheet.append(rec)
     arbs.sort(key=lambda a: -a["profit"])
     values.sort(key=lambda v: -v["edge"])
-    return arbs, values, fair
+    sheet.sort(key=lambda r: r["kick"])
+    return arbs, values, sheet
+  
+
+def row(text, p):
+    fair = 1.0 / p
+    return f"  • {text}: fair {fair:.2f} ({p * 100:.0f}% chance) → bet only at {fair * CFG['take_margin']:.2f} or higher"
 
 
-# ---------------------------------------------------------------- messages
+def fmt_fair(rec):
+    ev = rec["ev"]
+    home, away = ev["home_team"], ev["away_team"]
+    lines = [f"{icon(ev)} {rec['event']}", f"🕒 {rec['when']}"]
+    if rec["h2h"]:
+        probs, src = rec["h2h"]
+        lines.append("RESULT:" if is_soccer(ev) else "WINNER:")
+        for n in (home, "Draw", away):
+            if n in probs:
+                lines.append(row(label(ev, "h2h", None, n), probs[n]))
+        if is_soccer(ev) and "Draw" in probs and home in probs and away in probs:
+            ph, pd_, pa = probs[home], probs["Draw"], probs[away]
+            lines.append("DOUBLE CHANCE (either result wins the bet):")
+            lines.append(row(f"{home} or Draw", ph + pd_))
+            lines.append(row(f"{away} or Draw", pa + pd_))
+            lines.append(row(f"{home} or {away} (no draw)", ph + pa))
+            lines.append("DRAW NO BET (stake returned if it is a draw):")
+            lines.append(row(f"{home}", ph / (ph + pa)))
+            lines.append(row(f"{away}", pa / (ph + pa)))
+    for pt, probs, src in sorted(rec["totals"], key=lambda t: t[0] if t[0] is not None else 0)[:2]:
+        lines.append(f"TOTAL {'GOALS' if is_soccer(ev) else 'POINTS'} (line {pt:g}):")
+        for n in ("Over", "Under"):
+            if n in probs:
+                lines.append(row(label(ev, "totals", pt, n), probs[n]))
+    return "\n".join(lines)
+
+
+GUIDE = ("HOW TO READ THIS\n"
+         "• Fair odds = the true price once the bookmaker's built-in margin is removed.\n"
+         "• \"Bet only at X or higher\" = take the bet only if your bookmaker pays X or more\n"
+         "  (about 5% better than fair). If their price is lower, skip it.\n"
+         "• Chance % is the probability the sharp market gives that outcome.\n"
+         "• Check team news and live odds first. This is a guide, not a guarantee.")
+
+
 def fmt_arb(a):
-    lines = [f"💰 ARBITRAGE +{a['profit'] * 100:.1f}% · {a['event']} · {a['when']}"]
-    for n, (p, _, title) in a["legs"].items():
+    lines = [f"💰 SURE BET (arbitrage) +{a['profit'] * 100:.1f}%", f"{a['icon']} {a['event']} · {a['when']}",
+             f"Place ALL {len(a['legs'])} bets:"]
+    for i, (lab, (p, _, title)) in enumerate(a["legs"].items(), 1):
         stake = CFG["bankroll"] * (1 / p) / a["total"]
-        lines.append(f"   {n}: {p:.2f} at {title} → stake {stake:.1f} of {CFG['bankroll']:.0f}")
-    lines.append(f"   Guaranteed return {CFG['bankroll'] / a['total']:.1f} if every price still stands. "
-                 "Check live odds first.")
+        lines.append(f"  {i}) {lab} @ {p:.2f} at {title} → stake {stake:.1f}")
+    lines.append(f"Total stake {CFG['bankroll']:.0f} returns about {CFG['bankroll'] / a['total']:.1f} "
+                 "whichever outcome happens, if all prices still stand. Check live odds first.")
     return "\n".join(lines)
 
 
 def fmt_value(v):
-    return (f"🎯 VALUE +{v['edge'] * 100:.1f}% · {v['event']} · {v['when']}\n"
-            f"   {v['pick']} @ {v['price']:.2f} at {v['book']} (fair {v['fair']:.2f}, {v['src']})\n"
-            f"   Suggested stake ≈ {v['stake']:.1f} of {CFG['bankroll']:.0f} (quarter-Kelly, capped at 5%)")
-
-
-def fmt_fair(f):
-    parts = []
-    for n, p in f["probs"].items():
-        fair_odds = 1.0 / p
-        parts.append(f"{n} fair {fair_odds:.2f} → take ≥ {fair_odds * 1.05:.2f}")
-    return f"⚽ {f['event']} · {f['when']} ({f['src']})\n   " + "\n   ".join(parts)
+    return (f"🎯 VALUE BET +{v['edge'] * 100:.1f}%\n{v['icon']} {v['event']} · {v['when']}\n"
+            f"Bet: {v['pick']}\nOdds: {v['price']:.2f} at {v['book']} (fair price {v['fair']:.2f}, from {v['src']})\n"
+            f"Stake idea: {v['stake']:.1f} of {CFG['bankroll']:.0f} (small, cautious sizing)")
 
 
 def send_telegram(text):
@@ -230,14 +268,13 @@ def load_state():
         return {"seen": {}}
 
 
-# ---------------------------------------------------------------- run
-def collect(key):
+def collect(key, regions):
     events, remaining = [], None
     for sport in CFG["sports"]:
         if remaining is not None and float(remaining) < CFG["reserve"]:
             print(f"[warn] only {remaining} credits left, stopping to keep a reserve")
             break
-        evs, rem = get_events(sport, key)
+        evs, rem = get_events(sport, key, regions)
         remaining = rem if rem is not None else remaining
         if evs:
             events += evs
@@ -258,14 +295,14 @@ def main():
         print("ODDS_API_KEY is missing. Get a free key at the-odds-api.com and add it as a secret.")
         return 1
     now = datetime.now(timezone.utc)
-    events, remaining = collect(key)
-    arbs, values, fair = analyse(events, now)
+    events, remaining = collect(key, CFG["fair_regions"] if args.fair else CFG["regions"])
+    arbs, values, sheet = analyse(events, now)
     print(f"{len(events)} events fetched, credits left: {remaining}")
 
     if args.fair:
-        text = "⚖️ Fair odds sheet (take a price only if it is at or above the 'take' number)\n\n" + \
-               ("\n".join(fmt_fair(f) for f in fair[:25]) or "No matches with a sharp or consensus line.")
-        text += "\n\nFair odds are estimates with the margin removed. Check team news before betting."
+        body = "\n\n".join(fmt_fair(r) for r in sheet[:CFG["sheet_events"]]) or \
+            "No upcoming matches with a sharp or consensus line right now."
+        text = f"⚖️ FAIR ODDS SHEET (next {CFG['hours']:.0f}h, soonest first)\n\n{GUIDE}\n\n{body}"
         print(text)
         if not args.dry:
             send_telegram(text)
@@ -276,7 +313,7 @@ def main():
     state["seen"] = {k: t for k, t in state["seen"].items() if t > cutoff}
     msgs = []
     for a in arbs:
-        k = f"arb|{a['id']}|" + "|".join(f"{n}:{p:.2f}" for n, (p, _, _) in sorted(a["legs"].items()))
+        k = f"arb|{a['id']}|{a['key']}|" + "|".join(f"{n}:{p:.2f}" for n, (p, _, _) in sorted(a["legs"].items()))
         if k not in state["seen"]:
             state["seen"][k] = now.timestamp()
             msgs.append(fmt_arb(a))
@@ -285,7 +322,7 @@ def main():
         if k not in state["seen"]:
             state["seen"][k] = now.timestamp()
             msgs.append(fmt_value(v))
-    text = "\n\n".join(msgs) if msgs else "No new arbitrage or value bets this scan."
+    text = "\n\n".join(msgs) if msgs else "No new sure bets or value bets this scan."
     text += f"\n\nCredits left: {remaining}. Odds move fast: verify before betting. Bookmakers may limit winners."
     print(text)
     if not args.dry:
@@ -298,3 +335,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+  
