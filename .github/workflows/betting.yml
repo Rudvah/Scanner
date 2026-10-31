@@ -2,7 +2,7 @@ name: betting
 
 on:
   schedule:
-    - cron: "0 9 * * *"    # once a day, 09:00 UTC (10:00 in Lagos). Keep runs few: the free plan has few credits.
+    - cron: "0 9 * * *"
   workflow_dispatch:
     inputs:
       mode:
@@ -37,6 +37,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           BET_SPORTS: ${{ vars.BET_SPORTS || 'soccer_epl,soccer_uefa_champs_league,soccer_spain_la_liga,basketball_nba' }}
           BET_REGIONS: ${{ vars.BET_REGIONS || 'eu,uk' }}
+          BET_FAIR_REGIONS: ${{ vars.BET_FAIR_REGIONS || 'eu' }}
+          BET_MARKETS: ${{ vars.BET_MARKETS || 'h2h,totals' }}
           BANKROLL: ${{ vars.BANKROLL || '100' }}
       - name: Save state
         run: |
