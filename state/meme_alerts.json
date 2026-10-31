@@ -848,5 +848,45 @@
   "mcap": 33670,
   "liq": 15484.69,
   "score": 69.8
+ },
+ {
+  "addr": "8DKHFW32ApiG6xLYrTDTxkWMGxdDyASfNnSaWwCbpump",
+  "chain": "solana",
+  "symbol": "SUPER",
+  "t": 1793474931,
+  "price": 0.0001139,
+  "mcap": 113980,
+  "liq": 26576.23,
+  "score": 89.6
+ },
+ {
+  "addr": "4R9jUfYAifDyiLz9Tx6bHpPqkvh3GRom71YEapkUpump",
+  "chain": "solana",
+  "symbol": "DUEL",
+  "t": 1793474931,
+  "price": 3.21e-05,
+  "mcap": 32108,
+  "liq": 13051.77,
+  "score": 82.1
+ },
+ {
+  "addr": "FdKdpz11GsTofLaNiddrhxrsE4APZYSSfLFqQ9YKpump",
+  "chain": "solana",
+  "symbol": "SIS",
+  "t": 1793474931,
+  "price": 0.0004001,
+  "mcap": 397572,
+  "liq": 52505.25,
+  "score": 78.2
+ },
+ {
+  "addr": "5hvV6oAoUt8rxDJgusk3c32TfxtXYCbddbfkabupump",
+  "chain": "solana",
+  "symbol": "BIBERTY",
+  "t": 1793474931,
+  "price": 3.31e-05,
+  "mcap": 31209,
+  "liq": 13278.03,
+  "score": 71.5
  }
 ]
