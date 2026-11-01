@@ -1018,5 +1018,25 @@
   "mcap": 13420,
   "liq": 9494.2,
   "score": 79.0
+ },
+ {
+  "addr": "74Np8Ga5DomwZVx5bZBGFcHgFavPhgkvkJ2LPdWdpump",
+  "chain": "solana",
+  "symbol": "MIDTERMS",
+  "t": 1793576698,
+  "price": 4.32e-05,
+  "mcap": 42958,
+  "liq": 15519.82,
+  "score": 80.7
+ },
+ {
+  "addr": "8s4bNqEztH1JP7mkU747uMr7AckCQdiV47FDqYnDpump",
+  "chain": "solana",
+  "symbol": "ANAKIN",
+  "t": 1793576698,
+  "price": 0.001696,
+  "mcap": 1689572,
+  "liq": 109679.02,
+  "score": 69.4
  }
 ]
