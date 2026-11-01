@@ -958,5 +958,45 @@
   "mcap": 157379,
   "liq": 34718.18,
   "score": 79.8
+ },
+ {
+  "addr": "DQvRuXiZWiVzKxsEtZYCVvvYoztz22WvkXtpHpeRpump",
+  "chain": "solana",
+  "symbol": "BOUNCER",
+  "t": 1793547891,
+  "price": 0.0003246,
+  "mcap": 319874,
+  "liq": 45869.43,
+  "score": 83.4
+ },
+ {
+  "addr": "HSN4fgRP1yFXMzUjHbeXLQDEeU2m1aLyFjKgncvPLwdk",
+  "chain": "solana",
+  "symbol": "PUMPATAR",
+  "t": 1793547891,
+  "price": 7.195e-05,
+  "mcap": 71952,
+  "liq": 21801.35,
+  "score": 67.7
+ },
+ {
+  "addr": "5AWBTmZzYZ3twtKQLe1eziWw9yMcUyUiR6iRnCpXPv7f",
+  "chain": "solana",
+  "symbol": "GOAT",
+  "t": 1793547891,
+  "price": 5.254e-05,
+  "mcap": 52413,
+  "liq": 18772.47,
+  "score": 65.6
+ },
+ {
+  "addr": "Dm7uQVngPSs82eWfVnx3rb7hbqoDb6f2E455R783pump",
+  "chain": "solana",
+  "symbol": "SCARECROW",
+  "t": 1793547891,
+  "price": 2.766e-05,
+  "mcap": 27029,
+  "liq": 12149.24,
+  "score": 60.3
  }
 ]
