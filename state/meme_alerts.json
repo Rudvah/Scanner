@@ -918,5 +918,35 @@
   "mcap": 100581,
   "liq": 27593.92,
   "score": 74.2
+ },
+ {
+  "addr": "CPoGSmcjprCvzA2MFYLJMpQkGjmgVzKg4RVwMdrzpump",
+  "chain": "solana",
+  "symbol": "BLUE",
+  "t": 1793497844,
+  "price": 7.235e-05,
+  "mcap": 72229,
+  "liq": 21271.1,
+  "score": 81.3
+ },
+ {
+  "addr": "5U7cD5cXVMVFFhYVRhcm1Ruerg6RzVnUQkGcraZepump",
+  "chain": "solana",
+  "symbol": "NUT",
+  "t": 1793497844,
+  "price": 7.517e-05,
+  "mcap": 75173,
+  "liq": 21159.85,
+  "score": 81.0
+ },
+ {
+  "addr": "2mZwefm2rvQBAW6DBQLseD82cwXc5tnN7JTQbmaVpump",
+  "chain": "solana",
+  "symbol": "TRADERS",
+  "t": 1793497844,
+  "price": 5.275e-05,
+  "mcap": 50695,
+  "liq": 18730.16,
+  "score": 63.0
  }
 ]
