@@ -1038,5 +1038,15 @@
   "mcap": 1689572,
   "liq": 109679.02,
   "score": 69.4
+ },
+ {
+  "addr": "GCM6bnuh6KiN696Wk8tu7QTfrpLmXUEWEW7rDwcEpump",
+  "chain": "solana",
+  "symbol": "NNN",
+  "t": 1793576723,
+  "price": 6.313e-05,
+  "mcap": 60603,
+  "liq": 18880.26,
+  "score": 72.3
  }
 ]
