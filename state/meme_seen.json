@@ -480,5 +480,17 @@
  "2mZwefm2rvQBAW6DBQLseD82cwXc5tnN7JTQbmaVpump": {
   "t": 1793497844,
   "r": "alerted"
+ },
+ "GaCewzuGZ4U3shAmiLnqXMAN8WX4X7QRdJb3vy8ppump": {
+  "t": 1793522524,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Top 10 holders high ownership"
+  ]
+ },
+ "nikemwCaTqBamHqfRVqPzwtWsmuwdXb6To25xJ2znwT": {
+  "t": 1793522524,
+  "r": "alerted"
  }
 }

@@ -948,5 +948,15 @@
   "mcap": 50695,
   "liq": 18730.16,
   "score": 63.0
+ },
+ {
+  "addr": "nikemwCaTqBamHqfRVqPzwtWsmuwdXb6To25xJ2znwT",
+  "chain": "solana",
+  "symbol": "niketyson",
+  "t": 1793522524,
+  "price": 0.0001625,
+  "mcap": 157379,
+  "liq": 34718.18,
+  "score": 79.8
  }
 ]
