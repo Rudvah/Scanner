@@ -998,5 +998,25 @@
   "mcap": 27029,
   "liq": 12149.24,
   "score": 60.3
+ },
+ {
+  "addr": "8BxKRVNTRzM7LTJ9Q6rqKQFwXtMjZjjSNYNDyjLSpump",
+  "chain": "solana",
+  "symbol": "BABYKIN",
+  "t": 1793563821,
+  "price": 0.0001045,
+  "mcap": 104450,
+  "liq": 25009.88,
+  "score": 97.0
+ },
+ {
+  "addr": "3dcrPVZwfykvVcP8fpLig29nGa8B4kViybM5UK2SZjky",
+  "chain": "solana",
+  "symbol": "ITSPEAK",
+  "t": 1793563821,
+  "price": 1.347e-05,
+  "mcap": 13420,
+  "liq": 9494.2,
+  "score": 79.0
  }
 ]
