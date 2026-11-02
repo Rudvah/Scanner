@@ -1058,5 +1058,15 @@
   "mcap": 46350,
   "liq": 16782.25,
   "score": 67.3
+ },
+ {
+  "addr": "B7Cj19ke2F8S6fazbBvGMxHYNNMYuDaAn3Sn2Zikpump",
+  "chain": "solana",
+  "symbol": "YES",
+  "t": 1793623656,
+  "price": 4.781e-05,
+  "mcap": 47811,
+  "liq": 16375.85,
+  "score": 85.2
  }
 ]
