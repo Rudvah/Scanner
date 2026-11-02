@@ -1068,5 +1068,25 @@
   "mcap": 47811,
   "liq": 16375.85,
   "score": 85.2
+ },
+ {
+  "addr": "wDSAqt4tEZpDAwB9XY6ejkZvMFuT1zUMjUh67txeYhf",
+  "chain": "solana",
+  "symbol": "HEDGE",
+  "t": 1793657344,
+  "price": 0.0002731,
+  "mcap": 273197,
+  "liq": 108488.38,
+  "score": 78.8
+ },
+ {
+  "addr": "2VgKmiiM8G827rWMYaxjKJuW8prWjM8rTk8Qf3a8pump",
+  "chain": "solana",
+  "symbol": "GTACAT",
+  "t": 1793657344,
+  "price": 6.814e-05,
+  "mcap": 63361,
+  "liq": 21078.73,
+  "score": 70.0
  }
 ]
