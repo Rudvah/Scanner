@@ -1048,5 +1048,15 @@
   "mcap": 60603,
   "liq": 18880.26,
   "score": 72.3
+ },
+ {
+  "addr": "4wmT5vPBJ3iiFRmNhciCZ67yasiXSjzz3g9VukXrpump",
+  "chain": "solana",
+  "symbol": "HOPE",
+  "t": 1793593706,
+  "price": 4.884e-05,
+  "mcap": 46350,
+  "liq": 16782.25,
+  "score": 67.3
  }
 ]
