@@ -1138,5 +1138,25 @@
   "mcap": 113553,
   "liq": 27464.48,
   "score": 67.3
+ },
+ {
+  "addr": "1o7Z1sGcw6sdXXgqZFkCKwCxb9xLxGimBoUVG9Yzero",
+  "chain": "solana",
+  "symbol": "ZERO",
+  "t": 1793732559,
+  "price": 4.327e-05,
+  "mcap": 43279,
+  "liq": 17206.91,
+  "score": 83.1
+ },
+ {
+  "addr": "EJPWoVgMrkZrqZAtRkGvA4jppbo15rMF2hhe1EPzpump",
+  "chain": "solana",
+  "symbol": "DCYC",
+  "t": 1793732559,
+  "price": 6.482e-05,
+  "mcap": 61848,
+  "liq": 21225.36,
+  "score": 78.5
  }
 ]
