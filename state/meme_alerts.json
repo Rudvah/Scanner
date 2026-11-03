@@ -1128,5 +1128,15 @@
   "mcap": 1239065,
   "liq": 91820.25,
   "score": 72.4
+ },
+ {
+  "addr": "94exwLui2KfAzYnbATkX8iKh4tcjMDW6YwckkSJVpump",
+  "chain": "solana",
+  "symbol": "ABDUL",
+  "t": 1793705841,
+  "price": 0.0001158,
+  "mcap": 113553,
+  "liq": 27464.48,
+  "score": 67.3
  }
 ]
