@@ -1088,5 +1088,45 @@
   "mcap": 63361,
   "liq": 21078.73,
   "score": 70.0
+ },
+ {
+  "addr": "8UdrZzuCPbZAY2tiSErRED2KUrggJaRxEsHrzgWLpump",
+  "chain": "solana",
+  "symbol": "MEM",
+  "t": 1793676929,
+  "price": 8.808e-05,
+  "mcap": 88086,
+  "liq": 25774.63,
+  "score": 81.8
+ },
+ {
+  "addr": "DayjoyjxCA2SVTApEW7oBFG3WMvrYZRMjAnqsetLpump",
+  "chain": "solana",
+  "symbol": "SMUGLY",
+  "t": 1793676929,
+  "price": 0.0004673,
+  "mcap": 454814,
+  "liq": 54937.03,
+  "score": 79.6
+ },
+ {
+  "addr": "HAp8U1SB7bDGMa81AQom1ee6AR5iSFFTi57MEbTzcash",
+  "chain": "solana",
+  "symbol": "\u1453\u0b39\ua6a1\u0908",
+  "t": 1793676929,
+  "price": 7.499e-05,
+  "mcap": 74656,
+  "liq": 21847.82,
+  "score": 75.6
+ },
+ {
+  "addr": "31SYoqWFhx3i9UsfnoXTjFp4ZwJA8F8UPrMxymfDpump",
+  "chain": "solana",
+  "symbol": "SPHERE",
+  "t": 1793676929,
+  "price": 0.001244,
+  "mcap": 1239065,
+  "liq": 91820.25,
+  "score": 72.4
  }
 ]
