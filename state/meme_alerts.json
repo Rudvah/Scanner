@@ -1158,5 +1158,15 @@
   "mcap": 61848,
   "liq": 21225.36,
   "score": 78.5
+ },
+ {
+  "addr": "G1sPgsNMMfEY8ebZUd6ioQyUmyo8Z93FUqG3xfQdpump",
+  "chain": "solana",
+  "symbol": "stocky",
+  "t": 1793732633,
+  "price": 8.218e-05,
+  "mcap": 73361,
+  "liq": 22489.22,
+  "score": 75.6
  }
 ]
