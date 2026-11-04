@@ -580,5 +580,12 @@
  "9hbzrGcuBBjqFhDgHzjF9jGPjWHZV6nRwjDeS38ypump": {
   "t": 1793775029,
   "r": "alerted"
+ },
+ "2UxjHoidyefQxJrCS8qT23JsbqKFcpPCa8ywBYZupump": {
+  "t": 1793804724,
+  "r": "unsafe",
+  "why": [
+   "Top 10 holders high ownership"
+  ]
  }
 }
