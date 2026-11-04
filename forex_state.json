@@ -1,5 +1,6 @@
 {
+ "AUDCAD|rsi_reversion|4h": "2026-11-04 04:00:00+00:00",
  "GBPUSD|rsi_reversion|4h": "2026-10-30 12:00:00+00:00",
  "NZDUSD|donchian_breakout|4h": "2026-11-03 20:00:00+00:00",
- "XAUUSD|donchian_breakout|4h": "2026-10-30 12:00:00+00:00"
+ "XAUUSD|donchian_breakout|4h": "2026-11-04 04:00:00+00:00"
 }
