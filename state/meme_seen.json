@@ -595,5 +595,25 @@
    "Top 10 holders high ownership",
    "Single holder ownership"
   ]
+ },
+ "AUcqE7gYFL6grKmFGK9LyxBvZyeYoZrzb41prA8qpump": {
+  "t": 1793827428,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Low Liquidity"
+  ]
+ },
+ "92j5cWKjdVKDC7skBw1HjvYtrTU8nMM1zKjC4dqmpump": {
+  "t": 1793827428,
+  "r": "alerted"
+ },
+ "E4brwTWpx8anGcsJ11REmwcP149UD1yfwyCRYEQppump": {
+  "t": 1793827428,
+  "r": "alerted"
+ },
+ "27Y4WwxHiconrfhwQKGotJ5nVEbrcFiDnJnoRBbCpump": {
+  "t": 1793827428,
+  "r": "alerted"
  }
 }

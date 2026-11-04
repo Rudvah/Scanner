@@ -1178,5 +1178,35 @@
   "mcap": 40988,
   "liq": 15317.5,
   "score": 66.5
+ },
+ {
+  "addr": "92j5cWKjdVKDC7skBw1HjvYtrTU8nMM1zKjC4dqmpump",
+  "chain": "solana",
+  "symbol": "SUPERBOWL",
+  "t": 1793827428,
+  "price": 6.534e-05,
+  "mcap": 64827,
+  "liq": 19307.04,
+  "score": 83.9
+ },
+ {
+  "addr": "E4brwTWpx8anGcsJ11REmwcP149UD1yfwyCRYEQppump",
+  "chain": "solana",
+  "symbol": "Aren",
+  "t": 1793827428,
+  "price": 3.462e-05,
+  "mcap": 34587,
+  "liq": 13920.74,
+  "score": 73.1
+ },
+ {
+  "addr": "27Y4WwxHiconrfhwQKGotJ5nVEbrcFiDnJnoRBbCpump",
+  "chain": "solana",
+  "symbol": "tism",
+  "t": 1793827428,
+  "price": 3.062e-05,
+  "mcap": 30577,
+  "liq": 12742.05,
+  "score": 63.2
  }
 ]
