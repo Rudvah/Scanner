@@ -1168,5 +1168,15 @@
   "mcap": 73361,
   "liq": 22489.22,
   "score": 75.6
+ },
+ {
+  "addr": "9hbzrGcuBBjqFhDgHzjF9jGPjWHZV6nRwjDeS38ypump",
+  "chain": "solana",
+  "symbol": "WOKE3",
+  "t": 1793775029,
+  "price": 4.243e-05,
+  "mcap": 40988,
+  "liq": 15317.5,
+  "score": 66.5
  }
 ]
