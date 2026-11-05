@@ -1228,5 +1228,15 @@
   "mcap": 15916,
   "liq": 10466.38,
   "score": 77.1
+ },
+ {
+  "addr": "9okwT7syLTFXDv4W64Xp7QUgTx6yKE82SDjzitHNpump",
+  "chain": "solana",
+  "symbol": "ZELDA",
+  "t": 1793869044,
+  "price": 9.542e-05,
+  "mcap": 92148,
+  "liq": 24412.59,
+  "score": 74.9
  }
 ]

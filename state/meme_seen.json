@@ -623,5 +623,17 @@
  "7AnTcyCc5p3GhLxxKqV15tHAhDRmQwAJ7YqTvoLGBaU1": {
   "t": 1793842701,
   "r": "alerted"
+ },
+ "GxGYLpyyWwsizxrpr9T3xKrwGLWSH3t4NqcPysPnpump": {
+  "t": 1793869044,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Low Liquidity"
+  ]
+ },
+ "9okwT7syLTFXDv4W64Xp7QUgTx6yKE82SDjzitHNpump": {
+  "t": 1793869044,
+  "r": "alerted"
  }
 }
