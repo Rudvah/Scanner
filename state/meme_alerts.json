@@ -1248,5 +1248,15 @@
   "mcap": 53022,
   "liq": 17173.17,
   "score": 67.9
+ },
+ {
+  "addr": "0xaFdA71A7060018Bb052c73CAC5881f059fFeCccC",
+  "chain": "base",
+  "symbol": "DENIM",
+  "t": 1793918729,
+  "price": 7.406e-05,
+  "mcap": 74063,
+  "liq": 29406.48,
+  "score": 60.8
  }
 ]
