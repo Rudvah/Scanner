@@ -1208,5 +1208,25 @@
   "mcap": 30577,
   "liq": 12742.05,
   "score": 63.2
+ },
+ {
+  "addr": "Bid8i1ocWssjRmKh2kcUfHxD1K6Sk7E5pV2PSVdepump",
+  "chain": "solana",
+  "symbol": "inu",
+  "t": 1793842701,
+  "price": 9.157e-05,
+  "mcap": 91579,
+  "liq": 23377.54,
+  "score": 86.1
+ },
+ {
+  "addr": "7AnTcyCc5p3GhLxxKqV15tHAhDRmQwAJ7YqTvoLGBaU1",
+  "chain": "solana",
+  "symbol": "PENNY",
+  "t": 1793842701,
+  "price": 1.591e-05,
+  "mcap": 15916,
+  "liq": 10466.38,
+  "score": 77.1
  }
 ]
