@@ -1238,5 +1238,15 @@
   "mcap": 92148,
   "liq": 24412.59,
   "score": 74.9
+ },
+ {
+  "addr": "Eyo1o3QYKQwdvP6UtK9dQLTZj2BBtoJdN4tMWB2Dpump",
+  "chain": "solana",
+  "symbol": "GOODTIME",
+  "t": 1793898815,
+  "price": 5.544e-05,
+  "mcap": 53022,
+  "liq": 17173.17,
+  "score": 67.9
  }
 ]
