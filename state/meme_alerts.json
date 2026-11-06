@@ -1258,5 +1258,45 @@
   "mcap": 74063,
   "liq": 29406.48,
   "score": 60.8
+ },
+ {
+  "addr": "CMK5SEFQw3DDs6iGTBBAHeyQyMnBgtZvFnUp6tYwabi",
+  "chain": "solana",
+  "symbol": "WABI",
+  "t": 1793934630,
+  "price": 2.427e-05,
+  "mcap": 24271,
+  "liq": 14090.56,
+  "score": 79.7
+ },
+ {
+  "addr": "5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump",
+  "chain": "solana",
+  "symbol": "Diamond",
+  "t": 1793934630,
+  "price": 0.0004278,
+  "mcap": 408847,
+  "liq": 62726.4,
+  "score": 77.2
+ },
+ {
+  "addr": "Dk2iHPgeStfACECMbmigRRcDtP8yzfTjdHnMq7hqpump",
+  "chain": "solana",
+  "symbol": "DEGEN",
+  "t": 1793934630,
+  "price": 8.936e-05,
+  "mcap": 84982,
+  "liq": 25912.5,
+  "score": 70.5
+ },
+ {
+  "addr": "0x1C784D59BF55B754f95398D478f0762D73e8eEb8",
+  "chain": "base",
+  "symbol": "CLAUS",
+  "t": 1793934630,
+  "price": 2.873e-05,
+  "mcap": 28731,
+  "liq": 54463.54,
+  "score": 64.8
  }
 ]
