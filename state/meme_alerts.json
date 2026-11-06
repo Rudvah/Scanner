@@ -1328,5 +1328,35 @@
   "mcap": 116281,
   "liq": 29051.64,
   "score": 71.4
+ },
+ {
+  "addr": "FugyvQb7hrg71eL8iWu6cpZvg9HyJBXN761dzxNFpump",
+  "chain": "solana",
+  "symbol": "LAURA",
+  "t": 1793988806,
+  "price": 0.0001109,
+  "mcap": 110729,
+  "liq": 30095.45,
+  "score": 86.1
+ },
+ {
+  "addr": "8csCzE6QWAjNRiVNNSSn7ifR2CZHFj3sWuTzGSDapump",
+  "chain": "solana",
+  "symbol": "HODL",
+  "t": 1793988806,
+  "price": 0.0001601,
+  "mcap": 158093,
+  "liq": 31035.73,
+  "score": 71.5
+ },
+ {
+  "addr": "5aDjvdypu3N88vfC6ZN85CwjeR49N2Bcp7gL7C5Epump",
+  "chain": "solana",
+  "symbol": "TTP",
+  "t": 1793988806,
+  "price": 4.985e-05,
+  "mcap": 46969,
+  "liq": 16497.33,
+  "score": 66.9
  }
 ]
