@@ -1298,5 +1298,35 @@
   "mcap": 28731,
   "liq": 54463.54,
   "score": 64.8
+ },
+ {
+  "addr": "rAxD9RpFienq6zfq8yZSakZXjewZqTXD9jRd2UEpump",
+  "chain": "solana",
+  "symbol": "ATM",
+  "t": 1793963945,
+  "price": 6.519e-05,
+  "mcap": 65135,
+  "liq": 21218.83,
+  "score": 86.0
+ },
+ {
+  "addr": "G2apw4XQdSfTv9836JHWhRZGyqG43m93eMEF4zjnpump",
+  "chain": "solana",
+  "symbol": "HALO",
+  "t": 1793963945,
+  "price": 4.008e-05,
+  "mcap": 38385,
+  "liq": 16214.95,
+  "score": 73.7
+ },
+ {
+  "addr": "EW1b9rcLAJe634mgxb5r4bVYxDoGU37o7YazBzjTpump",
+  "chain": "solana",
+  "symbol": "RM",
+  "t": 1793963945,
+  "price": 0.0001194,
+  "mcap": 116281,
+  "liq": 29051.64,
+  "score": 71.4
  }
 ]
