@@ -1,36 +1,4 @@
 {
- "E8YeG61gTkBADYtnPcobeyMe6iBwbx5MkUGyNyhxpump": {
-  "t": 1792783620,
-  "r": "alerted"
- },
- "CokrQHPjaWjyXyU15LiN9rb62tgBuFiU78KD7fKiZtu1": {
-  "t": 1792783620,
-  "r": "alerted"
- },
- "3fwux1eyKEYzSnbYWVGoZtgg4ajUx4MBSAsvmTEgpump": {
-  "t": 1792794705,
-  "r": "unsafe",
-  "why": [
-   "Creator history of rugged tokens",
-   "Large Amount of LP Unlocked"
-  ]
- },
- "2Nyb2GXVoXM42hVQxJg5RppTbiN5SCZFL4LtZVVDpump": {
-  "t": 1792794705,
-  "r": "alerted"
- },
- "Ad6VdigRAwP7ioqiqWd1jbeAcNVvkzjLmKco8PHDpump": {
-  "t": 1792794705,
-  "r": "alerted"
- },
- "J8NLpWf52NrMMXLEhf26NUVrpst8Xm3CS91KZ5RPpump": {
-  "t": 1792794705,
-  "r": "alerted"
- },
- "0x648a6a60c00011b2f8FeA7B1F30D2c2E9b0845a2": {
-  "t": 1792794705,
-  "r": "alerted"
- },
  "HJcPYoVCbJM3mqMNRMNUDu4h7DiC7tb7WfJZfumvpump": {
   "t": 1792804876,
   "r": "alerted"
@@ -670,6 +638,18 @@
  },
  "5aDjvdypu3N88vfC6ZN85CwjeR49N2Bcp7gL7C5Epump": {
   "t": 1793988806,
+  "r": "alerted"
+ },
+ "0xf218540eCE557A83A733bEB36A94801299E1a70a": {
+  "t": 1794007398,
+  "r": "alerted"
+ },
+ "JATk4idqfAyU21F6w3xf2Rbyj9j8FnYxVWLMfoweqExh": {
+  "t": 1794007398,
+  "r": "alerted"
+ },
+ "Hy4iuJwuo9hAUMgMsNpFXANvKSnGmFFqcjBZuiCFpJCP": {
+  "t": 1794007398,
   "r": "alerted"
  }
 }

@@ -1358,5 +1358,35 @@
   "mcap": 46969,
   "liq": 16497.33,
   "score": 66.9
+ },
+ {
+  "addr": "0xf218540eCE557A83A733bEB36A94801299E1a70a",
+  "chain": "base",
+  "symbol": "PEPKING",
+  "t": 1794007398,
+  "price": 2.001e-06,
+  "mcap": 11211,
+  "liq": 18729.02,
+  "score": 76.7
+ },
+ {
+  "addr": "JATk4idqfAyU21F6w3xf2Rbyj9j8FnYxVWLMfoweqExh",
+  "chain": "solana",
+  "symbol": "WHITE",
+  "t": 1794007398,
+  "price": 0.0002322,
+  "mcap": 232225,
+  "liq": 99502.63,
+  "score": 74.7
+ },
+ {
+  "addr": "Hy4iuJwuo9hAUMgMsNpFXANvKSnGmFFqcjBZuiCFpJCP",
+  "chain": "solana",
+  "symbol": "PI",
+  "t": 1794007398,
+  "price": 0.0002541,
+  "mcap": 254114,
+  "liq": 102561.9,
+  "score": 62.1
  }
 ]
