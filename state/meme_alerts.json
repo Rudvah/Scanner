@@ -1408,5 +1408,15 @@
   "mcap": 158221,
   "liq": 30706.62,
   "score": 71.6
+ },
+ {
+  "addr": "FFgnd8bifG8zGBE7dij7g3HWp4gveJS4gDyjdk5epump",
+  "chain": "solana",
+  "symbol": "trauma ",
+  "t": 1794047601,
+  "price": 6.957e-05,
+  "mcap": 66417,
+  "liq": 20019.77,
+  "score": 69.8
  }
 ]
