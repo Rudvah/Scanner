@@ -1388,5 +1388,25 @@
   "mcap": 254114,
   "liq": 102561.9,
   "score": 62.1
+ },
+ {
+  "addr": "FhtLRwmMfuZAghT8HQ3hhvFYBV3Cw7duGyvjnU7Apump",
+  "chain": "solana",
+  "symbol": "SCAMCHI",
+  "t": 1794020420,
+  "price": 8.725e-05,
+  "mcap": 87170,
+  "liq": 23398.1,
+  "score": 74.6
+ },
+ {
+  "addr": "C1w2cSCc4GmXfUL2y5amkGLhDPsJT7Ts7VyS71inpump",
+  "chain": "solana",
+  "symbol": "BTC",
+  "t": 1794020420,
+  "price": 0.0001603,
+  "mcap": 158221,
+  "liq": 30706.62,
+  "score": 71.6
  }
 ]

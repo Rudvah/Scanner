@@ -1,20 +1,4 @@
 {
- "HJcPYoVCbJM3mqMNRMNUDu4h7DiC7tb7WfJZfumvpump": {
-  "t": 1792804876,
-  "r": "alerted"
- },
- "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
-  "t": 1792804876,
-  "r": "alerted"
- },
- "0x8b4086C85bF0538aDC4FD026E2aF18eC15DAFa1f": {
-  "t": 1792804876,
-  "r": "alerted"
- },
- "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump": {
-  "t": 1792804876,
-  "r": "alerted"
- },
  "59NZWxgJWRoHdXxsBFrXLBq4NEa9RBsmmFUqseLzpump": {
   "t": 1792822313,
   "r": "alerted"
@@ -650,6 +634,29 @@
  },
  "Hy4iuJwuo9hAUMgMsNpFXANvKSnGmFFqcjBZuiCFpJCP": {
   "t": 1794007398,
+  "r": "alerted"
+ },
+ "41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump": {
+  "t": 1794020420,
+  "r": "unsafe",
+  "why": [
+   "Single holder ownership"
+  ]
+ },
+ "Gvqrg6uTzB2JWyHjgtzeJqLiSigMmj4uuCYY5xiApump": {
+  "t": 1794020420,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Top 10 holders high ownership"
+  ]
+ },
+ "FhtLRwmMfuZAghT8HQ3hhvFYBV3Cw7duGyvjnU7Apump": {
+  "t": 1794020420,
+  "r": "alerted"
+ },
+ "C1w2cSCc4GmXfUL2y5amkGLhDPsJT7Ts7VyS71inpump": {
+  "t": 1794020420,
   "r": "alerted"
  }
 }
