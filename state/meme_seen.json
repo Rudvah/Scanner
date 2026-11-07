@@ -1,23 +1,4 @@
 {
- "DEU2iFMPePKqpze4EqZn9i5yBzeQT3riwx7vwgVVpump": {
-  "t": 1792864186,
-  "r": "alerted"
- },
- "6mQvSQvbYDBvWbQdXTx7jhqDfwzz5GVcX6tNacs1pump": {
-  "t": 1792872834,
-  "r": "unsafe",
-  "why": [
-   "Creator history of rugged tokens"
-  ]
- },
- "DQSL3cVotoRw3fTG9bXwDnS7YuZz2bz9rjjtR8X9pump": {
-  "t": 1792872834,
-  "r": "alerted"
- },
- "22rWiyDiY9GgxSrFiWC2vX1GxNxjkvrRPmZJDzv9pq6X": {
-  "t": 1792872864,
-  "r": "alerted"
- },
  "8THZ69JP2ErZuHVj4G5rcwkFfsQafp5mQsaoQReApump": {
   "t": 1792881480,
   "r": "alerted"
@@ -645,6 +626,10 @@
  },
  "CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump": {
   "t": 1794069852,
+  "r": "alerted"
+ },
+ "5UWfbqWEcLqDSrA2SwNXQpvbqEhZ2kPyh3LaPEmzpump": {
+  "t": 1794083966,
   "r": "alerted"
  }
 }

@@ -1468,5 +1468,15 @@
   "mcap": 187167,
   "liq": 33812,
   "score": 69.2
+ },
+ {
+  "addr": "5UWfbqWEcLqDSrA2SwNXQpvbqEhZ2kPyh3LaPEmzpump",
+  "chain": "solana",
+  "symbol": "Whitehouse",
+  "t": 1794083966,
+  "price": 8.228e-05,
+  "mcap": 79271,
+  "liq": 24264.04,
+  "score": 71.8
  }
 ]
