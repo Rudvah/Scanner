@@ -1418,5 +1418,55 @@
   "mcap": 66417,
   "liq": 20019.77,
   "score": 69.8
+ },
+ {
+  "addr": "G3PzMuSp2A7oP2qiTwnEywEYsVgTPFKzR8V7QrS9pump",
+  "chain": "solana",
+  "symbol": "PEPE69",
+  "t": 1794069852,
+  "price": 8.993e-05,
+  "mcap": 89930,
+  "liq": 23562.87,
+  "score": 84.1
+ },
+ {
+  "addr": "HW2Sz6nNonYCfD59Ng5AeV1xtuU43xu7oktb2PPfpump",
+  "chain": "solana",
+  "symbol": "Elysion Pad",
+  "t": 1794069852,
+  "price": 0.000143,
+  "mcap": 140261,
+  "liq": 33765.49,
+  "score": 81.8
+ },
+ {
+  "addr": "DY3o5SLKeZkhkyqJJL4bbxxHos86yLqoVD4wVVaHpiLL",
+  "chain": "solana",
+  "symbol": "piLL",
+  "t": 1794069852,
+  "price": 0.0001093,
+  "mcap": 109173,
+  "liq": 26343.65,
+  "score": 81.4
+ },
+ {
+  "addr": "BB843oCDKgqZyQXiGfF5RAHF1ZYsEBQx8oxGq5dPZqHq",
+  "chain": "solana",
+  "symbol": "BB84",
+  "t": 1794069852,
+  "price": 0.0006871,
+  "mcap": 687112,
+  "liq": 83692.48,
+  "score": 78.0
+ },
+ {
+  "addr": "CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump",
+  "chain": "solana",
+  "symbol": "BTC",
+  "t": 1794069852,
+  "price": 0.0001898,
+  "mcap": 187167,
+  "liq": 33812,
+  "score": 69.2
  }
 ]
