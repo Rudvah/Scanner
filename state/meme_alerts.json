@@ -1478,5 +1478,45 @@
   "mcap": 79271,
   "liq": 24264.04,
   "score": 71.8
+ },
+ {
+  "addr": "AtsxeXEVGCSJFDQKFpxucEjxk5vk9SUkU21mrCSFpump",
+  "chain": "solana",
+  "symbol": "ClaudiaGI",
+  "t": 1794096689,
+  "price": 0.0005676,
+  "mcap": 564340,
+  "liq": 59927.86,
+  "score": 89.9
+ },
+ {
+  "addr": "3EafjpE83KLduv2R8Gy9bpD8DhNp8e5w7ShJWYs2CwDd",
+  "chain": "solana",
+  "symbol": "FOLD",
+  "t": 1794096689,
+  "price": 1.917e-05,
+  "mcap": 19174,
+  "liq": 11358.38,
+  "score": 82.6
+ },
+ {
+  "addr": "8rHoAfpdE89bi1SRRKaYUWfng3YpntoxZQyEQy9GPmZV",
+  "chain": "solana",
+  "symbol": "MAGGIE",
+  "t": 1794096689,
+  "price": 8.678e-05,
+  "mcap": 86691,
+  "liq": 24153.54,
+  "score": 71.2
+ },
+ {
+  "addr": "3kQbP4tTBtUQ13TifHEon7X6ms9MhYtTr43m612owo5P",
+  "chain": "solana",
+  "symbol": "GTA6",
+  "t": 1794096689,
+  "price": 7.301e-05,
+  "mcap": 73012,
+  "liq": 58406.44,
+  "score": 64.1
  }
 ]
