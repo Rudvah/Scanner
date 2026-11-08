@@ -1518,5 +1518,15 @@
   "mcap": 73012,
   "liq": 58406.44,
   "score": 64.1
+ },
+ {
+  "addr": "E3xwq1btq8aNbebxfsqFz13LHRGy46GFQFbW91LWdiKn",
+  "chain": "solana",
+  "symbol": "p402",
+  "t": 1794119345,
+  "price": 1.236e-05,
+  "mcap": 12363,
+  "liq": 8037.51,
+  "score": 70.3
  }
 ]
