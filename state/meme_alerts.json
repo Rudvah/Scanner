@@ -1528,5 +1528,25 @@
   "mcap": 12363,
   "liq": 8037.51,
   "score": 70.3
+ },
+ {
+  "addr": "HvAuwngEey58kXt8vk6L3drCPgzPygi5d29Hy75vpump",
+  "chain": "solana",
+  "symbol": "space",
+  "t": 1794145632,
+  "price": 3.633e-05,
+  "mcap": 36336,
+  "liq": 15397.75,
+  "score": 74.0
+ },
+ {
+  "addr": "HJSJ7NUXYZ8es3UZ4w35XEsw7YRJLakKetBsz1WDpump",
+  "chain": "solana",
+  "symbol": "UNEMPLOYED",
+  "t": 1794145632,
+  "price": 1.393e-05,
+  "mcap": 13403,
+  "liq": 8096.94,
+  "score": 65.7
  }
 ]
