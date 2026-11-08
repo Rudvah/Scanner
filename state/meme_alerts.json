@@ -1568,5 +1568,15 @@
   "mcap": 351365,
   "liq": 119830.67,
   "score": 61.7
+ },
+ {
+  "addr": "BkYGs8BJzoc7ZgptAiMqAed8KQ31rVTsegBHdPTbpump",
+  "chain": "solana",
+  "symbol": "JensenAlice",
+  "t": 1794177566,
+  "price": 0.000327,
+  "mcap": 323174,
+  "liq": 44025.72,
+  "score": 90.9
  }
 ]
