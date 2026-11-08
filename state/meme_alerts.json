@@ -1548,5 +1548,25 @@
   "mcap": 13403,
   "liq": 8096.94,
   "score": 65.7
+ },
+ {
+  "addr": "5BeD1Uc3Rz2Eha5FqGEnVUpGRNRk8khkXLXQNxynPyTx",
+  "chain": "solana",
+  "symbol": "STOKE",
+  "t": 1794163139,
+  "price": 0.0001388,
+  "mcap": 138828,
+  "liq": 43755.16,
+  "score": 86.0
+ },
+ {
+  "addr": "9qghVo6gqg1nVYGZCq14mhsFFUDH3e2z1iH4JtkfLoat",
+  "chain": "solana",
+  "symbol": "BTC",
+  "t": 1794163139,
+  "price": 0.0003513,
+  "mcap": 351365,
+  "liq": 119830.67,
+  "score": 61.7
  }
 ]

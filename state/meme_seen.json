@@ -1,23 +1,4 @@
 {
- "5QREAgtfP1NkuymRaFdHxr5QNF2Yry9M1YCyaompump": {
-  "t": 1792939694,
-  "r": "alerted"
- },
- "BY9TNoqwmeZUQwAWDjFcNziBZR567889xzWnbXQipump": {
-  "t": 1792939694,
-  "r": "alerted"
- },
- "GaW5SiXrKqxZPimyzou32nMMse72sGe7cN56rw5kpump": {
-  "t": 1792951660,
-  "r": "unsafe",
-  "why": [
-   "Top 10 holders high ownership"
-  ]
- },
- "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump": {
-  "t": 1792951660,
-  "r": "alerted"
- },
  "Pairn5qtjZqVDMGbFuxMvLF6Mf7f2ZRSE46bNjyme67": {
   "t": 1792962252,
   "r": "alerted"
@@ -626,6 +607,22 @@
  },
  "HJSJ7NUXYZ8es3UZ4w35XEsw7YRJLakKetBsz1WDpump": {
   "t": 1794145632,
+  "r": "alerted"
+ },
+ "9zeTqCPi9Ct8eFmgBSY9dr47U8o7e5DWKXkBVqQYpump": {
+  "t": 1794163139,
+  "r": "unsafe",
+  "why": [
+   "Top 10 holders high ownership",
+   "Single holder ownership"
+  ]
+ },
+ "5BeD1Uc3Rz2Eha5FqGEnVUpGRNRk8khkXLXQNxynPyTx": {
+  "t": 1794163139,
+  "r": "alerted"
+ },
+ "9qghVo6gqg1nVYGZCq14mhsFFUDH3e2z1iH4JtkfLoat": {
+  "t": 1794163139,
   "r": "alerted"
  }
 }
