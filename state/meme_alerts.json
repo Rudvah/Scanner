@@ -1608,5 +1608,45 @@
   "mcap": 694794,
   "liq": 66180.08,
   "score": 78.5
+ },
+ {
+  "addr": "6USthxiSZFoCJWhd5bUTcStagAJ2rFd8q8SiF2kupump",
+  "chain": "solana",
+  "symbol": "ORBIT",
+  "t": 1794257769,
+  "price": 0.0005115,
+  "mcap": 508936,
+  "liq": 56011.37,
+  "score": 82.0
+ },
+ {
+  "addr": "F9DrbB5ATbAtLqt4PUbFGcVa5dAHqV3E9ucYvkEBLESS",
+  "chain": "solana",
+  "symbol": "SYGNAL",
+  "t": 1794257769,
+  "price": 2.656e-05,
+  "mcap": 26568,
+  "liq": 14549.45,
+  "score": 73.9
+ },
+ {
+  "addr": "XeaWBDDBxj5Qf6S6TshMC1SKaxSccJfRZUDj26opump",
+  "chain": "solana",
+  "symbol": "MERLYN",
+  "t": 1794257769,
+  "price": 7.036e-05,
+  "mcap": 66955,
+  "liq": 19335.67,
+  "score": 66.7
+ },
+ {
+  "addr": "ArvNVuHKpRyaRiU72bjBwJK8hz19J5Ery327yzVYpump",
+  "chain": "solana",
+  "symbol": "Biberty",
+  "t": 1794257769,
+  "price": 2.732e-05,
+  "mcap": 26066,
+  "liq": 11391.97,
+  "score": 66.4
  }
 ]
