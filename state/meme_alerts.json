@@ -1578,5 +1578,35 @@
   "mcap": 323174,
   "liq": 44025.72,
   "score": 90.9
+ },
+ {
+  "addr": "3mPaWq3s4MoF7mXLHPo3N9ueRjG4oRQVPqnHTJLkpump",
+  "chain": "solana",
+  "symbol": "NVIDIH",
+  "t": 1794190932,
+  "price": 0.0006316,
+  "mcap": 626666,
+  "liq": 62657.72,
+  "score": 86.5
+ },
+ {
+  "addr": "AxWd7zsqNmgcPyt8evEzycPAAgfAPNdZh8nToP1bpump",
+  "chain": "solana",
+  "symbol": "TITTYVERSE",
+  "t": 1794190932,
+  "price": 0.0002765,
+  "mcap": 273216,
+  "liq": 40804.24,
+  "score": 85.8
+ },
+ {
+  "addr": "H2ZViwA4dwxHd3bctARCUDUqTwTqfVrbmKQMrwBmpump",
+  "chain": "solana",
+  "symbol": "BAWSAQ",
+  "t": 1794190932,
+  "price": 0.0007014,
+  "mcap": 694794,
+  "liq": 66180.08,
+  "score": 78.5
  }
 ]
