@@ -1,42 +1,4 @@
 {
- "CufvRbdcYz3zRHYhAp4efhYu7TA3KkoqAFWqnzsVuh9V": {
-  "t": 1793076464,
-  "r": "alerted"
- },
- "E6exteuDy1u6u3FfQV7SvPyU4XPdcBGi4cBnqrusocat": {
-  "t": 1793076464,
-  "r": "alerted"
- },
- "GZd9LCziRNVXQWfsQ5jakdGLnkVBK7jtX3PjQjors7kT": {
-  "t": 1793076464,
-  "r": "alerted"
- },
- "5zTLJ9JxQRDeTxfm8onF8Gbf7J9tfXFwRbubaLs3pump": {
-  "t": 1793076464,
-  "r": "alerted"
- },
- "CyXDdjGUeV1nGzzr4g9octqkJNcqC19DD1gmfVq5hjrH": {
-  "t": 1793095941,
-  "r": "unsafe",
-  "why": [
-   "Large Amount of LP Unlocked"
-  ]
- },
- "GrtE7xGn3iBk93hhf1zz6i3Wbfv1uDd9unStGVhGpump": {
-  "t": 1793095941,
-  "r": "unsafe",
-  "why": [
-   "Single holder ownership"
-  ]
- },
- "Fek7BGWxw9MabKejxFdhEftygFkJXcQjezk99fkTmKaX": {
-  "t": 1793095941,
-  "r": "alerted"
- },
- "HMTwjQPHbf82woGKMwDyPHAxgpwVj4boFQPMwk5Bpump": {
-  "t": 1793095941,
-  "r": "alerted"
- },
  "J7ZfGzTcDwHhxhRCDFgSy4avH2xoBQczz9d4wJXrpump": {
   "t": 1793116647,
   "r": "alerted"
@@ -593,6 +555,10 @@
  },
  "0xa023f39463333bEd648e7499147DE01658E25B07": {
   "t": 1794280460,
+  "r": "alerted"
+ },
+ "9VZerdNL1x6EjetDqRnh5bYcdmk1y8sLAGs1ybzGpump": {
+  "t": 1794310208,
   "r": "alerted"
  }
 }
