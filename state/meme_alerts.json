@@ -1668,5 +1668,55 @@
   "mcap": 134483,
   "liq": 29403.13,
   "score": 73.2
+ },
+ {
+  "addr": "CQ8zNLYwMEAVVBHEswusZrsUraCvc7HjiBPwgTbRpump",
+  "chain": "solana",
+  "symbol": "BOXCAT",
+  "t": 1794338344,
+  "price": 5.44e-05,
+  "mcap": 54341,
+  "liq": 16663.89,
+  "score": 78.9
+ },
+ {
+  "addr": "ExjQ95yz1hadNHF9Qk2junAuNcySCo6Ttfyof7nooeeQ",
+  "chain": "solana",
+  "symbol": "VEIL",
+  "t": 1794338344,
+  "price": 6.666e-05,
+  "mcap": 66661,
+  "liq": 22988.86,
+  "score": 78.9
+ },
+ {
+  "addr": "AQ2gmhnqAiPDd2P6jgYrrVvVh8X1de2pBKPLKQbKpump",
+  "chain": "solana",
+  "symbol": "VC",
+  "t": 1794338344,
+  "price": 8.791e-05,
+  "mcap": 85178,
+  "liq": 25027.98,
+  "score": 76.6
+ },
+ {
+  "addr": "Ho7iohoM6UN96yoxzBNzz9aXZpNW3AyUVuEmBdAQpump",
+  "chain": "solana",
+  "symbol": "PPP",
+  "t": 1794338344,
+  "price": 8.195e-05,
+  "mcap": 79862,
+  "liq": 21965.83,
+  "score": 68.9
+ },
+ {
+  "addr": "78PC5CX6CnRvmxeMCBtw9QxPEuGdVTVVWh7rUnbBkw7g",
+  "chain": "solana",
+  "symbol": "USHP",
+  "t": 1794338344,
+  "price": 1.836e-05,
+  "mcap": 17408,
+  "liq": 8932.97,
+  "score": 63.7
  }
 ]
