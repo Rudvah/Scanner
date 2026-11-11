@@ -1718,5 +1718,25 @@
   "mcap": 17408,
   "liq": 8932.97,
   "score": 63.7
+ },
+ {
+  "addr": "4iJ7xEQrUvVUQH9KVStvw3FaY2PZDd7RtR4L9zx2pump",
+  "chain": "solana",
+  "symbol": "HOLD",
+  "t": 1794355756,
+  "price": 0.0002797,
+  "mcap": 263667,
+  "liq": 42616.08,
+  "score": 76.1
+ },
+ {
+  "addr": "6mwuYnY3fHdxed9GnrdY5BkXhJwMi1uz39MPsYUcpump",
+  "chain": "solana",
+  "symbol": "BULLHARIS",
+  "t": 1794355756,
+  "price": 0.0004462,
+  "mcap": 443960,
+  "liq": 50383.01,
+  "score": 62.6
  }
 ]
