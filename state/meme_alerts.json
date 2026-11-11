@@ -1738,5 +1738,35 @@
   "mcap": 443960,
   "liq": 50383.01,
   "score": 62.6
+ },
+ {
+  "addr": "GAV37UD3cvysYvvPSeKboFKwarG387RvznM3BBhBpump",
+  "chain": "solana",
+  "symbol": "mihao",
+  "t": 1794380090,
+  "price": 0.0001707,
+  "mcap": 168485,
+  "liq": 30552.44,
+  "score": 76.3
+ },
+ {
+  "addr": "ACQaUNABukRNGqJJS2geF1XhDignZuvG21hcE9gZpump",
+  "chain": "solana",
+  "symbol": "GTABOY",
+  "t": 1794380090,
+  "price": 2.593e-05,
+  "mcap": 24304,
+  "liq": 10838.48,
+  "score": 74.1
+ },
+ {
+  "addr": "BXwgus8w5NPgxxWxTUUHiKUz3Jezn8RB6uqowcJxpump",
+  "chain": "solana",
+  "symbol": "TRENCHER",
+  "t": 1794380090,
+  "price": 2.934e-05,
+  "mcap": 29349,
+  "liq": 11749.71,
+  "score": 65.1
  }
 ]
