@@ -1768,5 +1768,55 @@
   "mcap": 29349,
   "liq": 11749.71,
   "score": 65.1
+ },
+ {
+  "addr": "Hu4eFmzw4jHDYfU9KhjPnJoJFKdT2c3hr8WENudspump",
+  "chain": "solana",
+  "symbol": "SAXON",
+  "t": 1794433420,
+  "price": 5.964e-05,
+  "mcap": 59649,
+  "liq": 20012.32,
+  "score": 84.0
+ },
+ {
+  "addr": "4Dgjitjn8br3LcdcBnkc9tYJ8d1cnCCJd2nsVgzZpump",
+  "chain": "solana",
+  "symbol": "MIHAO VI",
+  "t": 1794433420,
+  "price": 0.0001213,
+  "mcap": 119666,
+  "liq": 25936.44,
+  "score": 79.8
+ },
+ {
+  "addr": "7fNYfFkDefatZugpcgaHqGxQuwm6JzcRYDQrdajqpump",
+  "chain": "solana",
+  "symbol": "AIB",
+  "t": 1794433420,
+  "price": 0.0002976,
+  "mcap": 295805,
+  "liq": 42116.74,
+  "score": 79.4
+ },
+ {
+  "addr": "Gsj4msPvgEdDJ6UuYwoKT6uqfMzHUWS8B3pG5QNvpump",
+  "chain": "solana",
+  "symbol": "mesk",
+  "t": 1794433420,
+  "price": 2.544e-05,
+  "mcap": 25445,
+  "liq": 11254.72,
+  "score": 78.7
+ },
+ {
+  "addr": "0xc98eef7a7BDc553a24aD5eB94682ac1712830112",
+  "chain": "base",
+  "symbol": "LAPTOP",
+  "t": 1794433420,
+  "price": 1.95e-06,
+  "mcap": 10921,
+  "liq": 17811.89,
+  "score": 76.6
  }
 ]
