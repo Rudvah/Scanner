@@ -1848,5 +1848,15 @@
   "mcap": 71707,
   "liq": 19699.78,
   "score": 78.7
+ },
+ {
+  "addr": "AJFnmpiF4VTKeqEWtwBUarib5zKKbXcs594UyrMHpump",
+  "chain": "solana",
+  "symbol": "AIB",
+  "t": 1794451320,
+  "price": 0.0005118,
+  "mcap": 509311,
+  "liq": 55707.34,
+  "score": 62.1
  }
 ]
