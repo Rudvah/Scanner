@@ -1868,5 +1868,55 @@
   "mcap": 145311,
   "liq": 29860.13,
   "score": 76.6
+ },
+ {
+  "addr": "5ba8HwNgio5t86aFdWJ81w5pNHjbqAKPKejTsVoDpump",
+  "chain": "solana",
+  "symbol": "MaxWif",
+  "t": 1794508896,
+  "price": 0.0001522,
+  "mcap": 148518,
+  "liq": 28823.24,
+  "score": 87.5
+ },
+ {
+  "addr": "2cSFs3gQorz1pB9HtnnHbqtbsQoSPrjPGR9P1A1i7sf8",
+  "chain": "solana",
+  "symbol": "PEG",
+  "t": 1794508896,
+  "price": 5.918e-05,
+  "mcap": 59186,
+  "liq": 18878.61,
+  "score": 78.3
+ },
+ {
+  "addr": "6MQGcPiDMusnHWXTBAfY7sRAHYRfgZmPjsmSPmPdpump",
+  "chain": "solana",
+  "symbol": "IMG",
+  "t": 1794508896,
+  "price": 6.968e-05,
+  "mcap": 69623,
+  "liq": 22085.45,
+  "score": 74.8
+ },
+ {
+  "addr": "ABAodYixeMG3pmuyohdgNft51PncJiadDqBBZvxWpump",
+  "chain": "solana",
+  "symbol": "DC",
+  "t": 1794508896,
+  "price": 6.806e-05,
+  "mcap": 66840,
+  "liq": 22574.76,
+  "score": 74.0
+ },
+ {
+  "addr": "3WcR58Ba1Z82bSK77DsTqXj3cG5sbR5WXemW6Bqppump",
+  "chain": "solana",
+  "symbol": "AMD",
+  "t": 1794508896,
+  "price": 8.849e-05,
+  "mcap": 88459,
+  "liq": 21577.16,
+  "score": 72.3
  }
 ]
