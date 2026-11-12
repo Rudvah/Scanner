@@ -1818,5 +1818,35 @@
   "mcap": 10921,
   "liq": 17811.89,
   "score": 76.6
+ },
+ {
+  "addr": "H57bUBka6sBfPQph6f58TsQvUvxugJQmqMANFV1mpump",
+  "chain": "solana",
+  "symbol": "Rex",
+  "t": 1794451253,
+  "price": 0.0006944,
+  "mcap": 686515,
+  "liq": 63845.33,
+  "score": 80.7
+ },
+ {
+  "addr": "5LPUWuxVTfkEhGob1kyWgijbFse4icqqH7VTgY79pump",
+  "chain": "solana",
+  "symbol": "blackjesus",
+  "t": 1794451253,
+  "price": 4.313e-05,
+  "mcap": 42295,
+  "liq": 14580.74,
+  "score": 80.6
+ },
+ {
+  "addr": "9Sunhg3DWCxnjcN1UzBY3X8W46v9DXhesBhuJLDtgrok",
+  "chain": "solana",
+  "symbol": "GROKIE",
+  "t": 1794451253,
+  "price": 7.375e-05,
+  "mcap": 71707,
+  "liq": 19699.78,
+  "score": 78.7
  }
 ]
