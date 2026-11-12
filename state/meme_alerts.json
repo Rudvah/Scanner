@@ -1858,5 +1858,15 @@
   "mcap": 509311,
   "liq": 55707.34,
   "score": 62.1
+ },
+ {
+  "addr": "2UMho4zUPqSKb2fbJbKNPf1dU1WKD6SfbNmVkvphpump",
+  "chain": "solana",
+  "symbol": "Shiqi",
+  "t": 1794479949,
+  "price": 0.0001516,
+  "mcap": 145311,
+  "liq": 29860.13,
+  "score": 76.6
  }
 ]

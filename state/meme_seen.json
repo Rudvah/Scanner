@@ -1,15 +1,4 @@
 {
- "Fa24xN13pzjmcx1dtKP9nBMMFCwLtXCJrtP5hSPKpump": {
-  "t": 1793265640,
-  "r": "unsafe",
-  "why": [
-   "Creator history of rugged tokens"
-  ]
- },
- "Bnxttv7gQHYP1n9JyXuiATWKtxxJPc6sJJzeRFVBuuu": {
-  "t": 1793265640,
-  "r": "alerted"
- },
  "8HLSVns9QeHkWmWjADEkCsK7ut8zzukCMmMCfKbgpump": {
   "t": 1793290762,
   "r": "alerted"
@@ -586,6 +575,18 @@
  },
  "AJFnmpiF4VTKeqEWtwBUarib5zKKbXcs594UyrMHpump": {
   "t": 1794451320,
+  "r": "alerted"
+ },
+ "5tePJcGmdKAoNVXe3fp2tmf8n7cmr5d3YBkYKj4Cpump": {
+  "t": 1794479949,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Low Liquidity"
+  ]
+ },
+ "2UMho4zUPqSKb2fbJbKNPf1dU1WKD6SfbNmVkvphpump": {
+  "t": 1794479949,
   "r": "alerted"
  }
 }
