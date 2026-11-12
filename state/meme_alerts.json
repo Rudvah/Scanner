@@ -1918,5 +1918,35 @@
   "mcap": 88459,
   "liq": 21577.16,
   "score": 72.3
+ },
+ {
+  "addr": "GgeWgeVTyVQVCK6KA8dJYiSqxDVio8puqiuVyFfpumps",
+  "chain": "solana",
+  "symbol": "PUMPS",
+  "t": 1794527848,
+  "price": 5.566e-05,
+  "mcap": 52531,
+  "liq": 16780,
+  "score": 72.7
+ },
+ {
+  "addr": "9a13W5HdqE95g3YE8Dk9wCHPucrCH33h6BTfdFvRpump",
+  "chain": "solana",
+  "symbol": "plumber",
+  "t": 1794527848,
+  "price": 0.0002307,
+  "mcap": 223159,
+  "liq": 45726.37,
+  "score": 70.6
+ },
+ {
+  "addr": "D7MyAD7k3AqJpg4uxjUcmL51EDHrEsJxkjUynsxcpump",
+  "chain": "solana",
+  "symbol": "Christmax",
+  "t": 1794527848,
+  "price": 0.0001102,
+  "mcap": 105346,
+  "liq": 24078.72,
+  "score": 63.3
  }
 ]
