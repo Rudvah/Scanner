@@ -1978,5 +1978,15 @@
   "mcap": 39818,
   "liq": 13770.76,
   "score": 78.6
+ },
+ {
+  "addr": "AVHbD2rgkESZ3QoiKQgr19KH4FaY5MMvLCPr1ni3pump",
+  "chain": "solana",
+  "symbol": "GTAMAS",
+  "t": 1794602819,
+  "price": 4.084e-05,
+  "mcap": 40777,
+  "liq": 16514.85,
+  "score": 81.7
  }
 ]

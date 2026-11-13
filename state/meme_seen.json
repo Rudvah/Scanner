@@ -1,43 +1,4 @@
 {
- "0x06363Bb76Fc8A0B4BFE5c768cE5BB8013F417400": {
-  "t": 1793371791,
-  "r": "unsafe",
-  "why": [
-   "owner can pause/blacklist/change tax"
-  ]
- },
- "0x1D6313cc032c54Bc1Bb7e650d26dE95Be0356031": {
-  "t": 1793371791,
-  "r": "alerted"
- },
- "etRgw1DVduNwoSdrwaMcnb6Yy16CShyv34SYWuApump": {
-  "t": 1793371791,
-  "r": "alerted"
- },
- "E5ybm4acARqNKEAHpUqYG1BRLpYai9anMz8enAHpump": {
-  "t": 1793371791,
-  "r": "alerted"
- },
- "BK4sWbteR1EhULXACs7khW1dasdF9LEkjuS9BAV3pump": {
-  "t": 1793389844,
-  "r": "alerted"
- },
- "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
-  "t": 1793389844,
-  "r": "alerted"
- },
- "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump": {
-  "t": 1793389844,
-  "r": "alerted"
- },
- "E8c9gvuE7gW4R8AVcaTCbbTG1zJGdUR9KGtS94eXBAGS": {
-  "t": 1793389844,
-  "r": "alerted"
- },
- "ACv7iJ7xVfohvfXp3dt7AfAPcekL2dHsYCbJw8Vp1osr": {
-  "t": 1793389844,
-  "r": "alerted"
- },
  "nG3jfPQHU2ZQhPERkTZD8YPSAsrrWiePPDcm9jxpump": {
   "t": 1793402845,
   "r": "alerted"
@@ -632,6 +593,18 @@
  },
  "HBMys9Q55GXTXDLcjA7aNGNniR71MfSGjNY83Qxfpump": {
   "t": 1794549289,
+  "r": "alerted"
+ },
+ "MoR1whCWjcLiUqAan4GHLRcn8wK4Jktk2DyDryNmeta": {
+  "t": 1794602819,
+  "r": "unsafe",
+  "why": [
+   "Mint Authority still enabled",
+   "Single holder ownership"
+  ]
+ },
+ "AVHbD2rgkESZ3QoiKQgr19KH4FaY5MMvLCPr1ni3pump": {
+  "t": 1794602819,
   "r": "alerted"
  }
 }
