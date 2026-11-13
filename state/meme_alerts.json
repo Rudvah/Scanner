@@ -1948,5 +1948,25 @@
   "mcap": 105346,
   "liq": 24078.72,
   "score": 63.3
+ },
+ {
+  "addr": "6p4ZRmb36ggUCox9R8eJ9Jva22doySgk6QVNrTFnpump",
+  "chain": "solana",
+  "symbol": "364",
+  "t": 1794549223,
+  "price": 9.037e-05,
+  "mcap": 90234,
+  "liq": 25248.92,
+  "score": 85.4
+ },
+ {
+  "addr": "ByCUjGx4FkhK7ac8Vdqzb41yScUtvG78GBYSXKsMpump",
+  "chain": "solana",
+  "symbol": "dca",
+  "t": 1794549223,
+  "price": 0.0001159,
+  "mcap": 106753,
+  "liq": 25572.42,
+  "score": 66.5
  }
 ]

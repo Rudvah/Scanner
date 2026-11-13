@@ -1,8 +1,4 @@
 {
- "AHgqStQviBDBiPra3cLxb8gQs2auRAmXT4s9v7LKpump": {
-  "t": 1793322908,
-  "r": "alerted"
- },
  "0x06363Bb76Fc8A0B4BFE5c768cE5BB8013F417400": {
   "t": 1793371791,
   "r": "unsafe",
@@ -616,6 +612,22 @@
  },
  "D7MyAD7k3AqJpg4uxjUcmL51EDHrEsJxkjUynsxcpump": {
   "t": 1794527848,
+  "r": "alerted"
+ },
+ "4k5odjodBZAGsL7NWMTV1eg5aH5GkhujuLJjCTxQpump": {
+  "t": 1794549223,
+  "r": "unsafe",
+  "why": [
+   "Top 10 holders high ownership",
+   "Single holder ownership"
+  ]
+ },
+ "6p4ZRmb36ggUCox9R8eJ9Jva22doySgk6QVNrTFnpump": {
+  "t": 1794549223,
+  "r": "alerted"
+ },
+ "ByCUjGx4FkhK7ac8Vdqzb41yScUtvG78GBYSXKsMpump": {
+  "t": 1794549223,
   "r": "alerted"
  }
 }
