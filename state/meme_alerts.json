@@ -1968,5 +1968,15 @@
   "mcap": 106753,
   "liq": 25572.42,
   "score": 66.5
+ },
+ {
+  "addr": "HBMys9Q55GXTXDLcjA7aNGNniR71MfSGjNY83Qxfpump",
+  "chain": "solana",
+  "symbol": "USEFUL",
+  "t": 1794549289,
+  "price": 3.981e-05,
+  "mcap": 39818,
+  "liq": 13770.76,
+  "score": 78.6
  }
 ]
