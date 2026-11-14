@@ -1988,5 +1988,35 @@
   "mcap": 40777,
   "liq": 16514.85,
   "score": 81.7
+ },
+ {
+  "addr": "CRwB4GxVDM4Bnh8QMqh9Nk8UZNscced3xec824vxpump",
+  "chain": "solana",
+  "symbol": "CSI",
+  "t": 1794619048,
+  "price": 0.001411,
+  "mcap": 1406583,
+  "liq": 89763.63,
+  "score": 85.8
+ },
+ {
+  "addr": "Erzs5FwufhBSKeT61tspjD8KnMBQgzygQxkAZrKu2x6i",
+  "chain": "solana",
+  "symbol": "Theo",
+  "t": 1794619048,
+  "price": 3.568e-05,
+  "mcap": 35684,
+  "liq": 13272.78,
+  "score": 81.6
+ },
+ {
+  "addr": "3dq3xBZHXD9wwUD2xjetwh2S9JXUUPhZ2AJD26zkpump",
+  "chain": "solana",
+  "symbol": "Sanctum",
+  "t": 1794619048,
+  "price": 3.362e-05,
+  "mcap": 31494,
+  "liq": 12253.55,
+  "score": 73.4
  }
 ]
