@@ -2018,5 +2018,55 @@
   "mcap": 31494,
   "liq": 12253.55,
   "score": 73.4
+ },
+ {
+  "addr": "8azHd6ZpAdpyFzGAaNkofyKhr19RWNNquSC8bAGEpump",
+  "chain": "solana",
+  "symbol": "ZAPZEKE",
+  "t": 1794667513,
+  "price": 8.926e-05,
+  "mcap": 85998,
+  "liq": 21101.16,
+  "score": 82.5
+ },
+ {
+  "addr": "6Nh9cmDoQvd2FvjNm44VmTwbyiKtxgmM7SCuhREhpump",
+  "chain": "solana",
+  "symbol": "GTA$",
+  "t": 1794667513,
+  "price": 0.0004316,
+  "mcap": 417530,
+  "liq": 65345.18,
+  "score": 79.7
+ },
+ {
+  "addr": "8JNcbK2bWFxQnZsR6xQtgB3en7DcFSXW5xSyh6fYpump",
+  "chain": "solana",
+  "symbol": "SLIDES",
+  "t": 1794667513,
+  "price": 6.428e-05,
+  "mcap": 61481,
+  "liq": 20455.06,
+  "score": 76.6
+ },
+ {
+  "addr": "97o3Kb9R7hMjHW6o9BunWk4jF1dFLhCpydPmh64npump",
+  "chain": "solana",
+  "symbol": "DYC",
+  "t": 1794667513,
+  "price": 4.694e-05,
+  "mcap": 45055,
+  "liq": 18685.75,
+  "score": 73.3
+ },
+ {
+  "addr": "5R9MnNEGLpsvq6wNmAkh82peNLqwfSTyu5ny9ezPzhot",
+  "chain": "solana",
+  "symbol": "HOT",
+  "t": 1794667513,
+  "price": 4.684e-05,
+  "mcap": 44651,
+  "liq": 14483.9,
+  "score": 66.3
  }
 ]
