@@ -2068,5 +2068,15 @@
   "mcap": 44651,
   "liq": 14483.9,
   "score": 66.3
+ },
+ {
+  "addr": "fX9dKa1DVdjSvYk3f2GAcj2RjQ5DFa54QTWAsXBpump",
+  "chain": "solana",
+  "symbol": "capy",
+  "t": 1794685294,
+  "price": 6.328e-05,
+  "mcap": 61634,
+  "liq": 16868.66,
+  "score": 72.1
  }
 ]
