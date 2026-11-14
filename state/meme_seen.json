@@ -1,32 +1,4 @@
 {
- "2pDkdMYChGZQQMfbRhfDgorZkKwmPF6sjN4bPfxoABTC": {
-  "t": 1793486695,
-  "r": "unsafe",
-  "why": [
-   "Large Amount of LP Unlocked",
-   "Low Liquidity"
-  ]
- },
- "9sNc5nW9XfBSK8Fwh8Ue4mTBmkDutCeZfjFd2x7Dpump": {
-  "t": 1793486695,
-  "r": "unsafe",
-  "why": [
-   "Top 10 holders high ownership",
-   "Single holder ownership"
-  ]
- },
- "8UVVYBKvHfhP9mN8bHfHGgYiZd1Jb1aVuye1RkdTpump": {
-  "t": 1793486695,
-  "r": "alerted"
- },
- "DZrVCDqSyUBFoFJWJCVELhzL4cTFYWpCMirnv91TTTSH": {
-  "t": 1793486695,
-  "r": "alerted"
- },
- "7Ypg1rKLu8q32E1AQEDjaPCg8dfGeCSsMkFnK98zcash": {
-  "t": 1793486695,
-  "r": "alerted"
- },
  "CPoGSmcjprCvzA2MFYLJMpQkGjmgVzKg4RVwMdrzpump": {
   "t": 1793497844,
   "r": "alerted"
@@ -613,6 +585,33 @@
  },
  "fX9dKa1DVdjSvYk3f2GAcj2RjQ5DFa54QTWAsXBpump": {
   "t": 1794685294,
+  "r": "alerted"
+ },
+ "AvRSpY1rPA9iVFxYHc5D5JQW6oU5tjGQZdsW2e5upump": {
+  "t": 1794699445,
+  "r": "unsafe",
+  "why": [
+   "Creator history of rugged tokens"
+  ]
+ },
+ "3Kf7Jxy1dB5TH56qFkC6XUW9S3qtMZQJzuUPzbdMpump": {
+  "t": 1794699445,
+  "r": "alerted"
+ },
+ "EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump": {
+  "t": 1794699445,
+  "r": "alerted"
+ },
+ "6vtfL1Zi8YQqQrsxwLqguFNFCvwmER5SnYSBYDTRpump": {
+  "t": 1794699445,
+  "r": "alerted"
+ },
+ "7rBatsxwXiMLcz2PJjh8G45wZfHNHd4dvtBUMwsepump": {
+  "t": 1794699445,
+  "r": "alerted"
+ },
+ "FBAQACdDtHvc3m6YTSPTjQVJ6D7dzGj6XmtsWs2Ypump": {
+  "t": 1794699445,
   "r": "alerted"
  }
 }

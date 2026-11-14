@@ -2078,5 +2078,55 @@
   "mcap": 61634,
   "liq": 16868.66,
   "score": 72.1
+ },
+ {
+  "addr": "3Kf7Jxy1dB5TH56qFkC6XUW9S3qtMZQJzuUPzbdMpump",
+  "chain": "solana",
+  "symbol": "J*B",
+  "t": 1794699445,
+  "price": 8.432e-05,
+  "mcap": 81672,
+  "liq": 27638.75,
+  "score": 76.5
+ },
+ {
+  "addr": "EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump",
+  "chain": "solana",
+  "symbol": "PumpMas",
+  "t": 1794699445,
+  "price": 2.245e-05,
+  "mcap": 21060,
+  "liq": 9300.62,
+  "score": 68.9
+ },
+ {
+  "addr": "6vtfL1Zi8YQqQrsxwLqguFNFCvwmER5SnYSBYDTRpump",
+  "chain": "solana",
+  "symbol": "loco",
+  "t": 1794699445,
+  "price": 2.615e-05,
+  "mcap": 25441,
+  "liq": 10666.5,
+  "score": 68.1
+ },
+ {
+  "addr": "7rBatsxwXiMLcz2PJjh8G45wZfHNHd4dvtBUMwsepump",
+  "chain": "solana",
+  "symbol": "JOB",
+  "t": 1794699445,
+  "price": 5.607e-05,
+  "mcap": 56022,
+  "liq": 15463.91,
+  "score": 65.3
+ },
+ {
+  "addr": "FBAQACdDtHvc3m6YTSPTjQVJ6D7dzGj6XmtsWs2Ypump",
+  "chain": "solana",
+  "symbol": "Grok5",
+  "t": 1794699445,
+  "price": 5.051e-05,
+  "mcap": 48525,
+  "liq": 17777.48,
+  "score": 61.9
  }
 ]
