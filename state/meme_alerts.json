@@ -2168,5 +2168,55 @@
   "mcap": 94778,
   "liq": 25760.49,
   "score": 69.7
+ },
+ {
+  "addr": "CHuLmJXz8F3YXUyv984PRxeECfSvqD5MZ3W1FoDmpump",
+  "chain": "solana",
+  "symbol": "BJB",
+  "t": 1794785265,
+  "price": 0.00133,
+  "mcap": 1327343,
+  "liq": 83192.79,
+  "score": 88.5
+ },
+ {
+  "addr": "EBM6Qa4yJzpyS7xfJueYfMgELRJGWUeaqomWe47Jpump",
+  "chain": "solana",
+  "symbol": "OPTIMUS",
+  "t": 1794785265,
+  "price": 4.139e-05,
+  "mcap": 41394,
+  "liq": 16048.38,
+  "score": 75.1
+ },
+ {
+  "addr": "2oxHzSUA6qz4My8qxpz3YFhtweUd15khaDhx5N7mBAGS",
+  "chain": "solana",
+  "symbol": "AUSTISM",
+  "t": 1794785265,
+  "price": 2.548e-05,
+  "mcap": 25484,
+  "liq": 11190.01,
+  "score": 72.5
+ },
+ {
+  "addr": "5LGmxerWmb53hbyP5KYGyP8jXxVmVmBggvNtrHKxCafZ",
+  "chain": "solana",
+  "symbol": "HUNDRED",
+  "t": 1794785265,
+  "price": 2.612e-05,
+  "mcap": 26121,
+  "liq": 12340.69,
+  "score": 71.0
+ },
+ {
+  "addr": "2kWx47CUrcXtzptFNnbSXKq3vo1ebqyLBhRytKRGpump",
+  "chain": "solana",
+  "symbol": "WIGGLES",
+  "t": 1794785265,
+  "price": 6.65e-05,
+  "mcap": 63656,
+  "liq": 17729.06,
+  "score": 68.7
  }
 ]
