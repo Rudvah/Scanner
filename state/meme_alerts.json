@@ -2158,5 +2158,15 @@
   "mcap": 18237,
   "liq": 8689.87,
   "score": 69.0
+ },
+ {
+  "addr": "mAWnfGt4EHpsicnZnynCuZbPcK7YmrN5dNjnVLipump",
+  "chain": "solana",
+  "symbol": "ANSEM",
+  "t": 1794769408,
+  "price": 9.49e-05,
+  "mcap": 94778,
+  "liq": 25760.49,
+  "score": 69.7
  }
 ]
