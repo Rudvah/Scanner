@@ -2138,5 +2138,25 @@
   "mcap": 1391038,
   "liq": 84940.79,
   "score": 85.7
+ },
+ {
+  "addr": "FS1pBmZKp2Qw1atC64GoLamHstECAos9ot8bGPgDpump",
+  "chain": "solana",
+  "symbol": "Socks",
+  "t": 1794745763,
+  "price": 0.0003215,
+  "mcap": 310998,
+  "liq": 42967.26,
+  "score": 78.6
+ },
+ {
+  "addr": "GmbC342to7Lab7LEh4aqkEY5mfCVbfDvs1X5TB8epump",
+  "chain": "solana",
+  "symbol": "Gomez",
+  "t": 1794745763,
+  "price": 1.904e-05,
+  "mcap": 18237,
+  "liq": 8689.87,
+  "score": 69.0
  }
 ]
