@@ -2268,5 +2268,45 @@
   "mcap": 48063,
   "liq": 15609.06,
   "score": 70.8
+ },
+ {
+  "addr": "BRf3SXRk8BdXmBZDJfKyEhbYmqBVf8843ctEMcD4pump",
+  "chain": "solana",
+  "symbol": "COGE",
+  "t": 1794862073,
+  "price": 0.0003097,
+  "mcap": 304697,
+  "liq": 38520.89,
+  "score": 73.5
+ },
+ {
+  "addr": "7TnXXR1ytJ9PZDxgSA8VwbyKmEWZmiA2YAn55YyVpump",
+  "chain": "solana",
+  "symbol": "Trader",
+  "t": 1794862073,
+  "price": 0.0001823,
+  "mcap": 171409,
+  "liq": 32173.53,
+  "score": 73.5
+ },
+ {
+  "addr": "48UW5PSMpaN1x2YW3ArY4xEiKyP8bJTFfednCHMG3Jcx",
+  "chain": "solana",
+  "symbol": "SNUT",
+  "t": 1794862073,
+  "price": 6.071e-05,
+  "mcap": 58774,
+  "liq": 21799.23,
+  "score": 67.6
+ },
+ {
+  "addr": "2NWgu4fqN2AxS5pp5v3f3SH54qArP9JepQFJm58gpump",
+  "chain": "solana",
+  "symbol": "GTA",
+  "t": 1794862073,
+  "price": 0.0007501,
+  "mcap": 742579,
+  "liq": 61788.66,
+  "score": 62.4
  }
 ]
