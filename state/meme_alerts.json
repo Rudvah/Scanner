@@ -2308,5 +2308,45 @@
   "mcap": 742579,
   "liq": 61788.66,
   "score": 62.4
+ },
+ {
+  "addr": "3dSzv7jTXFJusjBKZHpgieVLv3149anjqLTf92Q1pump",
+  "chain": "solana",
+  "symbol": "RizzGivin",
+  "t": 1794885835,
+  "price": 3.135e-05,
+  "mcap": 31351,
+  "liq": 11589.07,
+  "score": 80.9
+ },
+ {
+  "addr": "9k2nqjUrSh9p2ZBnWxNE3QRWYiLocrWZfoDm3Vdxpump",
+  "chain": "solana",
+  "symbol": "CHAR",
+  "t": 1794885835,
+  "price": 8.194e-05,
+  "mcap": 80531,
+  "liq": 20573.31,
+  "score": 71.1
+ },
+ {
+  "addr": "D2Zkpv4m8M9Yh7tSDDCtcyZb6WQYVKzkQjM4x5eMQDZB",
+  "chain": "solana",
+  "symbol": "Jojo",
+  "t": 1794885835,
+  "price": 0.000107,
+  "mcap": 102100,
+  "liq": 24537.92,
+  "score": 70.5
+ },
+ {
+  "addr": "2HVqzNisr463WMDpp6Q45ekuVfcjm8kEaiKd4ra8pump",
+  "chain": "solana",
+  "symbol": "CAT",
+  "t": 1794885835,
+  "price": 3.722e-05,
+  "mcap": 35607,
+  "liq": 12907.89,
+  "score": 67.4
  }
 ]
