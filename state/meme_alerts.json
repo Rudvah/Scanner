@@ -2348,5 +2348,15 @@
   "mcap": 35607,
   "liq": 12907.89,
   "score": 67.4
+ },
+ {
+  "addr": "9WcYJegbsMSzvtFUEGmJoGhZjCGBEcKqXpdkNDoMR5pN",
+  "chain": "solana",
+  "symbol": "RYANAIR",
+  "t": 1794917822,
+  "price": 2.48e-05,
+  "mcap": 23759,
+  "liq": 10138.62,
+  "score": 69.3
  }
 ]
