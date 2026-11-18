@@ -2398,5 +2398,15 @@
   "mcap": 34536,
   "liq": 12394.3,
   "score": 70.4
+ },
+ {
+  "addr": "8VpF5FToHRo4WWP6nYvEvJvpg85JGCYwcSAcPVFppump",
+  "chain": "solana",
+  "symbol": "APY",
+  "t": 1795034857,
+  "price": 4.103e-05,
+  "mcap": 40960,
+  "liq": 20192.07,
+  "score": 68.7
  }
 ]
