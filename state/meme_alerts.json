@@ -2368,5 +2368,35 @@
   "mcap": 48067,
   "liq": 14644.63,
   "score": 82.4
+ },
+ {
+  "addr": "5xhuX8VK8k8wGDdfFniWUzUQUSHjzKARosCGtEZypump",
+  "chain": "solana",
+  "symbol": "KATIA",
+  "t": 1794970922,
+  "price": 0.0007251,
+  "mcap": 721642,
+  "liq": 62537.53,
+  "score": 86.5
+ },
+ {
+  "addr": "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump",
+  "chain": "solana",
+  "symbol": "Leonida",
+  "t": 1794970922,
+  "price": 0.000657,
+  "mcap": 654383,
+  "liq": 59496.66,
+  "score": 76.7
+ },
+ {
+  "addr": "GKj42uUGCAgHUZhAwPPC41WGchYhyfgycatJ8Vzqpump",
+  "chain": "solana",
+  "symbol": "KALEB",
+  "t": 1794970922,
+  "price": 3.584e-05,
+  "mcap": 34536,
+  "liq": 12394.3,
+  "score": 70.4
  }
 ]
