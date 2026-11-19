@@ -2458,5 +2458,35 @@
   "mcap": 23339,
   "liq": 12065.07,
   "score": 64.0
+ },
+ {
+  "addr": "EPNy2zvT8hs4yaYZVmtFEtcBkiZf1WGJFYE6K6AMpump",
+  "chain": "solana",
+  "symbol": "DCTYCAT",
+  "t": 1795116051,
+  "price": 7.052e-05,
+  "mcap": 70500,
+  "liq": 18047.98,
+  "score": 78.6
+ },
+ {
+  "addr": "fRxGeXTCXLPQyChrq5sanfUWAe2vseLBiGdDE7k4S1M",
+  "chain": "solana",
+  "symbol": "SIM",
+  "t": 1795116051,
+  "price": 7.904e-05,
+  "mcap": 76564,
+  "liq": 19292,
+  "score": 65.3
+ },
+ {
+  "addr": "BqXxyRnMqf4vVwrbNrVNSVoDRBYQo8vQHeRRT6iapump",
+  "chain": "solana",
+  "symbol": "LDS",
+  "t": 1795116051,
+  "price": 4.411e-05,
+  "mcap": 42651,
+  "liq": 13859.56,
+  "score": 61.8
  }
 ]
