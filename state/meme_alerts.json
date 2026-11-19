@@ -2488,5 +2488,15 @@
   "mcap": 42651,
   "liq": 13859.56,
   "score": 61.8
+ },
+ {
+  "addr": "BxpmBqQNRYoJXoP6F9abvcLfp1fgYJzafsyDEFEppump",
+  "chain": "solana",
+  "symbol": "GTABANK",
+  "t": 1795116074,
+  "price": 3.973e-05,
+  "mcap": 39652,
+  "liq": 16083.99,
+  "score": 82.2
  }
 ]
