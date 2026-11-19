@@ -1,6 +1,14 @@
 {
  "seen": {
+  "arb|20fa5e2d73cec494c113790161a89aec|h2h|None|Los Angeles Clippers to win:9.50|San Antonio Spurs to win:1.13": 1795111207.439536,
   "arb|5896e4ed2ed41ce673e882b6529078b8|h2h|None|Toronto Raptors to win:1.59|Washington Wizards to win:3.07": 1795024186.543717,
+  "arb|6ef39b0fd8839f6e93a3de32523e9807|h2h|None|Draw:5.65|Fulham to win:8.20|Manchester City to win:1.45": 1795111207.439536,
+  "arb|9881e56a732493272e688663b26cd37f|h2h|None|Alav\u00e9s to win:2.32|Deportivo La Coru\u00f1a to win:3.70|Draw:3.45": 1795111207.439536,
+  "arb|b8d6ab6ecc8bb356c6335d3f417d0ecf|h2h|None|Aston Villa to win:1.85|Draw:4.03|Sunderland to win:4.90": 1795111207.439536,
+  "arb|cf68da11fa604c13fc9ef3219fad0314|h2h|None|Bournemouth to win:2.02|Draw:3.85|Nottingham Forest to win:4.20": 1795111207.439536,
+  "arb|dcee36f9b8a9989972b6d4ddde76c4c7|totals|2.5|Over 2.5 goals:1.92|Under 2.5 goals:2.12": 1795111207.439536,
+  "arb|e67ee3a6f93bb90b8aefcf3dd204477c|h2h|None|Draw:4.70|Ipswich Town to win:6.40|Tottenham Hotspur to win:1.60": 1795111207.439536,
+  "val|20fa5e2d73cec494c113790161a89aec|Los Angeles Clippers to win|Betway|9.50": 1795111207.439536,
   "val|5896e4ed2ed41ce673e882b6529078b8|Toronto Raptors to win|Bet Victor|1.53": 1795024186.543717,
   "val|5896e4ed2ed41ce673e882b6529078b8|Toronto Raptors to win|Betfair|1.59": 1795024186.543717,
   "val|5896e4ed2ed41ce673e882b6529078b8|Toronto Raptors to win|Betfred (UK)|1.53": 1795024186.543717,
@@ -9,11 +17,18 @@
   "val|5896e4ed2ed41ce673e882b6529078b8|Toronto Raptors to win|Smarkets|1.57": 1795024186.543717,
   "val|5896e4ed2ed41ce673e882b6529078b8|Toronto Raptors to win|Unibet (UK)|1.55": 1795024186.543717,
   "val|5896e4ed2ed41ce673e882b6529078b8|Toronto Raptors to win|Winamax (DE)|1.54": 1795024186.543717,
+  "val|6ef39b0fd8839f6e93a3de32523e9807|Fulham to win|Betfair|8.20": 1795111207.439536,
+  "val|6ef39b0fd8839f6e93a3de32523e9807|Fulham to win|Matchbook|8.20": 1795111207.439536,
   "val|7c2ac54a119f461bf8fc1a23da536f29|Orlando Magic to win|Betfair|4.20": 1794856772.581563,
   "val|7c2ac54a119f461bf8fc1a23da536f29|Orlando Magic to win|Matchbook|4.20": 1794856772.581563,
   "val|7c2ac54a119f461bf8fc1a23da536f29|Orlando Magic to win|Smarkets|4.10": 1794856772.581563,
   "val|c2c9d9729305c19d4a453f92c83feae8|Phoenix Suns to win|Betfair|4.50": 1794856772.581563,
   "val|c2c9d9729305c19d4a453f92c83feae8|Phoenix Suns to win|Matchbook|4.60": 1794856772.581563,
+  "val|dcee36f9b8a9989972b6d4ddde76c4c7|Espanyol to win|Betfair|7.60": 1795111207.439536,
+  "val|dcee36f9b8a9989972b6d4ddde76c4c7|Espanyol to win|Matchbook|7.60": 1795111207.439536,
+  "val|dcee36f9b8a9989972b6d4ddde76c4c7|Espanyol to win|Smarkets|7.60": 1795111207.439536,
+  "val|dcee36f9b8a9989972b6d4ddde76c4c7|Espanyol to win|Unibet (NL)|7.50": 1795111207.439536,
+  "val|dcee36f9b8a9989972b6d4ddde76c4c7|Espanyol to win|Unibet (SE)|7.50": 1795111207.439536,
   "val|f9ae24215832bbc1703c9836d0c96751|Indiana Pacers to win|Matchbook|3.75": 1795024186.543717
  }
 }
