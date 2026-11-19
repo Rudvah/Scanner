@@ -1,16 +1,4 @@
 {
- "GxGYLpyyWwsizxrpr9T3xKrwGLWSH3t4NqcPysPnpump": {
-  "t": 1793869044,
-  "r": "unsafe",
-  "why": [
-   "Large Amount of LP Unlocked",
-   "Low Liquidity"
-  ]
- },
- "9okwT7syLTFXDv4W64Xp7QUgTx6yKE82SDjzitHNpump": {
-  "t": 1793869044,
-  "r": "alerted"
- },
  "Eyo1o3QYKQwdvP6UtK9dQLTZj2BBtoJdN4tMWB2Dpump": {
   "t": 1793898815,
   "r": "alerted"
@@ -598,6 +586,26 @@
  },
  "8VpF5FToHRo4WWP6nYvEvJvpg85JGCYwcSAcPVFppump": {
   "t": 1795034857,
+  "r": "alerted"
+ },
+ "5a6mAmWbL3Na2KhwV1LmmAUSf12Gy1vd3NjqBq24pump": {
+  "t": 1795084612,
+  "r": "alerted"
+ },
+ "0xB22F1B4a2913138188358e9A980EDC1B9dD819fC": {
+  "t": 1795084612,
+  "r": "alerted"
+ },
+ "DUZrwdjEthcJ99ZiRXr31UuqTohoTg7VjTEyfGdBpump": {
+  "t": 1795084612,
+  "r": "alerted"
+ },
+ "Db2s6iVvenVhJkj96P4UbZWEAYX4nUhgXhSVbQrwpump": {
+  "t": 1795084612,
+  "r": "alerted"
+ },
+ "2L26JxjWAWxa13MjNpHrXpXp8BJ6ykz2qNWHN2zupump": {
+  "t": 1795084612,
   "r": "alerted"
  }
 }

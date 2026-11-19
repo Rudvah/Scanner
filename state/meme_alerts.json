@@ -2408,5 +2408,55 @@
   "mcap": 40960,
   "liq": 20192.07,
   "score": 68.7
+ },
+ {
+  "addr": "5a6mAmWbL3Na2KhwV1LmmAUSf12Gy1vd3NjqBq24pump",
+  "chain": "solana",
+  "symbol": "Sparrow",
+  "t": 1795084612,
+  "price": 0.0001155,
+  "mcap": 115386,
+  "liq": 29038.85,
+  "score": 88.6
+ },
+ {
+  "addr": "0xB22F1B4a2913138188358e9A980EDC1B9dD819fC",
+  "chain": "base",
+  "symbol": "SPACEX",
+  "t": 1795084612,
+  "price": 1.691e-06,
+  "mcap": 9472,
+  "liq": 15471.11,
+  "score": 80.1
+ },
+ {
+  "addr": "DUZrwdjEthcJ99ZiRXr31UuqTohoTg7VjTEyfGdBpump",
+  "chain": "solana",
+  "symbol": "jingyu",
+  "t": 1795084612,
+  "price": 7.859e-05,
+  "mcap": 76201,
+  "liq": 19383.01,
+  "score": 73.5
+ },
+ {
+  "addr": "Db2s6iVvenVhJkj96P4UbZWEAYX4nUhgXhSVbQrwpump",
+  "chain": "solana",
+  "symbol": "After",
+  "t": 1795084612,
+  "price": 2.363e-05,
+  "mcap": 22966,
+  "liq": 12391.33,
+  "score": 65.1
+ },
+ {
+  "addr": "2L26JxjWAWxa13MjNpHrXpXp8BJ6ykz2qNWHN2zupump",
+  "chain": "solana",
+  "symbol": "WKTT",
+  "t": 1795084612,
+  "price": 2.46e-05,
+  "mcap": 23339,
+  "liq": 12065.07,
+  "score": 64.0
  }
 ]
