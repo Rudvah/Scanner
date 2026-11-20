@@ -2558,5 +2558,55 @@
   "mcap": 21633,
   "liq": 11576.14,
   "score": 74.1
+ },
+ {
+  "addr": "BYKQkHKMWHidNBLQXgt7NX4PLUtJZRYGLWQYkJzPGenX",
+  "chain": "solana",
+  "symbol": "Trader",
+  "t": 1795218034,
+  "price": 0.0003066,
+  "mcap": 306698,
+  "liq": 95883.63,
+  "score": 81.5
+ },
+ {
+  "addr": "7m7CncqD9pKGVkBeoTcaWd1gA9q6jkiXwLLWTNKupump",
+  "chain": "solana",
+  "symbol": "really",
+  "t": 1795218034,
+  "price": 2.551e-05,
+  "mcap": 25511,
+  "liq": 10028.39,
+  "score": 79.3
+ },
+ {
+  "addr": "CTerwsBK7QFQBJWgTTSKV9LUYYJhRUouHPd8ijKXpump",
+  "chain": "solana",
+  "symbol": "FARM",
+  "t": 1795218034,
+  "price": 6.851e-05,
+  "mcap": 67036,
+  "liq": 19115.67,
+  "score": 77.1
+ },
+ {
+  "addr": "EoV9JQYi57tqjyQbWLdXVarYpEu82FsP8SDnkbFmpump",
+  "chain": "solana",
+  "symbol": "Bust",
+  "t": 1795218034,
+  "price": 7.371e-05,
+  "mcap": 69427,
+  "liq": 22773.14,
+  "score": 73.3
+ },
+ {
+  "addr": "5kLah7PHaD6A4RmU2tdF7Tv3zXHGrkvxgfFtKUfApump",
+  "chain": "solana",
+  "symbol": "MONKE",
+  "t": 1795218034,
+  "price": 0.0001202,
+  "mcap": 117723,
+  "liq": 29690.32,
+  "score": 70.1
  }
 ]
