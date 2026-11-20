@@ -2528,5 +2528,35 @@
   "mcap": 63810,
   "liq": 17249.62,
   "score": 69.7
+ },
+ {
+  "addr": "3JgkhGnN5ggpE14Ykb2sgcsF1LTBUFyVZBPa3VrDpump",
+  "chain": "solana",
+  "symbol": "MATHISOVER",
+  "t": 1795195928,
+  "price": 3.739e-05,
+  "mcap": 37360,
+  "liq": 12401.32,
+  "score": 88.5
+ },
+ {
+  "addr": "J5zXjgnbwxnWSuT13aE5sRmGnbyoNafWHR52SDB9pump",
+  "chain": "solana",
+  "symbol": "H4CK",
+  "t": 1795195928,
+  "price": 0.0001104,
+  "mcap": 107260,
+  "liq": 22309.54,
+  "score": 86.2
+ },
+ {
+  "addr": "9EEFuHwRgY8HmnocQuq4ty9KFjuM46Q8tyLmZE3Wpump",
+  "chain": "solana",
+  "symbol": "STICKERS",
+  "t": 1795195928,
+  "price": 2.257e-05,
+  "mcap": 21633,
+  "liq": 11576.14,
+  "score": 74.1
  }
 ]
