@@ -2498,5 +2498,35 @@
   "mcap": 39652,
   "liq": 16083.99,
   "score": 82.2
+ },
+ {
+  "addr": "3emn4AZwHpsH8K6rqjsMTeFHJTg4XqdPe9PBHpV3JANJ",
+  "chain": "solana",
+  "symbol": "I",
+  "t": 1795137789,
+  "price": 4.533e-05,
+  "mcap": 45243,
+  "liq": 14481.54,
+  "score": 86.3
+ },
+ {
+  "addr": "Eh2zcpFTKQkH2ivAzyMCg2CuVBW8mx4bkWKRDSmcEray",
+  "chain": "solana",
+  "symbol": "DOOMSDAY",
+  "t": 1795137789,
+  "price": 2.5e-05,
+  "mcap": 25006,
+  "liq": 11445.32,
+  "score": 77.1
+ },
+ {
+  "addr": "3LJhbS5EJwfJHU5cJ1JYk3fgmC8ajy93Kj56pTi9dcty",
+  "chain": "solana",
+  "symbol": "AUDACITY",
+  "t": 1795137789,
+  "price": 6.514e-05,
+  "mcap": 63810,
+  "liq": 17249.62,
+  "score": 69.7
  }
 ]
