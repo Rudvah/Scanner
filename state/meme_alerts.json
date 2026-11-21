@@ -2618,5 +2618,25 @@
   "mcap": 75796,
   "liq": 18438.9,
   "score": 65.9
+ },
+ {
+  "addr": "EK2tRRD5jqNUxohdMjbjnJ5Q3t9TYGBkZVjtMceDpump",
+  "chain": "solana",
+  "symbol": "Emily",
+  "t": 1795270400,
+  "price": 0.0001082,
+  "mcap": 104333,
+  "liq": 23783.15,
+  "score": 73.2
+ },
+ {
+  "addr": "BjnxH6a3D6HQz1LRPsGX5TZmW3GwstpexSNrK2utpump",
+  "chain": "solana",
+  "symbol": "XV",
+  "t": 1795270400,
+  "price": 0.000108,
+  "mcap": 104064,
+  "liq": 28798.6,
+  "score": 70.3
  }
 ]
