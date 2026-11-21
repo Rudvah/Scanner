@@ -2608,5 +2608,15 @@
   "mcap": 117723,
   "liq": 29690.32,
   "score": 70.1
+ },
+ {
+  "addr": "FQNz7BKQejsQR3aFyCY746Km2smesUS9DWYsU9nopump",
+  "chain": "solana",
+  "symbol": "VAREXON",
+  "t": 1795239568,
+  "price": 7.87e-05,
+  "mcap": 75796,
+  "liq": 18438.9,
+  "score": 65.9
  }
 ]
