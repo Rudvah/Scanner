@@ -2638,5 +2638,25 @@
   "mcap": 104064,
   "liq": 28798.6,
   "score": 70.3
+ },
+ {
+  "addr": "DKUM8qywmi8X9RYK2wUgnTw8QKjh1nYDThZR1GXPpump",
+  "chain": "solana",
+  "symbol": "TA",
+  "t": 1795293441,
+  "price": 5.165e-05,
+  "mcap": 49929,
+  "liq": 15686.78,
+  "score": 68.5
+ },
+ {
+  "addr": "Dtx414D8jurspmB1jqJWsYU66pemoXRjQeXx7TC1pump",
+  "chain": "solana",
+  "symbol": ":)",
+  "t": 1795293441,
+  "price": 2.208e-05,
+  "mcap": 21201,
+  "liq": 9404.21,
+  "score": 62.8
  }
 ]
