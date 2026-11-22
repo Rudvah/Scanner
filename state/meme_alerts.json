@@ -2658,5 +2658,25 @@
   "mcap": 21201,
   "liq": 9404.21,
   "score": 62.8
+ },
+ {
+  "addr": "4jPVfKpDNzZ9WrVrPoDBAGPsVcu8zbkN2WUw5GiCpump",
+  "chain": "solana",
+  "symbol": "Wow",
+  "t": 1795309007,
+  "price": 2.025e-05,
+  "mcap": 19276,
+  "liq": 8788.97,
+  "score": 68.4
+ },
+ {
+  "addr": "G74SSWk4qF4BeWfyR53fVZYqdNWo9wH7UR55jF4uuxds",
+  "chain": "solana",
+  "symbol": "MANEKI",
+  "t": 1795309007,
+  "price": 9.702e-05,
+  "mcap": 94056,
+  "liq": 21003.9,
+  "score": 67.6
  }
 ]
