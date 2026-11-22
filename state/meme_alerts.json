@@ -2768,5 +2768,25 @@
   "mcap": 49120,
   "liq": 14886.11,
   "score": 62.4
+ },
+ {
+  "addr": "BwgcBr42Zw5GsYQTiepwTng1pU2FRDK9oMvgj3tipump",
+  "chain": "solana",
+  "symbol": "murph",
+  "t": 1795383181,
+  "price": 4.512e-05,
+  "mcap": 43528,
+  "liq": 13752.18,
+  "score": 78.1
+ },
+ {
+  "addr": "3eJ4Ww7Z2eMbNMFPrDcn4cv7WD6CQgGWXNj41eCBpump",
+  "chain": "solana",
+  "symbol": "Incidents",
+  "t": 1795383181,
+  "price": 1.916e-05,
+  "mcap": 17979,
+  "liq": 8505.6,
+  "score": 68.3
  }
 ]
