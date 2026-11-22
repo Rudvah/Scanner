@@ -2678,5 +2678,45 @@
   "mcap": 94056,
   "liq": 21003.9,
   "score": 67.6
+ },
+ {
+  "addr": "3D7YQcnXi6RMjWxheiE8VLuGXJTtgQkmyugGYvzjpump",
+  "chain": "solana",
+  "symbol": "snowball",
+  "t": 1795333886,
+  "price": 0.0002964,
+  "mcap": 283380,
+  "liq": 40256.89,
+  "score": 80.6
+ },
+ {
+  "addr": "6fVQAutGBLpyYJRiekVjSjvKidsmgZx14bKV5HSSpump",
+  "chain": "solana",
+  "symbol": "CORONA",
+  "t": 1795333886,
+  "price": 4.658e-05,
+  "mcap": 45358,
+  "liq": 14330.97,
+  "score": 74.8
+ },
+ {
+  "addr": "B7a7t2hRCfDWvWCXniiL2RXr1ViUNfQrQ4ATr79wpump",
+  "chain": "solana",
+  "symbol": "Snowball",
+  "t": 1795333886,
+  "price": 2.334e-05,
+  "mcap": 20164,
+  "liq": 10344.2,
+  "score": 69.2
+ },
+ {
+  "addr": "kPqBsUZuogprbq15ZpACwDzbUHSAxTxbhRrxmrDpump",
+  "chain": "solana",
+  "symbol": "CATEMAS",
+  "t": 1795333886,
+  "price": 0.0001315,
+  "mcap": 127123,
+  "liq": 34097.88,
+  "score": 68.1
  }
 ]

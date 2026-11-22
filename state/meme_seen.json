@@ -1,8 +1,4 @@
 {
- "E3xwq1btq8aNbebxfsqFz13LHRGy46GFQFbW91LWdiKn": {
-  "t": 1794119345,
-  "r": "alerted"
- },
  "HvAuwngEey58kXt8vk6L3drCPgzPygi5d29Hy75vpump": {
   "t": 1794145632,
   "r": "alerted"
@@ -566,6 +562,30 @@
  },
  "G74SSWk4qF4BeWfyR53fVZYqdNWo9wH7UR55jF4uuxds": {
   "t": 1795309007,
+  "r": "alerted"
+ },
+ "3XsFunPdji9U1EgJXokZysw8SB3t74un89b6KLEVpump": {
+  "t": 1795333886,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Low Liquidity"
+  ]
+ },
+ "3D7YQcnXi6RMjWxheiE8VLuGXJTtgQkmyugGYvzjpump": {
+  "t": 1795333886,
+  "r": "alerted"
+ },
+ "6fVQAutGBLpyYJRiekVjSjvKidsmgZx14bKV5HSSpump": {
+  "t": 1795333886,
+  "r": "alerted"
+ },
+ "B7a7t2hRCfDWvWCXniiL2RXr1ViUNfQrQ4ATr79wpump": {
+  "t": 1795333886,
+  "r": "alerted"
+ },
+ "kPqBsUZuogprbq15ZpACwDzbUHSAxTxbhRrxmrDpump": {
+  "t": 1795333886,
   "r": "alerted"
  }
 }
