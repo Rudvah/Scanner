@@ -2718,5 +2718,55 @@
   "mcap": 127123,
   "liq": 34097.88,
   "score": 68.1
+ },
+ {
+  "addr": "B6wM98qkQKP71mhPA48S7No6TxM4KaXdFojDTZeUpump",
+  "chain": "solana",
+  "symbol": "GIF",
+  "t": 1795362923,
+  "price": 3.523e-05,
+  "mcap": 35199,
+  "liq": 12318.92,
+  "score": 82.1
+ },
+ {
+  "addr": "8eyeL2ndAM1r3bShu8LLkAma8FkgzsFg1LMMCbjHpump",
+  "chain": "solana",
+  "symbol": "FRANK",
+  "t": 1795362923,
+  "price": 4.011e-05,
+  "mcap": 40060,
+  "liq": 13608.51,
+  "score": 75.1
+ },
+ {
+  "addr": "HrkugCbWtaZ5Kf6eb7ejRSPtfrJxBqJEwTQSHQQgpump",
+  "chain": "solana",
+  "symbol": "DUMB",
+  "t": 1795362923,
+  "price": 1.715e-05,
+  "mcap": 16243,
+  "liq": 8011.68,
+  "score": 71.1
+ },
+ {
+  "addr": "9WLkGszniwQjErPAYgwso71SbnJdz4p7HvEoWjNCpump",
+  "chain": "solana",
+  "symbol": "Jupiter",
+  "t": 1795362923,
+  "price": 1.805e-05,
+  "mcap": 17073,
+  "liq": 8224.38,
+  "score": 62.7
+ },
+ {
+  "addr": "3pGmCpDCr2B6cZFhFJFtLrcMCadMvjV4dB9UGJyNpump",
+  "chain": "solana",
+  "symbol": "testicles",
+  "t": 1795362923,
+  "price": 5.079e-05,
+  "mcap": 49120,
+  "liq": 14886.11,
+  "score": 62.4
  }
 ]
