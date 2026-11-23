@@ -2838,5 +2838,25 @@
   "mcap": 168095,
   "liq": 28636.26,
   "score": 68.4
+ },
+ {
+  "addr": "9AiHB952pXVrHuct9m3RKWoWv4LG52p58FYjMvUkpump",
+  "chain": "solana",
+  "symbol": "HOLD",
+  "t": 1795431629,
+  "price": 9.212e-05,
+  "mcap": 89767,
+  "liq": 21660.28,
+  "score": 71.5
+ },
+ {
+  "addr": "FHiMLpA7qSfAa1QWT9QEAe1SondRwgpmR2skjMAfpump",
+  "chain": "solana",
+  "symbol": "Loafing",
+  "t": 1795431629,
+  "price": 1.856e-05,
+  "mcap": 17823,
+  "liq": 8612.23,
+  "score": 69.1
  }
 ]
