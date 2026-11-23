@@ -2798,5 +2798,45 @@
   "mcap": 55444,
   "liq": 20008.28,
   "score": 68.9
+ },
+ {
+  "addr": "6aiyJ9uwGYRE3tM6rk7oeqLwpdDcdtVgU7aW2mFFpump",
+  "chain": "solana",
+  "symbol": "cCAT",
+  "t": 1795400074,
+  "price": 0.0005257,
+  "mcap": 504717,
+  "liq": 55817.84,
+  "score": 82.5
+ },
+ {
+  "addr": "DTsMPr9UAisgBkZ2WGjZipaoALuhuoYCbR6euExi5JAQ",
+  "chain": "solana",
+  "symbol": "ZCRYPT",
+  "t": 1795400074,
+  "price": 3.923e-05,
+  "mcap": 37922,
+  "liq": 12804.27,
+  "score": 81.6
+ },
+ {
+  "addr": "7S8k5qQfP2M48ixDLxDh6AgtwDo92eKxZ7WNmZt7pump",
+  "chain": "solana",
+  "symbol": "Hedge",
+  "t": 1795400074,
+  "price": 0.0001143,
+  "mcap": 107451,
+  "liq": 32724.34,
+  "score": 73.6
+ },
+ {
+  "addr": "AQfw8J74V17erZsmMz4oK474eVLBaP44gD33vVbhtHo5",
+  "chain": "solana",
+  "symbol": "ZOL",
+  "t": 1795400074,
+  "price": 0.000168,
+  "mcap": 168095,
+  "liq": 28636.26,
+  "score": 68.4
  }
 ]
