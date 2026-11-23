@@ -2858,5 +2858,35 @@
   "mcap": 17823,
   "liq": 8612.23,
   "score": 69.1
+ },
+ {
+  "addr": "BECqBzwZmkzM7A3tWimc2qvm7ookzYi8XACHMZgipump",
+  "chain": "solana",
+  "symbol": "THANKS",
+  "t": 1795474141,
+  "price": 6.401e-05,
+  "mcap": 64015,
+  "liq": 17182.45,
+  "score": 81.0
+ },
+ {
+  "addr": "DrJjCnagFhVKNuc8Fe8HejkY4aZaaCqy7WivdwdVpump",
+  "chain": "solana",
+  "symbol": "JENSEN",
+  "t": 1795474141,
+  "price": 0.0001818,
+  "mcap": 178476,
+  "liq": 29515.74,
+  "score": 79.0
+ },
+ {
+  "addr": "816hX5ah459t2z37LPQC8X11uZECsgHwvs8iBRWcpump",
+  "chain": "solana",
+  "symbol": "NCSP",
+  "t": 1795474141,
+  "price": 8.639e-05,
+  "mcap": 85541,
+  "liq": 20203.26,
+  "score": 68.5
  }
 ]
