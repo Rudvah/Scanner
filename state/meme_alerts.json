@@ -2888,5 +2888,25 @@
   "mcap": 85541,
   "liq": 20203.26,
   "score": 68.5
+ },
+ {
+  "addr": "5KDyvAjSU8HWofZfVnpkdY2N4UM1R2jxUkLupYmgpump",
+  "chain": "solana",
+  "symbol": "ORBLUX",
+  "t": 1795502694,
+  "price": 3.925e-05,
+  "mcap": 37817,
+  "liq": 13300.73,
+  "score": 76.1
+ },
+ {
+  "addr": "6kdrep4bs5HjY7uGQ4cSnNAdAxspTBivQVm2ZueZpump",
+  "chain": "solana",
+  "symbol": "NAJIN",
+  "t": 1795502694,
+  "price": 2.159e-05,
+  "mcap": 21168,
+  "liq": 9227.26,
+  "score": 61.4
  }
 ]
