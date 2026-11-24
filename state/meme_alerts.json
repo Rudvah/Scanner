@@ -2908,5 +2908,35 @@
   "mcap": 21168,
   "liq": 9227.26,
   "score": 61.4
+ },
+ {
+  "addr": "2M3CsCP97Le187KQC5jhZG3c6bFzCZ51NP8bscrupump",
+  "chain": "solana",
+  "symbol": "Wanted",
+  "t": 1795545485,
+  "price": 0.0004411,
+  "mcap": 437309,
+  "liq": 46350.92,
+  "score": 91.9
+ },
+ {
+  "addr": "2YKce3apGESoWhqt4N7MGg5t4UEKgPPL4ArheEvPpump",
+  "chain": "solana",
+  "symbol": "SANTIA",
+  "t": 1795545485,
+  "price": 8.071e-05,
+  "mcap": 79980,
+  "liq": 19014.19,
+  "score": 88.8
+ },
+ {
+  "addr": "FFXtjuyoeMhKT8yCpXdDwee9yftW9u71zggWxQgBpump",
+  "chain": "solana",
+  "symbol": "LFG",
+  "t": 1795545485,
+  "price": 2.777e-05,
+  "mcap": 26387,
+  "liq": 10468.32,
+  "score": 70.4
  }
 ]
