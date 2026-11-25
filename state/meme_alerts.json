@@ -3008,5 +3008,25 @@
   "mcap": 32639,
   "liq": 12600.7,
   "score": 81.1
+ },
+ {
+  "addr": "2Rw6rLRRZXQLNreForjeVvDjnpYUaW6rmMFXmRP9pump",
+  "chain": "solana",
+  "symbol": "SWARM",
+  "t": 1795608917,
+  "price": 1.966e-05,
+  "mcap": 18618,
+  "liq": 8527.76,
+  "score": 73.9
+ },
+ {
+  "addr": "8ArRsCwf3FqiMTY4wHqPmViWGJyJWQqQ6YucgTrhpump",
+  "chain": "solana",
+  "symbol": "Pompom",
+  "t": 1795608917,
+  "price": 2.04e-05,
+  "mcap": 19086,
+  "liq": 8810.35,
+  "score": 67.4
  }
 ]
