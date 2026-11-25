@@ -1808,5 +1808,55 @@
    "wise-token11": 0.091095,
    "evaa-protocol": 2.18
   }
+ },
+ {
+  "date": "2026-11-25",
+  "picks": {
+   "usual": 0.01040018,
+   "eigenlayer": 0.108946,
+   "across-protocol": 0.04368423,
+   "avantis": 0.056914,
+   "ston-2": 0.396479,
+   "yield-basis": 0.054495,
+   "concrete": 0.129721,
+   "resolv": 0.01368705
+  },
+  "universe": {
+   "usual": 0.01040018,
+   "eigenlayer": 0.108946,
+   "across-protocol": 0.04368423,
+   "avantis": 0.056914,
+   "ston-2": 0.396479,
+   "yield-basis": 0.054495,
+   "concrete": 0.129721,
+   "resolv": 0.01368705,
+   "hyperlane": 0.03884936,
+   "re": 0.207754,
+   "unity-2": 0.998609,
+   "bio-protocol": 0.01489689,
+   "zeus-network": 0.00452765,
+   "chip-2": 0.02563657,
+   "mansory-token": 0.00574488,
+   "startale-usd": 0.998541,
+   "symmio": 0.00431577,
+   "looped-hype": 62.07,
+   "opinion": 0.03033731,
+   "brickken": 0.057932,
+   "anvil": 0.00122876,
+   "cap-4": 0.093547,
+   "zama": 0.055217,
+   "solomon": 0.485046,
+   "grove-2": 0.00513286,
+   "momentum-3": 0.289625,
+   "chutes": 10.73,
+   "huma-finance": 0.00765936,
+   "zerobase": 0.04991055,
+   "flying-tulip": 0.099906,
+   "umia": 0.245852,
+   "solstice": 0.03428559,
+   "kaio": 0.01519081,
+   "wise-token11": 0.090643,
+   "evaa-protocol": 2.77
+  }
  }
 ]
