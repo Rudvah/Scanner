@@ -2,6 +2,7 @@
  "AUDCAD|rsi_reversion|4h": "2026-11-23 00:00:00+00:00",
  "CADCHF|rsi_reversion|4h": "2026-11-13 20:00:00+00:00",
  "CADJPY|ema_cross|4h": "2026-11-06 20:00:00+00:00",
+ "EURAUD|donchian_breakout|4h": "2026-11-25 04:00:00+00:00",
  "GBPUSD|rsi_reversion|4h": "2026-11-19 04:00:00+00:00",
  "NZDUSD|donchian_breakout|4h": "2026-11-20 16:00:00+00:00",
  "XAUUSD|donchian_breakout|4h": "2026-11-12 04:00:00+00:00"
