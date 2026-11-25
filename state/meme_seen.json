@@ -1,40 +1,4 @@
 {
- "CQ8zNLYwMEAVVBHEswusZrsUraCvc7HjiBPwgTbRpump": {
-  "t": 1794338344,
-  "r": "alerted"
- },
- "ExjQ95yz1hadNHF9Qk2junAuNcySCo6Ttfyof7nooeeQ": {
-  "t": 1794338344,
-  "r": "alerted"
- },
- "AQ2gmhnqAiPDd2P6jgYrrVvVh8X1de2pBKPLKQbKpump": {
-  "t": 1794338344,
-  "r": "alerted"
- },
- "Ho7iohoM6UN96yoxzBNzz9aXZpNW3AyUVuEmBdAQpump": {
-  "t": 1794338344,
-  "r": "alerted"
- },
- "78PC5CX6CnRvmxeMCBtw9QxPEuGdVTVVWh7rUnbBkw7g": {
-  "t": 1794338344,
-  "r": "alerted"
- },
- "85gJ7HucRUpPjLZP9KVWEKyB85uBxtwMfqzm9ufNpump": {
-  "t": 1794355756,
-  "r": "unsafe",
-  "why": [
-   "Large Amount of LP Unlocked",
-   "Low Liquidity"
-  ]
- },
- "4iJ7xEQrUvVUQH9KVStvw3FaY2PZDd7RtR4L9zx2pump": {
-  "t": 1794355756,
-  "r": "alerted"
- },
- "6mwuYnY3fHdxed9GnrdY5BkXhJwMi1uz39MPsYUcpump": {
-  "t": 1794355756,
-  "r": "alerted"
- },
  "5dReBkDjES5SyRuasNHytYDmCqdupyoWTRUSTRgtpump": {
   "t": 1794380090,
   "r": "unsafe",
@@ -610,6 +574,34 @@
  },
  "FFXtjuyoeMhKT8yCpXdDwee9yftW9u71zggWxQgBpump": {
   "t": 1795545485,
+  "r": "alerted"
+ },
+ "BWPv5jje9xipZ6V4q855fjiu5e7HiWGNvS5x8c1Mpump": {
+  "t": 1795575353,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Low Liquidity"
+  ]
+ },
+ "E35iEA2yLLHc1tjm6et1Z3YuH8DhxJYWtWezPHgSpump": {
+  "t": 1795575353,
+  "r": "alerted"
+ },
+ "CLxrgvfFs3gr9BQhTAfGxZDsiHfVUQTDEahfiZdLpump": {
+  "t": 1795575353,
+  "r": "alerted"
+ },
+ "DMFzUvtfEmE697ZfEDqAXErd9MrBDEs66V5WiRvApump": {
+  "t": 1795575353,
+  "r": "alerted"
+ },
+ "2ksAWrKoyPkXaSo2HBSPrjALrytsm9SVEHq11VQZpump": {
+  "t": 1795575353,
+  "r": "alerted"
+ },
+ "5Xd2vr3oY2YDhBeozvsZQto3rLiMzWDDBLadkgQspump": {
+  "t": 1795575353,
   "r": "alerted"
  }
 }

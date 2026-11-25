@@ -2938,5 +2938,55 @@
   "mcap": 26387,
   "liq": 10468.32,
   "score": 70.4
+ },
+ {
+  "addr": "E35iEA2yLLHc1tjm6et1Z3YuH8DhxJYWtWezPHgSpump",
+  "chain": "solana",
+  "symbol": "BOOBS",
+  "t": 1795575353,
+  "price": 0.002056,
+  "mcap": 2043596,
+  "liq": 102599.83,
+  "score": 83.8
+ },
+ {
+  "addr": "CLxrgvfFs3gr9BQhTAfGxZDsiHfVUQTDEahfiZdLpump",
+  "chain": "solana",
+  "symbol": "ChristmASS",
+  "t": 1795575353,
+  "price": 0.0001612,
+  "mcap": 159806,
+  "liq": 27783.28,
+  "score": 82.2
+ },
+ {
+  "addr": "DMFzUvtfEmE697ZfEDqAXErd9MrBDEs66V5WiRvApump",
+  "chain": "solana",
+  "symbol": "DongCoin",
+  "t": 1795575353,
+  "price": 0.0007019,
+  "mcap": 699241,
+  "liq": 58149.23,
+  "score": 71.7
+ },
+ {
+  "addr": "2ksAWrKoyPkXaSo2HBSPrjALrytsm9SVEHq11VQZpump",
+  "chain": "solana",
+  "symbol": "Caiolo",
+  "t": 1795575353,
+  "price": 2.787e-05,
+  "mcap": 26742,
+  "liq": 10482.38,
+  "score": 71.2
+ },
+ {
+  "addr": "5Xd2vr3oY2YDhBeozvsZQto3rLiMzWDDBLadkgQspump",
+  "chain": "solana",
+  "symbol": "TOUCAN",
+  "t": 1795575353,
+  "price": 6.502e-05,
+  "mcap": 61347,
+  "liq": 16900.58,
+  "score": 70.0
  }
 ]
