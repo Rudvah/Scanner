@@ -1,23 +1,4 @@
 {
- "5dReBkDjES5SyRuasNHytYDmCqdupyoWTRUSTRgtpump": {
-  "t": 1794380090,
-  "r": "unsafe",
-  "why": [
-   "Large Amount of LP Unlocked"
-  ]
- },
- "GAV37UD3cvysYvvPSeKboFKwarG387RvznM3BBhBpump": {
-  "t": 1794380090,
-  "r": "alerted"
- },
- "ACQaUNABukRNGqJJS2geF1XhDignZuvG21hcE9gZpump": {
-  "t": 1794380090,
-  "r": "alerted"
- },
- "BXwgus8w5NPgxxWxTUUHiKUz3Jezn8RB6uqowcJxpump": {
-  "t": 1794380090,
-  "r": "alerted"
- },
  "C493YhUFRt9zFgzLRm3SckCEXeouGse8iUoW3EeFpump": {
   "t": 1794408869,
   "r": "unsafe",
@@ -606,6 +587,10 @@
  },
  "Ea7ADHtZdQVre2mTBbN9Ps3TBraR6n5GUamGF9Ftpump": {
   "t": 1795575379,
+  "r": "alerted"
+ },
+ "38EDdUxnJvrnDsJyB45E2W3pK26qLEjmWTvsEmMuG9ZR": {
+  "t": 1795608756,
   "r": "alerted"
  }
 }

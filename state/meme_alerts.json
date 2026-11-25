@@ -2998,5 +2998,15 @@
   "mcap": 51753,
   "liq": 15277.68,
   "score": 72.7
+ },
+ {
+  "addr": "38EDdUxnJvrnDsJyB45E2W3pK26qLEjmWTvsEmMuG9ZR",
+  "chain": "solana",
+  "symbol": "OUROBOROS",
+  "t": 1795608756,
+  "price": 3.271e-05,
+  "mcap": 32639,
+  "liq": 12600.7,
+  "score": 81.1
  }
 ]
