@@ -3118,5 +3118,15 @@
   "mcap": 6300,
   "liq": 11160.15,
   "score": 79.2
+ },
+ {
+  "addr": "Bb38n8AVLMh9amo8qtjLvqE8nPtfs8GEsyzg1pC6pump",
+  "chain": "solana",
+  "symbol": "Cateball",
+  "t": 1795733296,
+  "price": 0.000786,
+  "mcap": 785930,
+  "liq": 63275.7,
+  "score": 88.3
  }
 ]
