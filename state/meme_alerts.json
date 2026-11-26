@@ -3128,5 +3128,15 @@
   "mcap": 785930,
   "liq": 63275.7,
   "score": 88.3
+ },
+ {
+  "addr": "CvXQ9qEriGgTbMWyF8L1U7oqn9ev8A49N1dzNE8cpump",
+  "chain": "solana",
+  "symbol": "CINU",
+  "t": 1795733317,
+  "price": 8.51e-05,
+  "mcap": 84978,
+  "liq": 24016.11,
+  "score": 73.2
  }
 ]
