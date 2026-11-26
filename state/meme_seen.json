@@ -1,20 +1,4 @@
 {
- "H57bUBka6sBfPQph6f58TsQvUvxugJQmqMANFV1mpump": {
-  "t": 1794451253,
-  "r": "alerted"
- },
- "5LPUWuxVTfkEhGob1kyWgijbFse4icqqH7VTgY79pump": {
-  "t": 1794451253,
-  "r": "alerted"
- },
- "9Sunhg3DWCxnjcN1UzBY3X8W46v9DXhesBhuJLDtgrok": {
-  "t": 1794451253,
-  "r": "alerted"
- },
- "AJFnmpiF4VTKeqEWtwBUarib5zKKbXcs594UyrMHpump": {
-  "t": 1794451320,
-  "r": "alerted"
- },
  "5tePJcGmdKAoNVXe3fp2tmf8n7cmr5d3YBkYKj4Cpump": {
   "t": 1794479949,
   "r": "unsafe",
@@ -602,6 +586,33 @@
  },
  "Cqojv7y5HokxxjRGcBLNMdMgerVyQyu2SMbGoAbiWire": {
   "t": 1795643662,
+  "r": "alerted"
+ },
+ "7NtwfodU8tPqLViNcaVLDKKYTSCEV6etvUnKsp8Uof7g": {
+  "t": 1795665401,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked",
+   "Top 10 holders high ownership"
+  ]
+ },
+ "9YkFzGhRTp8axvpUDAsigxTXMDg1dqG6vyeaJcCdMM25": {
+  "t": 1795665401,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked"
+  ]
+ },
+ "Fo2HAwr7ZAUM2bSZ7MWSi16e3aWGpbw5MsUDYCttpump": {
+  "t": 1795665401,
+  "r": "alerted"
+ },
+ "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump": {
+  "t": 1795665401,
+  "r": "alerted"
+ },
+ "4HS4oza8YdXCHTWP3ToCrPkYUm9Afv7aV3y6up5Upump": {
+  "t": 1795665401,
   "r": "alerted"
  }
 }
