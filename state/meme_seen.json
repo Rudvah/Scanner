@@ -614,5 +614,12 @@
  "4HS4oza8YdXCHTWP3ToCrPkYUm9Afv7aV3y6up5Upump": {
   "t": 1795665401,
   "r": "alerted"
+ },
+ "4yDXVKGYNaoqwB13qSpKYPv1EadR6RZgpX8pvVU8v2SD": {
+  "t": 1795665431,
+  "r": "unsafe",
+  "why": [
+   "Large Amount of LP Unlocked"
+  ]
  }
 }
