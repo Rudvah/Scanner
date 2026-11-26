@@ -3098,5 +3098,15 @@
   "mcap": 20097,
   "liq": 8883.31,
   "score": 63.4
+ },
+ {
+  "addr": "32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump",
+  "chain": "solana",
+  "symbol": "PAIR",
+  "t": 1795700297,
+  "price": 6.613e-05,
+  "mcap": 66024,
+  "liq": 18265.63,
+  "score": 77.6
  }
 ]

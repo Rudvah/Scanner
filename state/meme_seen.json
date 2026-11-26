@@ -1,16 +1,4 @@
 {
- "5tePJcGmdKAoNVXe3fp2tmf8n7cmr5d3YBkYKj4Cpump": {
-  "t": 1794479949,
-  "r": "unsafe",
-  "why": [
-   "Large Amount of LP Unlocked",
-   "Low Liquidity"
-  ]
- },
- "2UMho4zUPqSKb2fbJbKNPf1dU1WKD6SfbNmVkvphpump": {
-  "t": 1794479949,
-  "r": "alerted"
- },
  "5ba8HwNgio5t86aFdWJ81w5pNHjbqAKPKejTsVoDpump": {
   "t": 1794508896,
   "r": "alerted"
@@ -621,5 +609,9 @@
   "why": [
    "Large Amount of LP Unlocked"
   ]
+ },
+ "32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump": {
+  "t": 1795700297,
+  "r": "alerted"
  }
 }
