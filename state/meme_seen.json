@@ -1,16 +1,4 @@
 {
- "MoR1whCWjcLiUqAan4GHLRcn8wK4Jktk2DyDryNmeta": {
-  "t": 1794602819,
-  "r": "unsafe",
-  "why": [
-   "Mint Authority still enabled",
-   "Single holder ownership"
-  ]
- },
- "AVHbD2rgkESZ3QoiKQgr19KH4FaY5MMvLCPr1ni3pump": {
-  "t": 1794602819,
-  "r": "alerted"
- },
  "CRwB4GxVDM4Bnh8QMqh9Nk8UZNscced3xec824vxpump": {
   "t": 1794619048,
   "r": "alerted"
