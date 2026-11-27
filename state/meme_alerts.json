@@ -3138,5 +3138,45 @@
   "mcap": 84978,
   "liq": 24016.11,
   "score": 73.2
+ },
+ {
+  "addr": "G2XqmSc8vJpLLwaLVXUeNkxsrhVT8vQ3Pje8MqeDpump",
+  "chain": "solana",
+  "symbol": "SpaceXCoin",
+  "t": 1795754820,
+  "price": 0.0005895,
+  "mcap": 589302,
+  "liq": 55649.52,
+  "score": 87.1
+ },
+ {
+  "addr": "5xrT8y2KU2YwzipwCMNxxTc8KAGQd4wjtGTc2WyJJCMh",
+  "chain": "solana",
+  "symbol": "DragonRiders",
+  "t": 1795754820,
+  "price": 0.0001594,
+  "mcap": 159474,
+  "liq": 35374.34,
+  "score": 79.7
+ },
+ {
+  "addr": "C8CZZnPJzPaWhB82EmpKMZc5PEqNnQ46n43j5Fj9pump",
+  "chain": "solana",
+  "symbol": "Gemma",
+  "t": 1795754820,
+  "price": 3.342e-05,
+  "mcap": 33429,
+  "liq": 11910.57,
+  "score": 72.4
+ },
+ {
+  "addr": "EomygbXHKGwb9bkCatVftQpCVgvBPmgAnMUuwusxpump",
+  "chain": "solana",
+  "symbol": "LUMINARE",
+  "t": 1795754820,
+  "price": 8.889e-05,
+  "mcap": 88893,
+  "liq": 20627.2,
+  "score": 66.2
  }
 ]
