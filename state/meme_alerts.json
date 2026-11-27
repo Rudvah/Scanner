@@ -3178,5 +3178,55 @@
   "mcap": 88893,
   "liq": 20627.2,
   "score": 66.2
+ },
+ {
+  "addr": "F5LxbqJxAMrvfxLbqPckErmqNyiPzDJMUXnX8vrhpump",
+  "chain": "solana",
+  "symbol": "KITT",
+  "t": 1795790524,
+  "price": 6.601e-05,
+  "mcap": 66012,
+  "liq": 17144.23,
+  "score": 79.8
+ },
+ {
+  "addr": "DNgboHpauGZ5KbSptWSkwQyQLSDCQKdoU3qsk9FTpump",
+  "chain": "solana",
+  "symbol": "FRGST",
+  "t": 1795790524,
+  "price": 7.227e-05,
+  "mcap": 72278,
+  "liq": 18330.84,
+  "score": 76.4
+ },
+ {
+  "addr": "3MeLekwiKucXKnn7Y51kddFKT9GdNCffqtcMQES2perp",
+  "chain": "solana",
+  "symbol": "PERPIT",
+  "t": 1795790524,
+  "price": 1.733e-05,
+  "mcap": 17335,
+  "liq": 8858.68,
+  "score": 73.3
+ },
+ {
+  "addr": "GXpQZkap4ExgQTTX4SXfETV7nt1YZKEZSakqos3hpump",
+  "chain": "solana",
+  "symbol": "TWORBIT",
+  "t": 1795790524,
+  "price": 0.0004801,
+  "mcap": 480116,
+  "liq": 49830.91,
+  "score": 73.1
+ },
+ {
+  "addr": "7Y2CVbnqZRvR5RUvEJ9RQ73fZEfv7ybNcysytAepump",
+  "chain": "solana",
+  "symbol": "WINSTON",
+  "t": 1795790524,
+  "price": 0.000184,
+  "mcap": 183655,
+  "liq": 31206.85,
+  "score": 71.6
  }
 ]
