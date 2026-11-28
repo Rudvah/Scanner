@@ -3248,5 +3248,25 @@
   "mcap": 35657,
   "liq": 12748.12,
   "score": 72.3
+ },
+ {
+  "addr": "ANxUJcRwevw9xcWMQNrwgpzcdeSgXzNq6hLUxGG3pump",
+  "chain": "solana",
+  "symbol": "OKOWARE",
+  "t": 1795873968,
+  "price": 2.073e-05,
+  "mcap": 20708,
+  "liq": 9157.38,
+  "score": 70.7
+ },
+ {
+  "addr": "4newt1R5fGEoCKdf9XBgiR6B43iacmnVAR2d4Wt8pump",
+  "chain": "solana",
+  "symbol": "Mojave",
+  "t": 1795873968,
+  "price": 2.444e-05,
+  "mcap": 24411,
+  "liq": 9911.54,
+  "score": 68.5
  }
 ]
