@@ -3228,5 +3228,25 @@
   "mcap": 183655,
   "liq": 31206.85,
   "score": 71.6
+ },
+ {
+  "addr": "6NZANPwagg8qLrfi2mk9HyCXWWAVnhsv4CiqWuHPpump",
+  "chain": "solana",
+  "symbol": "DAW",
+  "t": 1795841491,
+  "price": 3.2e-05,
+  "mcap": 32001,
+  "liq": 11819.61,
+  "score": 73.8
+ },
+ {
+  "addr": "BRRktKPa8m4dMrQ1fT6fLJABQjYUqLaEhPuMHxUvpump",
+  "chain": "solana",
+  "symbol": "JEFFLE",
+  "t": 1795841491,
+  "price": 3.565e-05,
+  "mcap": 35657,
+  "liq": 12748.12,
+  "score": 72.3
  }
 ]
